@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+
+
+.Section{display: grid;
+         padding: 25px;}
+
+.P1{    grid-template-columns: 75% 25%;}
+.P2{    grid-template-columns: 45% 55%;}
+
+@media only screen and (max-width: 991px) {    .Section{display: inline}}
+
+.bts{
+    padding: 6px;
+}
+.bts button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.bts button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+.About{
+    background-color: whitesmoke;
+    margin: 30px;
+    border: 4px solid whitesmoke;
+    box-shadow: 1px 1px 4px black;
+
+}
+.About h1{font-family: 'Montserrat', sans-serif;}
+.About h2{font-size: 18px;font-family: 'Montserrat', sans-serif;}
+
+                /*Google Maps API*/
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+
