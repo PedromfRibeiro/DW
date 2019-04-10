@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.plat{  display: grid;
+    padding: 25px;
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 5%;
+}
+
+.column img {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    width: 128px;
+    height: 128px;
+    border-radius: 18px;
+    margin: 0 auto;
+}
+
+
+body {
+    text-align: center;
+}
+h2{
+    font-size:24px ;}
+h3{
+    font-size: 16px;
+}
+@media only screen and (max-width: 991px) {
+    .plat{display: inline}
+
+}
+
+
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent h3{font-size: 20px;
+text-align: center}
+.tabcontent {
+    text-align: justify;
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#Home {background-color: #333333;}
+
+#News {background-color: #333333;}
+#About {background-color: #333333;}
+
