@@ -13,7 +13,6 @@ body {
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 .table-title {
-    padding-bottom: 15px;
     background: #435d7d;
     color: #fff;
     padding: 16px 30px;
@@ -24,9 +23,7 @@ body {
     margin: 5px 0 0;
     font-size: 24px;
 }
-.table-title .btn-group {
-    float: right;
-}
+
 .table-title .btn {
     color: #fff;
     float: right;
@@ -34,7 +31,6 @@ body {
     border: none;
     min-width: 50px;
     border-radius: 2px;
-    border: none;
     outline: none !important;
     margin-left: 10px;
 }
@@ -92,11 +88,6 @@ table.table td a.delete {
 }
 table.table td i {
     font-size: 19px;
-}
-table.table .avatar {
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-right: 10px;
 }
 .pagination {
     float: right;
@@ -169,7 +160,6 @@ table.table .avatar {
     height: 11px;
     border: solid #000;
     border-width: 0 3px 3px 0;
-    transform: inherit;
     z-index: 3;
     transform: rotateZ(45deg);
 }

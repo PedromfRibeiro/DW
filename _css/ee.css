@@ -37,16 +37,6 @@
 }
 
 /* Center the image and position the close button */
-#id01 .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-}
-
-#id01 img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
 
 #id01 .container {
     padding: 16px;

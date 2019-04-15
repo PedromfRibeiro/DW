@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
+    <script src="_js/Produto.js"></script>
     <?php
     include '_Includes/Header.html';
     ?>
+
     <link href="_css/Produto.css" rel="stylesheet">
     <meta name="robots" content="noindex,follow" />
+
 </head>
 
 
@@ -89,12 +92,12 @@
 
     <div id="Contact" class="tabcontent">
         <h3>Contact</h3>
-        <p><blockquote class="embedly-card"><h4><a href="https://pt.wikipedia.org/wiki/Lista_de_pr%C3%AAmios_e_indica%C3%A7%C3%B5es_recebidos_por_The_Witcher_3:_Wild_Hunt">Lista de prêmios e indicações recebidos por The Witcher 3: Wild Hunt - Wikipédia, a enciclopédia livre</a></h4><p>Esta é uma lista de prêmios e indicações recebidos por The Witcher 3: Wild Hunt (em polonês: Wiedźmin 3: Dziki Gon), um jogo eletrônico de ação e fantasia desenvolvido pela CD Projekt RED que foi lançado mundialmente no dia 19 de maio de 2015 para as plataformas Microsoft Windows, PlayStation 4 e Xbox One.</p></blockquote>
-        <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>!</p>
+        <p><blockquote class="embedly-card"><h4><a href="https://pt.wikipedia.org/wiki/Lista_de_pr%C3%AAmios_e_indica%C3%A7%C3%B5es_recebidos_por_The_Witcher_3:_Wild_Hunt">Lista de prêmios e indicações recebidos por The Witcher 3: Wild Hunt - Wikipédia, a enciclopédia livre</a></h4><a>Esta é uma lista de prêmios e indicações recebidos por The Witcher 3: Wild Hunt (em polonês: Wiedźmin 3: Dziki Gon), um jogo eletrônico de ação e fantasia desenvolvido pela CD Projekt RED que foi lançado mundialmente no dia 19 de maio de 2015 para as plataformas Microsoft Windows, PlayStation 4 e Xbox One.</blockquote>
+        <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script></p>
     </div>
     <div id="Contact1" class="tabcontent">
         <h3>Can You Run It?</h3>
-        <p><blockquote class="embedly-card"><h4><a href="https://www.systemrequirementslab.com/cyri/requirements/the-witcher-3-wild-hunt/12446">The Witcher 3: Wild Hunt Requirements Test</a></h4><p>Check the The Witcher 3: Wild Hunt system requirements. Can I Run it? Test your specs and rate your gaming PC.</p></blockquote>
+        <p><blockquote class="embedly-card"><h4><a href="https://www.systemrequirementslab.com/cyri/requirements/the-witcher-3-wild-hunt/12446">The Witcher 3: Wild Hunt Requirements Test</a></h4><>Check the The Witcher 3: Wild Hunt system requirements. Can I Run it? Test your specs and rate your gaming PC.</blockquote>
         <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script></p>
     </div>
 </div>
