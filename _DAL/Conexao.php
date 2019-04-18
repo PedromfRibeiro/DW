@@ -1,20 +1,31 @@
 <?php
+class Connection
+{
+    public function Connect(){
+        try {
+            $conexao = new PDO("mysql:host=localhost; dbname=dwphp","root","" );
+            return $conexao;
 
-$dbhost=”localhost”; //replace with your hostname
+        } catch (PDOException $erro) {
+            echo "Erro na conexão:" . $erro->getMessage();
+        }
+    }
 
-$dbuser = “root”; //replace with your admin username
 
-$dbpass = “itsasecret”; //password of your admin
+    public function NSQuerry($SQLString){
+        $pdo= $this->Connect();
+        return  $pdo->prepare($SQLString)->execute();
+    }
 
-$dbname = “dwphp”;
 
-$con = myslqi_connect($dbhost, $dbuser, $dbpass);
 
-if($con){
+    public function SQuerry($SQLString,Genero $genero){
+        $pdo= $this->Connect();
+        $arrayGen = (array) $genero;
+       return  $pdo->prepare($SQLString)->execute($arrayGen);
 
-    $db = mysqli_select_db($dbname);
 
-    if(!$db){echo “Could not connect to database ”.mysqli_error($con);}}
-else {    echo “could not connect to server”;}
-?>
+
+    }
+
 }

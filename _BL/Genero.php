@@ -1,21 +1,41 @@
 <?php
-
-
-public class Genero
+include ('_DAL/GeneroDAL.php');
+class Genero
 {
    public $id;
    public $genero;
 
-    public function __construct($ID, $gen)
+    public function __construct($id,$genero)
     {
-        $this->id = $ID;
-        $this->genero = $gen;
+        $this->id = $id;
+        $this->genero = $genero;
     }
 
-        public function Create()     {}
-        public function Update()     {}
-        public function Read()       {}
-        public function Delete()     {}
+
+        public  function Create()     {
+
+        $val = new GeneroDAL();
+        $val -> Create($this);
+    }
+
+        public function ReadALL()       {
+        $val = new GeneroDAL();
+        return $val -> ReadALLDAL();
+
+    }
+
+        public function Update()     {
+        $val = new GeneroDAL();
+        $val -> Update($this);
+
+        }
+        public function Delete()     {
+            $val = new GeneroDAL();
+            $val -> Delete($this);
+        }
+
         public function CreateTable(){}
 
 }
+
+?>

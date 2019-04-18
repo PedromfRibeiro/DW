@@ -3,7 +3,7 @@
 <head>
     <script src="_js/Produto.js"></script>
     <?php
-    include '_Includes/Header.html';
+    include '_Includes/Header.php';
     ?>
 
     <link href="_css/Produto.css" rel="stylesheet">

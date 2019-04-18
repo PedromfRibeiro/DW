@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8bb2d7fa-4efd-4973-bf84-472c4d1e6d42" name="Default Changelist" comment="" />
+    <list default="true" id="8bb2d7fa-4efd-4973-bf84-472c4d1e6d42" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Update_TESTE.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_DAL/GeneroDAL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Form.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogIn.php" beforeDir="false" afterPath="$PROJECT_DIR$/LogIn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_BL/Genero.php" beforeDir="false" afterPath="$PROJECT_DIR$/_BL/Genero.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_DAL/Conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/_DAL/Conexao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/Footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/Footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/Header.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/Header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminclientes.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminclientes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminencomendas.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminencomendas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admingames.php" beforeDir="false" afterPath="$PROJECT_DIR$/admingames.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admingeneros.php" beforeDir="false" afterPath="$PROJECT_DIR$/admingeneros.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminplataforma.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminplataforma.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +36,103 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dwphp@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dwphp@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dwphp@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dwphp: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dwphp@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dwphp: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="genero: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <splitter split-orientation="horizontal" split-proportion="0.5771558">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/_BL/Genero.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="294">
+                  <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/_DAL/GeneroDAL.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="144">
+                  <caret line="38" selection-start-line="38" selection-end-line="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/_DAL/Conexao.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="6" selection-start-line="6" selection-end-line="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Index.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/_BL/Genero.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="107">
+                  <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Connection</find>
+      <find>Action</find>
+      <find>Name</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -32,9 +141,27 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Git_php" />
+      </map>
+    </option>
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/_includes/Header.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/_includes/Header.php" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -43,11 +170,30 @@
         <option value="$PROJECT_DIR$/insert.php" />
         <option value="$PROJECT_DIR$/Conexao.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1cea5c26-baad-4cb4-81ff-12ca08899fab/console.sql" />
-        <option value="$PROJECT_DIR$/_DAL/Conexao.php" />
         <option value="$PROJECT_DIR$/_DAL/insert.php" />
+        <option value="$PROJECT_DIR$/_DAL/%%RESET%%.PHP" />
+        <option value="$PROJECT_DIR$/_DAL/Insert.php" />
+        <option value="$PROJECT_DIR$/Index2.html" />
+        <option value="$PROJECT_DIR$/_css/Index2Style.css" />
+        <option value="$PROJECT_DIR$/_DAL/ConexaoTT.php" />
+        <option value="$PROJECT_DIR$/adminclientes.php" />
+        <option value="$PROJECT_DIR$/_DAL/reset.php" />
+        <option value="$PROJECT_DIR$/_DAL/dddd.php" />
+        <option value="$PROJECT_DIR$/Index2.php" />
+        <option value="$PROJECT_DIR$/_DAL/CrudGlobal.php" />
+        <option value="$PROJECT_DIR$/_DAL/ww.php" />
+        <option value="$PROJECT_DIR$/ww.php" />
+        <option value="$PROJECT_DIR$/LogIn.php" />
+        <option value="$PROJECT_DIR$/Update TESTE.php" />
+        <option value="$PROJECT_DIR$/_DAL/Conexao.php" />
+        <option value="$PROJECT_DIR$/admingeneros.php" />
+        <option value="$PROJECT_DIR$/_BL/Genero.php" />
+        <option value="$PROJECT_DIR$/Index.php" />
+        <option value="$PROJECT_DIR$/_DAL/GeneroDAL.php" />
       </list>
     </option>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="c0d84c4d-fb35-428a-86ea-c37024cf67ff" name="xDebug" />
@@ -55,6 +201,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-2" />
+    <option name="y" value="60" />
     <option name="width" value="1070" />
     <option name="height" value="738" />
   </component>
@@ -83,19 +231,6 @@
               <item name="DWphp" type="462c0819:PsiDirectoryNode" />
               <item name="_DAL" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DWphp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="DWphp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="DWphp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -105,17 +240,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql&#10;java.sql.Driver" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J 8/8.0.15/mysql-connector-java-8.0.15.jar" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\DWphp\_DAL" />
       <recent name="C:\xampp\htdocs\DWphp" />
+      <recent name="C:\xampp\htdocs\DWphp\_BL" />
+      <recent name="C:\xampp\htdocs\DWphp\_DAL" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -130,20 +269,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Web Page.C">
+  <component name="RunManager" selected="PHP Web Page.Index">
+    <configuration name="AdminCliente.php " type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/AdminCliente.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="Admin_form.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Admin_form.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="Admingeneros.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Admingeneros.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="GeneroDAL.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/_DAL/GeneroDAL.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="Index" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Index.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="Update TESTE" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Update_TESTE.php">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="">
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="PHP Script.Conexao.php" />
-      <item itemvalue="PHP Script.insert.php" />
-      <item itemvalue="PHP Web Page.C" />
-      <item itemvalue="PHP Web Page.Unnamed (1)" />
-      <item itemvalue="PHP Web Page.Unnamed" />
+      <item itemvalue="PHP Web Page.Admin_form.php" />
+      <item itemvalue="PHP Web Page.AdminCliente.php " />
+      <item itemvalue="PHP Web Page.Index" />
+      <item itemvalue="PHP Web Page.Admingeneros.php" />
+      <item itemvalue="PHP Web Page.Update TESTE" />
+      <item itemvalue="PHP Web Page.GeneroDAL.php" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHP Script.Conexao.php" />
-        <item itemvalue="PHP Script.insert.php" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -164,7 +319,11 @@
       <updated>1555335627862</updated>
       <workItem from="1555335636967" duration="8830000" />
       <workItem from="1555344768898" duration="2256000" />
-      <workItem from="1555461182753" duration="241000" />
+      <workItem from="1555461182753" duration="1874000" />
+      <workItem from="1555463313181" duration="2155000" />
+      <workItem from="1555496580941" duration="2338000" />
+      <workItem from="1555499905409" duration="25853000" />
+      <workItem from="1555594385952" duration="8503000" />
     </task>
     <task id="LOCAL-00002" summary="DAL&#10;Connected DB &#10; Select from Genero TESTE">
       <created>1555345812520</created>
@@ -180,22 +339,29 @@
       <option name="project" value="LOCAL" />
       <updated>1555461344453</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&#10;ccc">
+      <created>1555461509778</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555461509778</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11402000" />
+    <option name="totallyTimeSpent" value="51884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21028744" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.24962178" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.16263238" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32850242" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4977307" visible="true" weight="0.41545895" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
@@ -203,7 +369,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32850242" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50226927" side_tool="true" weight="0.13043478" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
       <window_info active="true" anchor="bottom" id="Inspection Results" order="13" visible="true" weight="0.3188406" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32850242" />
@@ -244,6 +410,37 @@
     <MESSAGE value="&#10;ccc" />
     <option name="LAST_COMMIT_MESSAGE" value="&#10;ccc" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/_DAL/GeneroDAL.php</url>
+          <line>38</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/_DAL/GeneroDAL.php</url>
+          <line>37</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/_DAL/GeneroDAL.php</url>
+          <line>36</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/_DAL/GeneroDAL.php</url>
+          <line>35</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PhpWebAppRunConfigurationType">
+        <watch expression="$array[&quot;id&quot;]" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d1db993c-e2da-47aa-a4bd-f772a5c50af1/console.sql">
       <provider selected="true" editor-type-id="text-editor">
@@ -259,29 +456,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="82" column="15" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/Header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b60828c5-662f-45e6-a7f7-64fe1091d619/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_BL/Genero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Admin_Form.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -293,22 +469,118 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1cea5c26-baad-4cb4-81ff-12ca08899fab/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/admingeneros.php">
+    <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/server_privileges.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51" />
+        <state relative-caret-position="272">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_DAL/insert.php">
+    <entry file="file://$PROJECT_DIR$/_includes/Header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="425">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" column="15" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/db_sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/phpmyadmin.css.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_DAL/reset.php" />
+    <entry file="file://$PROJECT_DIR$/_DAL/dddd.php" />
+    <entry file="file://$PROJECT_DIR$/_DAL/CrudGlobal.php" />
+    <entry file="file://$PROJECT_DIR$/Index2.php" />
+    <entry file="file://$PROJECT_DIR$/_DAL/ConexaoTT.php" />
+    <entry file="file://$PROJECT_DIR$/_includes/Footer.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminclientes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="91" column="19" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_css/Index2.css" />
+    <entry file="file://$PROJECT_DIR$/LogIn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ww.php" />
+    <entry file="file://$PROJECT_DIR$/Update_TESTE.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admingeneros.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1cea5c26-baad-4cb4-81ff-12ca08899fab/schema/dwphp/table/genero.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_BL/Genero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_DAL/Conexao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_DAL/GeneroDAL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>

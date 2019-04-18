@@ -3,7 +3,7 @@
 
     <?php
     phpinfo();
-    include '_Includes/Header.html';
+    include '_Includes/Header.php';
     ?>
 <head>
     <link href="_css/Admin_form.css" type="text/css" rel="stylesheet"/>

@@ -2,7 +2,7 @@
 <html lang="pt-pt">
 <head>
     <?php
-    include '_Includes/Header.html';
+    include '_Includes/Header.php';
     ?>
     <link href="_css/adminencomendas.css" type="text/css" rel="stylesheet"/>
 
@@ -91,6 +91,6 @@
 
 </body>
 <?php
-include '_Includes/Footer.html';
+include '_Includes/Footer.php';
 ?>
 </html>
