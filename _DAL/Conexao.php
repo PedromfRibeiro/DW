@@ -28,4 +28,8 @@ class Connection
 
     }
 
+    public function close(){
+        $this->close();
+    }
+
 }

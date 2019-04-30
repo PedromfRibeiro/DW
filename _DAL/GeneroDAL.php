@@ -1,5 +1,6 @@
 <?php
 require "Conexao.php";
+//require_once dirname( __FILE__) ."/Conexao.php";
 
 class GeneroDAL{
 

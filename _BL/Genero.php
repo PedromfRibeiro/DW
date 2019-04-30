@@ -1,5 +1,7 @@
 <?php
 include ('_DAL/GeneroDAL.php');
+//require_once dirname( __FILE__) ."/DAL/GeneroDAL.php";
+
 class Genero
 {
    public $id;
