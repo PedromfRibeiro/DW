@@ -5,6 +5,15 @@ body {
     font-family: 'Varela Round', sans-serif;
     font-size: 13px;
 }
+
+.Section{display: grid;
+    padding: 25px;
+    grid-column-gap: 10%;
+    grid-template-columns: 45% 45%;}
+
+
+@media only screen and (max-width: 991px) {    .Section{display: inline}}
+
 .table-wrapper {
     background: #fff;
     padding: 20px 25px;

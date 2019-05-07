@@ -1,6 +1,6 @@
 <?php
 class Connection
-{
+{public $conexao;
     public function Connect(){
         try {
             $conexao = new PDO("mysql:host=localhost; dbname=dwphp","root","" );
@@ -11,21 +11,15 @@ class Connection
         }
     }
 
-
-    public function NSQuerry($SQLString){
+    public function SQuerry($SQLString,$obj){
         $pdo= $this->Connect();
-        return  $pdo->prepare($SQLString)->execute();
+        $arrayGen = (array) $obj;
+        $stmte = $pdo->prepare($SQLString);
+        $stmte->execute($arrayGen);
+        return  $stmte;
     }
 
-
-
-    public function SQuerry($SQLString,Genero $genero){
-        $pdo= $this->Connect();
-        $arrayGen = (array) $genero;
-       return  $pdo->prepare($SQLString)->execute($arrayGen);
-
-
-
-    }
 
 }
+
+

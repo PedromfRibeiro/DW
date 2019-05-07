@@ -1,26 +1,33 @@
 <?php
-include ('_DAL/GeneroDAL.php');
+require_once ('_DAL/GeneroDAL.php');
+
 class Genero
 {
    public $id;
    public $genero;
 
-    public function __construct($id,$genero)
+
+    public function __construct($id, $genero)
     {
         $this->id = $id;
         $this->genero = $genero;
     }
 
-
-        public  function Create()     {
-
+    public function Create()
+        {
+            $val = new GeneroDAL();
+            $val->CreateDAL($this);
+        }
+    public function Read()     {
         $val = new GeneroDAL();
-        $val -> Create($this);
+        $result = $val -> ReadDAL($this);
+        return $result;
+
     }
-
-        public function ReadALL()       {
+    public function ReadALL()    {
         $val = new GeneroDAL();
-        return $val -> ReadALLDAL();
+        $rr =$val -> ReadALLDAL();
+        return $rr;
 
     }
 

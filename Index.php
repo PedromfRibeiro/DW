@@ -7,19 +7,7 @@
     <link href="_css/MainPage.css" type="text/css" rel="stylesheet"/>
 
 <body>
-<?php
-include '_BL/Genero.php';
 
-function ddd(){
-   // $eee = new Genero('33','Keeeee');
-    //$eee->Create();
-    //$Uddd = new Genero('1','Action');
-    //$Uddd -> Update();
-    $Uddd = new Genero('33','');
-    $Uddd -> Delete();
-}
-ddd();
-?>
 
 
 <div class="Section P1">

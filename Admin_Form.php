@@ -2,7 +2,6 @@
 <html lang="pt-pt">
 
     <?php
-    phpinfo();
     include '_Includes/Header.php';
     ?>
 <head>
@@ -33,55 +32,30 @@
                         <div class="form-group">
                             <label class="loginformelement" >Plataforma</label>
                         <select class="form-control">
-                            <option>Android</option>
-                            <option>Battle Net</option>
-                            <option>Origin</option>
-                            <option>Epic Games</option>
-                            <option>Free2Play</option>
-                            <option>GOC.COM</option>
-                            <option>NCSOFT</option>
-                            <option>Nintendo</option>
-                            <option>Other</option>
-                            <option>Playstation 3</option>
-                            <option>Playstation 4</option>
-                            <option>Steam</option>
-                            <option>Uplay</option>
-                            <option>Xbox 360</option>
-                            <option>Xbox One</option>
-
+                            <?php
+                            require_once '_BL/Plataforma.php';
+                            $POD = new Plataforma('','');
+                            $BFetch = ($POD->ReadALL());
+                            while ($row = $BFetch->fetch()) {
+                                echo '<option>' . $row['Plataforma'] . '</option>';
+                            }
+                            $POD=null;
+                            ?>
                         </select>
                 </div>
 
                         <div class="form-group">
                             <label class="loginformelement" >Genero</label>
                         <select class="form-control">
-
-                            <option>Action</option>
-                            <option>Adventure</option>
-                            <option>Anime</option>
-                            <option>Casual</option>
-                            <option>Co-op</option>
-                            <option>Fighting</option>
-                            <option>FPS</option>
-                            <option>Horror</option>
-                            <option>Simulation</option>
-                            <option>MMO</option>
-                            <option>Courses</option>
-                            <option>Open-World</option>
-                            <option>Indie</option>
-                            <option>Point&Click</option>
-                            <option>Puzzle</option>
-                            <option>Racing</option>
-                            <option>RPG</option>
-                            <option>Simulation</option>
-                            <option>Sport</option>
-                            <option>Story Rich</option>
-                            <option>Strategy</option>
-                            <option>Survival</option>
-                            <option>3PS</option>
-                            <option>VR Games</option>
-                            <option>Subscription</option>
-
+                            <?php
+                            require_once '_BL/Genero.php';
+                            $POD = new Genero('','');
+                            $BFetch = ($POD->ReadALL());
+                            while ($row = $BFetch->fetch()) {
+                                echo '<option>' . $row['genero'] . '</option>';
+                            }
+                            $POD=null;
+                            ?>
                         </select>
                         </div>
 

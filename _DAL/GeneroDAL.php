@@ -1,44 +1,41 @@
 <?php
-require "Conexao.php";
+require_once "Conexao.php";
 
 class GeneroDAL{
 
-    public function Create(Genero $genero){
-
-
+    public function Create(genero $gen){
         $PDO = new Connection();
         $PDO -> Connect();
         $sql = "INSERT INTO genero SET id=:id, genero=:genero;";
-        $PDO -> SQuerry($sql,$genero);
-
-
+        return $PDO -> SQuerry($sql,$gen);
+    }
+    public function ReadDAL(genero $gen){
+        $dbGen = new Connection();
+        $dbGen -> Connect();
+        $sql="SELECT FROM genero WHERE id = :id";
+        $val = ['id' => ($gen->id)];
+        return $dbGen->SQuerry($sql,$val);
+    }
+    public function ReadALLDAL(){
+        $dbGen = new Connection();
+        $dbGen -> Connect();
+        $sql = "SELECT * FROM genero";
+        return $dbGen->SQuerry($sql,null);
+    }
+    public function Update(genero $gen){
+        $dbGen = new Connection();
+        $dbGen -> Connect();
+        $sql="UPDATE genero set genero=:genero  where id=:id ";
+        return $dbGen->SQuerry($sql,$gen);
+    }
+    public function Delete(genero $gen){
+        $dbGen = new Connection();
+        $dbGen -> Connect();
+        $sql="DELETE FROM genero WHERE id = :id";
+        $val = ['id' => ($gen->id)];
+        return $dbGen->SQuerry($sql,$val);
     }
 
-    public function ReadAll(){
-        $db = new Connection();
-        $conn= $db -> Connect();
-        $sql = "SELECT * FROM `genero`";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        return $stmt;
-    }
-
-
-    public function Update(Genero $genero){
-        $db = new Connection();
-        $db -> Connect();
-        $sql = "UPDATE genero set genero=:genero  where id=:id ;";
-        $db->SQuerry($sql,$genero);
-    }
-
-public function Delete(Genero $genero){
-    $db = new Connection();
-    $conn= $db -> Connect();
-    $attr = 'id';
-    $where = ['id' => ($genero->$attr)];
-    $conn->prepare("DELETE FROM `genero` WHERE `genero`.id=:id")->execute($where);
-    return $conn;
-}
 }
 ?>
 
