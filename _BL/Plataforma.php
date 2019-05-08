@@ -16,23 +16,26 @@ class Plataforma
             $val = new PlataformaDAL();
             $val->Create($this);
         }
-    public function Read()    {
+    public function Read()
+    {
         $val = new PlataformaDAL();
         return $val -> ReadDAL($this);
 
     }
-    public function ReadALL()    {
+    public function ReadALL()
+    {
         $val = new PlataformaDAL();
         return $val -> ReadALLDAL();
 
     }
         
-        public function Update()     {
+        public function Update()
+        {
         $val = new PlataformaDAL();
         $val -> Update($this);
-
         }
-        public function Delete()     {
+        public function Delete()
+        {
             $val = new PlataformaDAL();
             $val -> Delete($this);
         }

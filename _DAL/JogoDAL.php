@@ -2,41 +2,41 @@
 require_once "Conexao.php";
 
 class JogoDAL{
-    public function Create(jogo $jog){
+
+    public function Create(Jogo $jog){
         $PDO = new Connection();
         $PDO -> Connect();
-        $sql = "INSERT INTO jogo SET id=:id, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma=:idPlataforma;";
-        return $PDO -> SQuerry($sql,$jog);
+        $sql = "INSERT INTO jogo SET idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idJogo=:idJogo;";
+        $arrayGen = (array) $jog;
+        return $PDO -> SQuerry($sql,$arrayGen);
     }
-    public function ReadDAL(jogo $jog){
+    public function ReadDAL(Jogo $jog){
         $dbJogo = new Connection();
         $dbJogo -> Connect();
-        $sql="SELECT FROM jogo WHERE id = :id";
-        $val = ['id' => ($jog->id)];
+        $sql="SELECT FROM Jogo WHERE idJogo = :idJogo";
+        $val = ['idJogo' => ($jog->idJogo)];
         return $dbJogo->SQuerry($sql,$val);
     }
     public function ReadALLDAL(){
         $dbJogo = new Connection();
         $dbJogo -> Connect();
-        $sql = "SELECT * FROM jogo";
+        $sql = "SELECT * FROM Jogo";
         return $dbJogo->SQuerry($sql,null);
     }
-    public function Update(jogo $jog){
+    public function Update(Jogo $jog){
         $dbJogo = new Connection();
         $dbJogo -> Connect();
-        $sql="UPDATE jogo set jogo=:jogo  where id=:id ";
-        return $dbJogo->SQuerry($sql,$jog);
+        $sql="Update jogo SET idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idJogo=:idJogo  where idJogo=:idJogo ";
+        $arrayGen = (array) $jog;
+        return $dbJogo->SQuerry($sql,$arrayGen);
     }
-    public function Delete(jogo $jog){
+    public function Delete(Jogo $jog){
         $dbJogo = new Connection();
         $dbJogo -> Connect();
-        $sql="DELETE FROM jogo WHERE id = :id";
-        $val = ['id' => ($jog->id)];
+        $sql="DELETE FROM Jogo WHERE idJogo = :idJogo";
+        $val = ['idJogo' => ($jog->idJogo)];
         return $dbJogo->SQuerry($sql,$val);
     }
 
 }
 ?>
-
-
-

@@ -11,9 +11,9 @@ class Jogo
     public $idPlataforma;
 
 
-    public function __construct($id, $nome, $preco, $descricao, $idGenero, $idPlataforma)
+    public function __construct($idJogo, $nome, $preco, $descricao, $idGenero, $idPlataforma)
     {
-        $this->idJogo = $id;
+        $this->idJogo = $idJogo;
         $this->nome = $nome;
         $this->preco = $preco;
         $this->descricao = $descricao;

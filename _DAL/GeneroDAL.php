@@ -1,19 +1,20 @@
 <?php
 require_once "Conexao.php";
 
-class GeneroDAL{
+class generoDAL{
 
-    public function Create(genero $gen){
+    public function Create(genero $Gen){
         $PDO = new Connection();
         $PDO -> Connect();
-        $sql = "INSERT INTO genero SET id=:id, genero=:genero;";
-        return $PDO -> SQuerry($sql,$gen);
+        $sql = "INSERT INTO genero SET genero=:genero;";
+        $val = ['genero' => $Gen->genero];
+        return $PDO -> SQuerry($sql,$val);
     }
-    public function ReadDAL(genero $gen){
+    public function ReadDAL(genero $Gen){
         $dbGen = new Connection();
         $dbGen -> Connect();
         $sql="SELECT FROM genero WHERE id = :id";
-        $val = ['id' => ($gen->id)];
+        $val = ['id' => ($Gen->id)];
         return $dbGen->SQuerry($sql,$val);
     }
     public function ReadALLDAL(){
@@ -22,17 +23,18 @@ class GeneroDAL{
         $sql = "SELECT * FROM genero";
         return $dbGen->SQuerry($sql,null);
     }
-    public function Update(genero $gen){
+    public function Update(genero $Gen){
         $dbGen = new Connection();
         $dbGen -> Connect();
         $sql="UPDATE genero set genero=:genero  where id=:id ";
-        return $dbGen->SQuerry($sql,$gen);
+        $arrayGen = (array) $Gen;
+        return $dbGen->SQuerry($sql,$arrayGen);
     }
-    public function Delete(genero $gen){
+    public function Delete(genero $Gen){
         $dbGen = new Connection();
         $dbGen -> Connect();
         $sql="DELETE FROM genero WHERE id = :id";
-        $val = ['id' => ($gen->id)];
+        $val = ['id' => ($Gen->id)];
         return $dbGen->SQuerry($sql,$val);
     }
 

@@ -13,9 +13,8 @@ class Connection
 
     public function SQuerry($SQLString,$obj){
         $pdo= $this->Connect();
-        $arrayGen = (array) $obj;
         $stmte = $pdo->prepare($SQLString);
-        $stmte->execute($arrayGen);
+        $stmte->execute($obj);
         return  $stmte;
     }
 

@@ -6,8 +6,9 @@ class PlataformaDAL{
     public function Create(Plataforma $plat){
         $PDO = new Connection();
         $PDO -> Connect();
-        $sql = "INSERT INTO plataforma SET id=:id, Plataforma=:Plataforma;";
-        return $PDO -> SQuerry($sql,$plat);
+        $sql = "INSERT INTO plataforma SET Plataforma=:Plataforma;";
+        $val = ['Plataforma' => $plat->Plataforma];
+        return $PDO -> SQuerry($sql,$val);
     }
     public function ReadDAL(Plataforma $plat){
     $dbPlat = new Connection();
@@ -26,7 +27,8 @@ class PlataformaDAL{
         $dbPlat = new Connection();
         $dbPlat -> Connect();
         $sql="UPDATE plataforma set Plataforma=:Plataforma  where id=:id ";
-        return $dbPlat->SQuerry($sql,$plat);
+        $arrayGen = (array) $plat;
+        return $dbPlat->SQuerry($sql,$arrayGen);
     }
     public function Delete(Plataforma $plat){
     $dbPlat = new Connection();

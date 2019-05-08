@@ -33,6 +33,10 @@
 								<label for="checkbox1"></label>
 							</span>
                 <?php
+                require_once '_BL/Jogo.php';
+
+                $pp= new Jogo('','wqrqweryyyyqwer','20','wergergerg','1','1');
+                $pp-> Create();
 
                 require_once '_BL/Jogo.php';
                 require_once '_BL/Genero.php';
@@ -42,18 +46,13 @@
 
                 while ($row = $BFetch->fetch()) {
 
-                    $gen = new Genero('1' ,'eeee');
-                    $genn = ($gen->Read());
-
 
                     echo '<tr>';
                     echo '<td>' . $row['nome'] . '</td>';
                     echo '<td>' . $row['preco'] . '</td>';
                     echo '<td>' . $row['descricao'] . '</td>';
-                    echo '<td>' . $genn.'</td>';
-                    echo '<td>' . $genn. '</td>';
-
-                    echo '<td>' . $row['idPlataforma'] . '</td>';
+                    echo '<td>' . $row['idGenero'].'</td>';
+                    echo '<td>' . $row['idPlataforma']. '</td>';
                     echo '<td>
                         <a href="#editgeneros" onclick="this" class="edit" ><i class="material-icons" title="Edit" >&#xE254;</i></a>
                         <a href="#deletegeneros" onclick="this" class="delete"><i class="material-icons" title="Delete">&#xE872;</i></a>
