@@ -1,5 +1,6 @@
 <?php
-include ('_DAL/JogoDAL.php');
+require_once ('_DAL/JogoDAL.php');
+
 
 class Jogo
 {
@@ -25,7 +26,7 @@ class Jogo
     public function Create()
     {
         $val = new JogoDAL();
-        $val->Create($this);
+        $val->CreateDAL($this);
     }
     public function ReadALL()    {
         $val = new JogoDAL();

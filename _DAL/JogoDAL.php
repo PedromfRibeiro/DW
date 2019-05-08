@@ -3,12 +3,13 @@ require_once "Conexao.php";
 
 class JogoDAL{
 
-    public function Create(Jogo $jog){
+
+    public function CreateDAL(Jogo $Enc){
         $PDO = new Connection();
         $PDO -> Connect();
-        $sql = "INSERT INTO jogo SET idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idJogo=:idJogo;";
-        $arrayGen = (array) $jog;
-        return $PDO -> SQuerry($sql,$arrayGen);
+        $sql = "INSERT INTO Jogo  SET 	idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma";
+        $val = (array) $Enc;
+        return $PDO -> SQuerry($sql,$val);
     }
     public function ReadDAL(Jogo $jog){
         $dbJogo = new Connection();
@@ -26,7 +27,7 @@ class JogoDAL{
     public function Update(Jogo $jog){
         $dbJogo = new Connection();
         $dbJogo -> Connect();
-        $sql="Update jogo SET idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idJogo=:idJogo  where idJogo=:idJogo ";
+        $sql="Update jogo SET idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma=:idPlataforma where idJogo=:idJogo ";
         $arrayGen = (array) $jog;
         return $dbJogo->SQuerry($sql,$arrayGen);
     }

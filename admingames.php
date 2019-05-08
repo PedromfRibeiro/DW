@@ -35,8 +35,8 @@
                 <?php
                 require_once '_BL/Jogo.php';
 
-                $pp= new Jogo('','wqrqweryyyyqwer','20','wergergerg','1','1');
-                $pp-> Create();
+                $pp = new Jogo('','wqwer','2055','werttttttttttgergerg','1','1');
+                $pp -> Create();
 
                 require_once '_BL/Jogo.php';
                 require_once '_BL/Genero.php';

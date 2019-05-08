@@ -20,7 +20,6 @@ class Utilizador
         $sqle = "SELECT * FROM Utilizador";
         $stmte = $conne->prepare($sqle);
         $stmte->execute();
-
         return $stmte;
     }
 
