@@ -3,7 +3,7 @@ class Connection
 {public $conexao;
     public function Connect(){
         try {
-            $conexao = new PDO("mysql:host=localhost; dbname=dwphp","root","" );
+            $conexao = new PDO("mysql:host=localhost; dbname=dwphp","dwphp","" );
             return $conexao;
 
         } catch (PDOException $erro) {
