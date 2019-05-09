@@ -7,7 +7,7 @@ class StockDAL
     public function Create(Stock $stock){
         $PDO = new Connection();
         $PDO -> Connect();
-        $sql = "INSERT INTO stock SET quantidade=:quantidade, idJogo=:idJogo;";
+        $sql = "INSERT INTO stock SET idStock=:idStock, quantidade=:quantidade, idJogo=:idJogo;";
         $arrayStock = (array) $stock;
         return $PDO -> SQuerry($sql,$arrayStock);
     }

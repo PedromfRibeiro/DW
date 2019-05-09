@@ -11,7 +11,7 @@ public $idJogo;
 
     public function __construct($idStock, $quantidade, $idJogo)
     {
-        $this->$idStock = $idStock;
+        $this->idStock = $idStock;
         $this->quantidade = $quantidade;
         $this->idJogo = $idJogo;
     }
