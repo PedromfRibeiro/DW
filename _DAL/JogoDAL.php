@@ -7,7 +7,7 @@ class JogoDAL{
     public function CreateDAL(Jogo $Enc){
         $PDO = new Connection();
         $PDO -> Connect();
-        $sql = "INSERT INTO Jogo  SET 	idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma";
+        $sql = "INSERT INTO `jogo` (`idJogo`, `nome`, `preco`, `descricao`, `idGenero`, `idPlataforma`) VALUES (0, `nome`, `preco`, `descricao`, `idGenero`, `idPlataforma`);";
         $val = (array) $Enc;
         return $PDO -> SQuerry($sql,$val);
     }

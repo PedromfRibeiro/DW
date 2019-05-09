@@ -2,11 +2,14 @@
 
 <?php
 
-require_once '_BL/Jogo.php';
+require_once '_BL/Venda.php';
+require_once '_BL/Stock.php';
 
-$pp = new Jogo('','qqwwweeerr','20','werqwegergerg','1','1');
+$pp = new Venda('','2019-05-08','21','1','1','1');
 $pp -> Create();
 
+$oo = new Stock('0','33','1');
+$oo -> Create();
 ?>
 
 </html>
