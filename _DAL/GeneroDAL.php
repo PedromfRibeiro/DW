@@ -3,7 +3,7 @@ require_once "Conexao.php";
 
 class generoDAL{
 
-    public function Create(genero $Gen){
+    public function CreateDAL(genero $Gen){
         $PDO = new Connection();
         $PDO -> Connect();
         $sql = "INSERT INTO genero SET genero=:genero;";

@@ -13,9 +13,11 @@ class PlataformaDAL{
     public function ReadDAL(Plataforma $plat){
     $dbPlat = new Connection();
     $dbPlat -> Connect();
-    $sql="SELECT FROM plataforma WHERE id = :id";
+    $sql="SELECT id, Plataforma FROM plataforma WHERE id = :id";
     $val = ['id' => ($plat->id)];
-    return $dbPlat->SQuerry($sql,$val);
+    $stm= $dbPlat->SQuerry($sql,$val);
+    $res = $stm->fetch();
+    return $res;
     }
     public function ReadALLDAL(){
         $dbPlat = new Connection();

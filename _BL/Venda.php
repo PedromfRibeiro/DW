@@ -47,6 +47,10 @@ public $id_Encomenda;
         $val = new VendaDAL();
         $val -> Delete($this);
     }
+    public function CreateTable(){
+        $val = new VendaDAL();
+        $val -> CreateDB();
+    }
 
 
 }

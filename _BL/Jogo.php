@@ -44,7 +44,10 @@ class Jogo
         $val -> Delete($this);
     }
 
-    public function CreateTable(){}
+    public function CreateTable(){
+        $val = new JogoDAL();
+        $val -> CreateDB();
+    }
 
 }
 

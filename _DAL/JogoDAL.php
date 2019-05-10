@@ -9,7 +9,6 @@ class JogoDAL{
         $PDO -> Connect();
         $sql = "INSERT INTO jogo SET idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma=:idPlataforma;";
         $val = (array) $Jogo;
-
         return $PDO -> SQuerry($sql,$val);
     }
     public function ReadDAL(Jogo $Jogo){
@@ -38,6 +37,12 @@ class JogoDAL{
         $sql="DELETE FROM Jogo WHERE idJogo = :idJogo";
         $val = ['idJogo' => ($Jogo->idJogo)];
         return $dbJogo->SQuerry($sql,$val);
+    }
+    public function CreateDB(){
+        $dbJogo = new Connection();
+        $dbJogo -> Connect();
+        $sql="use dwphp;CREATE TABLE IF NOT EXISTS `jogo` (  `idJogo` int(11) NOT NULL AUTO_INCREMENT,  `nome` varchar(45) NOT NULL,  `preco` varchar(45) NOT NULL,  `descricao` varchar(45) NOT NULL,  `idGenero` int(11) NOT NULL,  `idPlataforma` int(11) NOT NULL,  PRIMARY KEY (`idJogo`),  KEY `fk_Genero_idx` (`idGenero`),  KEY `fk_Plataforma_idx` (`idPlataforma`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+        return $dbJogo->SQuerry($sql,null);
     }
 
 }

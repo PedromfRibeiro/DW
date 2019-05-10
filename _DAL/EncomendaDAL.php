@@ -41,7 +41,7 @@ class EncomendaDAl{
     public function CreateDB(){
         $dbEnc = new Connection();
         $dbEnc -> Connect();
-        $sql="USE `dwphp`; CREATE TABLE IF NOT EXISTS `encomenda` (    `idEncomenda` int(11) NOT NULL AUTO_INCREMENT,    `data_enc` date NOT NULL,    `Finalizada` tinyint(4) NOT NULL,    `id_utilizador` int(11) NOT NULL,    PRIMARY KEY (`idEncomenda`),    KEY `fk_id_utilizador_idx` (`id_utilizador`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+        $sql="USE `dwphp`; CREATE TABLE IF NOT EXISTS`encomenda`(`idEncomenda` int(11) NOT NULL AUTO_INCREMENT,`data_enc` date NOT NULL,`Finalizada` tinyint(4) NOT NULL,`id_utilizador` int(11) NOT NULL,PRIMARY KEY (`idEncomenda`),KEY `fk_id_utilizador_idx` (`id_utilizador`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;ADD CONSTRAINT `fk_id_utilizador` FOREIGN KEY (`id_utilizador`) REFERENCES `utilizador` (`idUtilizador`) ON DELETE NO ACTION ON UPDATE NO ACTION;";
         return $dbEnc->SQuerry($sql,null);
 
 }
