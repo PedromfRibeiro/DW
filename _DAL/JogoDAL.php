@@ -7,8 +7,13 @@ class JogoDAL{
     public static function CreateDAL(Jogo $Jogo){
         $PDO = new Connection();
         $PDO -> Connect();
-        $sql = "INSERT INTO jogo SET idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma=:idPlataforma;";
-        $val = (array) $Jogo;
+        $sql = "INSERT INTO jogo SET nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma=:idPlataforma;";
+        $val = array(
+            'nome' => $Jogo->nome,
+            'preco' => $Jogo->preco,
+            'descricao' => $Jogo->descricao,
+            'idGenero' => $Jogo->idGenero,
+            'idPlataforma' => $Jogo->idPlataforma);
         return $PDO -> SQuerry($sql,$val);
     }
     public static function ReadDAL(Jogo $Jogo){
@@ -28,9 +33,14 @@ class JogoDAL{
     public static function Update(Jogo $Jogo){
         $dbJogo = new Connection();
         $dbJogo -> Connect();
-        $sql="Update jogo SET idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma=:idPlataforma where idJogo=:idJogo ";
-        $arrayGen = (array) $Jogo;
-        return $dbJogo->SQuerry($sql,$arrayGen);
+        $sql="Update jogo SET  nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma=:idPlataforma where idJogo=:idJogo ";
+        $val = array(
+            'nome' => $Jogo->nome,
+            'preco' => $Jogo->preco,
+            'descricao' => $Jogo->descricao,
+            'idGenero' => $Jogo->idGenero,
+            'idPlataforma' => $Jogo->idPlataforma);
+        return $dbJogo->SQuerry($sql,$val);
     }
     public static function Delete(Jogo $Jogo){
         $dbJogo = new Connection();

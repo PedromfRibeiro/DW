@@ -13,7 +13,7 @@ class EncomendaDAl{
     public static function ReadDAL(encomenda $Enc){
         $dbEnc = new Connection();
         $dbEnc -> Connect();
-        $sql="SELECT FROM encomenda WHERE id = :id";
+        $sql="SELECT * FROM encomenda WHERE idEncomenda = :idEncomenda";
         $val = ['id' => ($Enc->idEncomenda)];
         $stm = $dbEnc->SQuerry($sql,$val);
         return  $stm->fetch();
@@ -27,7 +27,7 @@ class EncomendaDAl{
     public static function Update(encomenda $Enc){
         $dbEnc = new Connection();
         $dbEnc -> Connect();
-        $sql="UPDATE encomenda set encomenda=:encomenda  where id=:id ";
+        $sql="UPDATE encomenda set idEncomenda=:idEncomenda,data_enc=:data_enc,Finalizada=:Finalizada,id_utilizador=:id_utilizador  where idEncomenda=:idEncomenda ";
         $arrayGen = (array) $Enc;
         return $dbEnc->SQuerry($sql,$arrayGen);
     }

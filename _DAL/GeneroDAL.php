@@ -27,9 +27,7 @@ class generoDAL{
     public static function Update(genero $Gen){
         $dbGen = new Connection();
         $dbGen -> Connect();
-
         $sql="UPDATE genero set genero=:genero  where id=:id ";
-
         $arrayGen = (array) $Gen;
         return $dbGen->SQuerry($sql,$arrayGen);
     }

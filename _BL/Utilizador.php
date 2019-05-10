@@ -9,15 +9,17 @@ public $idUtilizador;
 public $Nome;
 public $Data_Registo;
 public $Autorizcao;
+public $Data_Nascimento;
 public $email;
 
 
-    public function __construct($idUtilizador, $Nome, $Data_Registo, $Autorizcao, $email)
+    public function __construct($idUtilizador, $Nome, $Data_Registo, $Autorizcao,$Data_Nascimento, $email)
     {
         $this->idUtilizador = $idUtilizador;
         $this->Nome = $Nome;
         $this->Data_Registo = $Data_Registo;
         $this->Autorizcao = $Autorizcao;
+        $this->Data_Nascimento=$Data_Nascimento;
         $this->email = $email;
     }
     public function Create()

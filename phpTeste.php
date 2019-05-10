@@ -10,13 +10,16 @@ require_once '_BL/Stock.php';
 require_once '_BL/Utilizador.php';
 require_once '_BL/Venda.php';
 
+$date = "2012-08-06";
+$date=date("Y-m-d",strtotime($date));
+
 $plataforma = new Plataforma('','');
-$Genero     = new Genero('','');
-$Stock      = new Stock('','','');
-$Utilizador = new Utilizador('','','','','');
-$Encomenda  = new Encomenda('','','','');
-$Jogo       = new Jogo('','','','','','');
-$Venda      = new Venda('','','','','','');
+$Genero     = new Genero('','aa');
+$Stock      = new Stock('','11','1');
+$Utilizador = new Utilizador('','Joao',$date,'0',$date,'umemail@hotmail.com');
+$Encomenda  = new Encomenda('','0000-00-00','1','1');
+$Jogo       = new Jogo('','Rise of DW','20.0','Lorum','1','1');
+$Venda      = new Venda('','20-01-2019','20.0','1','1','1');
 
 
 //--------Create Tables-------------
@@ -30,6 +33,15 @@ $Venda      = new Venda('','','','','','');
     $Venda->CreateTable();
 
 //----------------------------------
+
+$Genero->Create();
+$Stock->Create();
+$Jogo->Create();
+$Encomenda->Create();
+$Venda->Create();
+$Encomenda->idEncomenda= '2';
+$Encomenda->Finalizada= '0';
+$Encomenda->Update();
 
 //--------Create-------------
 $plataforma->Plataforma = 'Acme';
@@ -59,6 +71,7 @@ $arr=array("Action","Adventure","Anime","Casual","Co-op","Fighting","FPS","Horro
 foreach($arr as &$value){
     $Genero-> genero =$value;
     $Genero->Create();}
+
 ?>
 
 </html>
