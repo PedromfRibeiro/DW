@@ -68,12 +68,6 @@ $POD=null;
                 </div>
             </div>
         </div>
-        <?php
-        $row=null;
-        $POD=null;
-        $BFetch=null;
-        ?>
-
     </div>
 
 

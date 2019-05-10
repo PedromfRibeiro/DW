@@ -15,7 +15,8 @@ class EncomendaDAl{
         $dbEnc -> Connect();
         $sql="SELECT FROM encomenda WHERE id = :id";
         $val = ['id' => ($Enc->idEncomenda)];
-        return $dbEnc->SQuerry($sql,$val);
+        $stm = $dbEnc->SQuerry($sql,$val);
+        return  $stm->fetch();
     }
     public static function ReadALLDAL(){
         $dbEnc = new Connection();
@@ -38,7 +39,7 @@ class EncomendaDAl{
         return $dbEnc->SQuerry($sql,$val);
     }
 
-    public function CreateDB(){
+    public static function CreateDB(){
         $dbEnc = new Connection();
         $dbEnc -> Connect();
         $sql="USE `dwphp`; CREATE TABLE IF NOT EXISTS`encomenda`(`idEncomenda` int(11) NOT NULL AUTO_INCREMENT,`data_enc` date NOT NULL,`Finalizada` tinyint(4) NOT NULL,`id_utilizador` int(11) NOT NULL,PRIMARY KEY (`idEncomenda`),KEY `fk_id_utilizador_idx` (`id_utilizador`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;ADD CONSTRAINT `fk_id_utilizador` FOREIGN KEY (`id_utilizador`) REFERENCES `utilizador` (`idUtilizador`) ON DELETE NO ACTION ON UPDATE NO ACTION;";

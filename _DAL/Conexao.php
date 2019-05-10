@@ -1,6 +1,8 @@
 <?php
 class Connection
-{public $conexao;
+{
+    public $conexao;
+
     public function Connect(){
         try {
             $conexao = new PDO("mysql:host=localhost; dbname=dwphp","dwphp","" );
@@ -17,8 +19,6 @@ class Connection
         $stmte->execute($obj);
         return  $stmte;
     }
-
-
 }
 
 
