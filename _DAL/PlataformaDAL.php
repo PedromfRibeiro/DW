@@ -37,9 +37,13 @@ class PlataformaDAL{
     $val = ['id' => ($plat->id)];
     return $dbPlat->SQuerry($sql,$val);
 }
-
+public function CreateDB(){
+    $dbPlat = new Connection();
+    $dbPlat -> Connect();
+    $sql="Use dwphp; CREATE TABLE IF NOT EXISTS `plataforma` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `Plataforma` varchar(45) NOT NULL,  PRIMARY KEY (`id`))DEFAULT CHARSET=utf8;";
+    return $dbPlat->SQuerry($sql,null);}
 }
-?>
+    ?>
 
 
 

@@ -37,10 +37,14 @@ public function Update()     {
     $val -> Update($this);
 
 }
-public function Delete()     {
+public  function Delete()     {
     $val = new EncomendaDAl();
     $val -> Delete($this);
 }
 
 
+public function CreateTable(){
+    $val = new EncomendaDAl();
+    $val -> CreateDB();
+}
 }

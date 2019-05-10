@@ -40,8 +40,11 @@ class Plataforma
             $val -> Delete($this);
         }
 
-        public function CreateTable(){}
+        public function CreateTable(){
 
+        $val = new PlataformaDAL();
+        $val -> CreateDB();
+    }
 }
 
 ?>

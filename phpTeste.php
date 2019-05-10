@@ -2,11 +2,10 @@
 
 <?php
 
-require_once '_BL/Jogo.php';
-require_once '_BL/Stock.php';
+require_once '_BL/Encomenda.php';
+require_once '_BL/Plataforma.php';
+$pp = new Plataforma('','');  $pp -> CreateTable();
 
-$pp = new Jogo('','aeaeaeae','21','aeaeaeaeae1','1','1');
-$pp -> Create();
 
 ?>
 

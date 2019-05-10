@@ -9,6 +9,7 @@ class JogoDAL{
         $PDO -> Connect();
         $sql = "INSERT INTO jogo SET idJogo=:idJogo, nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma=:idPlataforma;";
         $val = (array) $Jogo;
+
         return $PDO -> SQuerry($sql,$val);
     }
     public function ReadDAL(Jogo $Jogo){
