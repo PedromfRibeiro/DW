@@ -1,5 +1,5 @@
 <?php
-include ('_DAL/PlataformaDAL.php');
+require_once ('_DAL/PlataformaDAL.php');
 
 class Plataforma
 {
@@ -40,10 +40,10 @@ class Plataforma
             $val -> Delete($this);
         }
 
-        public function CreateTable(){
+        public function CreateDB(){
 
         $val = new PlataformaDAL();
-        $val -> CreateDB();
+        $val -> CreateTable();
     }
 }
 

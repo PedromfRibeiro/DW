@@ -1,5 +1,7 @@
 <?php
 
+require_once ('_DAL/UtilizadorDAL.php');
+
 
 class Utilizador
 {
@@ -46,7 +48,12 @@ public $email;
         $val -> Delete($this);
     }
 
-    public function CreateTable(){}
+    public function CreateTable(){
+        $val = new UtilizadorDAL();
+        $val -> CreateTable();
+
+
+    }
 
 
 }

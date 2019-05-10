@@ -37,6 +37,12 @@ class generoDAL{
         $val = ['id' => ($Gen->id)];
         return $dbGen->SQuerry($sql,$val);
     }
+    public function CreateTable(){
+        $dbGen = new Connection();
+        $dbGen -> Connect();
+        $sql="Use dwphp; CREATE TABLE IF NOT EXISTS `genero` (  `idGenero` int(11) NOT NULL AUTO_INCREMENT,  `genero` varchar(45) NOT NULL,  PRIMARY KEY (`idGenero`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+        return $dbGen->SQuerry($sql,null);
+    }
 
 }
 ?>

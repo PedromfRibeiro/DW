@@ -41,7 +41,10 @@ class Genero
             $val -> Delete($this);
         }
 
-        public function CreateTable(){}
+        public function CreateDB(){
+            $val = new GeneroDAL();
+            $val -> CreateTable();
+    }
 
 }
 

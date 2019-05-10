@@ -45,4 +45,11 @@ public $idJogo;
         $val -> Delete($this);
     }
 
+    public function CreateDB()     {
+        $val = new StockDAL();
+        $val -> CreateTable();
+    }
+
+
+
 }

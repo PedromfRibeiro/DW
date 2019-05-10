@@ -38,4 +38,10 @@ class StockDAL
         $val = ['id' => ($stock->id)];
         return $dbstock->SQuerry($sql,$val);
     }
+    public function CreateTable(){
+        $dbstock = new Connection();
+        $dbstock -> Connect();
+        $sql="use dwphp;CREATE TABLE IF NOT EXISTS `stock` (  `idStock` int(11) NOT NULL AUTO_INCREMENT,  `quantidade` varchar(45) NOT NULL,  `idJogo` int(11) NOT NULL,  PRIMARY KEY (`idStock`),  KEY `fk_idJogo_idx` (`idJogo`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+        return $dbstock->SQuerry($sql,null);
+    }
 }

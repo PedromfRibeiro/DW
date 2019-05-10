@@ -2,7 +2,7 @@
 require_once "Conexao.php";
 
 
-class Utilizador
+class UtilizadorDAL
 {
     public function Create(Utilizador $util)
     {
@@ -53,6 +53,11 @@ class Utilizador
         $conn->prepare("DELETE FROM `Utilizador` WHERE `Utilizador`.id=:id")->execute($where);
         return $conn;
     }
-
+    public function CreateTable(){
+        $dbPlat = new Connection();
+        $dbPlat -> Connect();
+        $sql="Use dwphp; CREATE TABLE IF NOT EXISTS `utilizador` (  `idUtilizador` int(11) NOT NULL,  `Nome` varchar(45) NOT NULL,  `Data_Registo` datetime(6) NOT NULL,  `Autorizacao` tinyint(4) NOT NULL,  `Data_Nascimento` date NOT NULL,  `email` varchar(45) NOT NULL,  PRIMARY KEY (`idUtilizador`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+        return $dbPlat->SQuerry($sql,null);
+    }
 
 }
