@@ -48,7 +48,7 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="LogIn.php">Login </a>
+                        <a class="nav-link" href="Login/login.php">Login </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Profile.php">Profile</a>

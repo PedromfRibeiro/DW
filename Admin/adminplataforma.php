@@ -4,7 +4,7 @@
     <?php
     include '_Includes/Header.php';
     ?>
-    <link href="_css/admingames.css" type="text/css" rel="stylesheet"/>
+    <link href="../_css/adminplataforma.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -13,10 +13,10 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Manage <b>Cliente</b></h2>
+                    <h2>Manage <b>Plataforma</b></h2>
                 </div>
                 <div class="col-sm-6">
-                    <a href="#addCliente" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Add New Cliente</span></a>
+                    <a href="#addplataforma" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Add New Plataforma</span></a>
                 </div>
             </div>
         </div>
@@ -30,9 +30,6 @@
 							</span>
                 </th>
                 <th>Name</th>
-                <th>Idade</th>
-                <th>Email</th>
-                <th>Password</th>
             </tr>
             </thead>
             <tbody>
@@ -43,14 +40,10 @@
 								<label for="checkbox1"></label>
 							</span>
                 </td>
-                <td>Miguel Gonçalves</td>
-                <td>22</td>
-                <td>arinto00@gmail.com</td>
-                <td>teste</td>
-
+                <td>Steam </td>
                 <td>
-                    <a href="#editCliente" class="edit" ><i class="material-icons" title="Edit">&#xE254;</i></a>
-                    <a href="#deleteCliente" class="delete"><i class="material-icons" title="Delete">&#xE872;</i></a>
+                    <a href="#editPlataforma" class="edit" ><i class="material-icons" title="Edit">&#xE254;</i></a>
+                    <a href="#deletePataforma" class="delete"><i class="material-icons" title="Delete">&#xE872;</i></a>
                 </td>
             </tr>
             <tr>
@@ -60,13 +53,11 @@
 								<label for="checkbox2"></label>
 							</span>
                 </td>
-                <td>Pedro Ribeiro</td>
-                <td>21</td>
-                <td>OmortoQueEstaVivo@gmail.com</td>
-                <td>teste2</td>
+                <td>Origin</td>
+
                 <td>
-                    <a href="#editCliente" class="edit" ><i class="material-icons"  title="Edit">&#xE254;</i></a>
-                    <a href="#deleteCliente" class="delete" ><i class="material-icons"  title="Delete">&#xE872;</i></a>
+                    <a href="#editPlataforma" class="edit" ><i class="material-icons"  title="Edit">&#xE254;</i></a>
+                    <a href="#deletePlataforma" class="delete" ><i class="material-icons"  title="Delete">&#xE872;</i></a>
                 </td>
             </tr>
 

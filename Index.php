@@ -52,7 +52,7 @@
         <a href="Produtos.php">
             <button type="button" class="btn btn-secondary btn-lg btn-block">Produtos</button>
         </a>
-        <a href="LogIn.php">
+        <a href="Login/login.php">
             <button type="button" class="btn btn-secondary btn-lg btn-block">Login</button>
         </a>
         <a href="Register.php">

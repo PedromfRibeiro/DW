@@ -4,7 +4,7 @@
     <?php
     require '_Includes/Header.php';
     ?>
-    <link href="_css/admingeneros.css" type="text/css" rel="stylesheet"/>
+    <link href="../_css/admingeneros.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>

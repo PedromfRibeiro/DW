@@ -4,7 +4,7 @@
     <?php
     include '_Includes/Header.php';
     ?>
-    <link href="_css/adminplataforma.css" type="text/css" rel="stylesheet"/>
+    <link href="../_css/adminencomendas.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -13,10 +13,10 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Manage <b>Plataforma</b></h2>
+                    <h2>Manage <b>Encomendas</b></h2>
                 </div>
                 <div class="col-sm-6">
-                    <a href="#addplataforma" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Add New Plataforma</span></a>
+                    <a href="#addencomendas" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Add New encomenda</span></a>
                 </div>
             </div>
         </div>
@@ -29,7 +29,11 @@
 								<label for="selectAll"></label>
 							</span>
                 </th>
-                <th>Name</th>
+                <th>Nome</th>
+                <th>Produtos</th>
+                <th>Data de encomenda</th>
+                <th>Data de entrega</th>
+                <th>Custo</th>
             </tr>
             </thead>
             <tbody>
@@ -40,10 +44,14 @@
 								<label for="checkbox1"></label>
 							</span>
                 </td>
-                <td>Steam </td>
+                <td>Miguel Gonçalves </td>
+                <td>PLAYERUNKNOWN'S BATTLEGROUNDS</td>
+                <td> 26/03/2019</td>
+                <td>3/05/2019</td>
+                <td>29.99</td>
                 <td>
-                    <a href="#editPlataforma" class="edit" ><i class="material-icons" title="Edit">&#xE254;</i></a>
-                    <a href="#deletePataforma" class="delete"><i class="material-icons" title="Delete">&#xE872;</i></a>
+                    <a href="#editgeneros" class="edit" ><i class="material-icons" title="Edit">&#xE254;</i></a>
+                    <a href="#deletegeneros" class="delete"><i class="material-icons" title="Delete">&#xE872;</i></a>
                 </td>
             </tr>
             <tr>
@@ -53,11 +61,14 @@
 								<label for="checkbox2"></label>
 							</span>
                 </td>
-                <td>Origin</td>
-
+                <td>Pedro Ribeiro</td>
+                <td>PLAYERUNKNOWN'S BATTLEGROUNDS,Counter-Strike: Global Offensive</td>
+                <td> 13/03/2019</td>
+                <td>23/05/2019</td>
+                <td>49.98</td>
                 <td>
-                    <a href="#editPlataforma" class="edit" ><i class="material-icons"  title="Edit">&#xE254;</i></a>
-                    <a href="#deletePlataforma" class="delete" ><i class="material-icons"  title="Delete">&#xE872;</i></a>
+                    <a href="#editgeneros" class="edit" ><i class="material-icons"  title="Edit">&#xE254;</i></a>
+                    <a href="#deletegeneros" class="delete" ><i class="material-icons"  title="Delete">&#xE872;</i></a>
                 </td>
             </tr>
 
