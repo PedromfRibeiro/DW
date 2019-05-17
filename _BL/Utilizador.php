@@ -1,31 +1,34 @@
 <?php
 
-require_once ('_DAL/UtilizadorDAL.php');
+require_once ('../_DAL/UtilizadorDAL.php');
 
 
 class Utilizador
 {
 public $idUtilizador;
 public $Nome;
+public $pass;
 public $Data_Registo;
-public $Autorizcao;
+public $Autorizacao;
 public $Data_Nascimento;
 public $email;
 
-
-    public function __construct($idUtilizador, $Nome, $Data_Registo, $Autorizcao,$Data_Nascimento, $email)
+    public function __construct($idUtilizador, $Nome, $pass, $Data_Registo, $Autorizacao, $Data_Nascimento, $email)
     {
         $this->idUtilizador = $idUtilizador;
         $this->Nome = $Nome;
+        $this->pass = $pass;
         $this->Data_Registo = $Data_Registo;
-        $this->Autorizcao = $Autorizcao;
-        $this->Data_Nascimento=$Data_Nascimento;
+        $this->Autorizacao = $Autorizacao;
+        $this->Data_Nascimento = $Data_Nascimento;
         $this->email = $email;
     }
+
+
     public function Create()
     {
         $val = new UtilizadorDAL();
-        $val->Create($this);
+        $val->CreateDAL($this);
     }
     public function Read()     {
         $val = new UtilizadorDAL();

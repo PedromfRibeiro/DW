@@ -4,29 +4,33 @@ require_once "Conexao.php";
 
 class UtilizadorDAL
 {
-    public static function Create(Utilizador $util)
+    public static function CreateDAL(Utilizador $util)
     {
 
 
         $PDO = new Connection();
         $PDO->Connect();
-        $sql = "INSERT INTO Utilizador set nome=:nome, Data_Registo=:Data_Registo, Autorizcao=:Autorizcao,Data_Nascimento=:Data_Nascimento,email=:email;";
+        $sql = "INSERT INTO utilizador set Nome=:Nome, pass=:pass, Data_Registo=:Data_Registo, Autorizacao=:Autorizacao,Data_Nascimento=:Data_Nascimento,email=:email;";
         $val =array(
             ':Nome'=>$util->Nome,
+            ':pass'=>$util->pass,
             ':Data_Registo'=>$util->Data_Registo,
-            ':Autorizcao'=>$util->Autorizcao,
+            ':Autorizacao'=>$util->Autorizacao,
             ':Data_Nascimento'=>$util->Data_Nascimento,
             ':email'=>$util->email);
     $PDO->SQuerry($sql, $val);
     }
 
 
-    public static function ReadDAL($Enc)
+    public static function ReadDAL(Utilizador $util)
     {
         $dbUtilizador = new Connection();
         $dbUtilizador -> Connect();
-        $sql = "SELECT * FROM Utilizador WHERE idUtilizador=:idUtilizador";
-        $val = ['id' => ($Enc->idEncomenda)];
+        $sql = "SELECT * FROM Utilizador WHERE email=:email AND pass=:pass";
+        $val = [
+            ':email'=>$util->email,
+            ':pass'=>$util->pass,
+        ];
         $stm = $dbUtilizador->SQuerry($sql,$val);
         return $stm->fetch();
     }
@@ -62,7 +66,7 @@ class UtilizadorDAL
     public static function CreateTable(){
         $dbUtilizador = new Connection();
         $dbUtilizador -> Connect();
-        $sql="Use dwphp; CREATE TABLE IF NOT EXISTS `utilizador` (  `idUtilizador` int(11) NOT NULL,  `Nome` varchar(45) NOT NULL,  `Data_Registo` date(6) NOT NULL,  `Autorizacao` tinyint(4) NOT NULL,  `Data_Nascimento` date NOT NULL,  `email` varchar(45) NOT NULL,  PRIMARY KEY (`idUtilizador`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+        $sql="Use dwphp; CREATE TABLE IF NOT EXISTS `utilizador` (  `idUtilizador` int(11) NOT NULL,  `Nome` varchar(45) NOT NULL,`pass` varchar(45) NOT NULL , `Data_Registo` date NOT NULL,  `Autorizacao` tinyint(4) NOT NULL,  `Data_Nascimento` date NOT NULL,  `email` varchar(45) NOT NULL,  PRIMARY KEY (`idUtilizador`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
         return $dbUtilizador->SQuerry($sql,null);
     }
 

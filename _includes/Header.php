@@ -69,17 +69,23 @@
     <form class="modal-content animate" action="/action_page.php">
 
 
-        <div class="container">
+        <div class="container" id="Login_Form">
             <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <input type="text" id="Login_Nome" placeholder="Enter Username" name="uname" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" id="Login_pass" placeholder="Enter Password" name="psw" required>
 
             <button type="submit">Login</button>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
+            <?php
+            require_once "../_BL/Utilizador.php";
+            $PDO = new Utilizador($_POST['Login_Nome'],$_POST['Login_pass'],'','','');
+            $BFetch = ($POD->Read());
+            ?>
+
         </div>
 
         <div class="container" >
