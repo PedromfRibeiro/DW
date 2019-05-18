@@ -12,8 +12,10 @@ public $Data_Registo;
 public $Autorizacao;
 public $Data_Nascimento;
 public $email;
+public $code_hash;
+public $Verify;
 
-    public function __construct($idUtilizador, $Nome, $pass, $Data_Registo, $Autorizacao, $Data_Nascimento, $email)
+    public function __construct($idUtilizador, $Nome, $pass, $Data_Registo, $Autorizacao, $Data_Nascimento, $email, $code_hash, $Verify)
     {
         $this->idUtilizador = $idUtilizador;
         $this->Nome = $Nome;
@@ -22,6 +24,8 @@ public $email;
         $this->Autorizacao = $Autorizacao;
         $this->Data_Nascimento = $Data_Nascimento;
         $this->email = $email;
+        $this->code_hash = $code_hash;
+        $this->Verify = $Verify;
     }
 
 
@@ -36,6 +40,7 @@ public $email;
         return $result;
 
     }
+
     public function ReadALL()    {
         $val = new UtilizadorDAL();
         $rr =$val -> ReadALLDAL();
@@ -45,12 +50,12 @@ public $email;
 
     public function Update()     {
         $val = new UtilizadorDAL();
-        $val -> Update($this);
+        $val -> UpdateDAL($this);
 
     }
     public function Delete()     {
         $val = new UtilizadorDAL();
-        $val -> Delete($this);
+        $val -> DeleteDAL($this);
     }
 
     public function CreateTable(){
@@ -60,5 +65,19 @@ public $email;
 
     }
 
+    public function ReadVerify()     {
+        $val = new UtilizadorDAL();
+        $result = $val -> ReadVerifyDAL($this);
+        return $result;
+    }
+    public function ReadEmailVerify()     {
+        $val = new UtilizadorDAL();
+        $result = $val -> ReadEmailDAL($this);
+        return $result;
 
+    }
+    public function UpdateVerify()     {
+        $val = new UtilizadorDAL();
+        $val -> UpdateVerifyDAL($this);
+    }
 }

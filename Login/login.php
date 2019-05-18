@@ -1,6 +1,6 @@
 <?php
-require_once '../_BL/Utilizador.php';
 session_start();
+require_once '../_BL/Utilizador.php';
 try
 {
     if(isset($_POST["login"]))
@@ -11,16 +11,16 @@ try
         }
         else
         {
-            $uu = new Utilizador('','','','','','','');
+            $uu = new Utilizador('','','','','','','','','');
             $uu->email=$_POST["username"];
-            $uu->pass=$_POST["password"];
+            $uu->pass= md5($_POST['password']);;
 
             $statement=$uu->Read();
 
             if($statement > 0)
             {
                 $_SESSION["username"] = $_POST["username"];
-                header("location:../Index.php");
+                header("location:../Genero.php");
             }
             else
             {
@@ -34,6 +34,7 @@ catch(PDOException $error)
     $message = $error->getMessage();
 }
 ?>
+<meta charset="utf-8" />
 <!DOCTYPE html>
 <html>
 <head>

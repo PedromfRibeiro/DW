@@ -1,4 +1,39 @@
+<?php
+session_start();
+include '_BL/Utilizador.php';
+try
+{
+    if(isset($_POST["login"]))
+    {
+        if(empty($_POST["email"]) || empty($_POST["password"]))
+        {
+            $message = '<label>All fields are required</label>';
+        }
+        else
+        {
+            $uu = new Utilizador('','','','','','','');
+            $uu->email=$_POST["email"];
+            $uu->pass=$_POST["password"];
 
+            $statement=$uu->Read();
+
+            if($statement > 0)
+            {
+                $_SESSION["email"] = $_POST["email"];
+                header("location:Index.php");
+            }
+            else
+            {
+                $message = '<label>Wrong Data</label>';
+            }
+        }
+    }
+}
+catch(PDOException $error)
+{
+    $message = $error->getMessage();
+}?>
+<meta charset="utf-8" />
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -66,33 +101,36 @@
 <body>
 <div id="id01" class="modal">
 
-    <form class="modal-content animate" action="/action_page.php">
+
+    <form class="modal-content animate">
+    <div class="container " style="width:500px;">
+        <?php
+        if(isset($message))
+        {
+            echo '<label class="text-danger">'.$message.'</label>';
+        }?>
+        <h3 align="">PHP Login Script using PDO</h3><br />
+        <form class="modal-content animate"  method="post">
+            <label><b>email</b></label>
+            <input type="text" name="email" class="form-control" id="Login_Nome" placeholder="Enter email"  required>
 
 
-        <div class="container" id="Login_Form">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" id="Login_Nome" placeholder="Enter Username" name="uname" required>
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" id="Login_pass" placeholder="Enter Password"  required>
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" id="Login_pass" placeholder="Enter Password" name="psw" required>
-
-            <button type="submit">Login</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-            <?php
-            require_once "../_BL/Utilizador.php";
-            $PDO = new Utilizador($_POST['Login_Nome'],$_POST['Login_pass'],'','','');
-            $BFetch = ($POD->Read());
-            ?>
-
-        </div>
-
-        <div class="container" >
-            <button class="cancelbtn" id="close" type="button" onclick="document.getElementById('id01').style.display='none'" >Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
+            <br />
+            <input type="submit" name="login" class="btn btn-info" value="Login" />
+            <div class="container" >
+                <button class="cancelbtn" id="close" type="button" onclick="document.getElementById('id01').style.display='none'" >Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
     </form>
+
+
+
+
 </div>
 </body>
 <!-- ./Header -->

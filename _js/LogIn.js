@@ -12,8 +12,5 @@ window.onclick = function(event) {
     if(event.target == modalA) {
         modalA.style.display = "none";
     }
-    var log= loginAA(); //call the php add function
-
-
 }
 
