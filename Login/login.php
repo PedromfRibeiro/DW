@@ -14,7 +14,7 @@ try
         {
             $uu = new Utilizador('','','','','','','','','');
             $uu->email=$_POST["username"];
-            $uu->pass= md5($_POST['password']);;
+            $uu->pass= sha1($_POST['password']);;
 
             $statement=$uu->Read();
 

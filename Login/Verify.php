@@ -18,7 +18,8 @@ if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['code_hash'])
         $verify->code_hash = md5(rand(0, 1000));
         $verify->Verify='1';
         $verify->UpdateVerify();
-        header("Location: DWphp/Genero.php");
+        $_SESSION['message'] = "Account has been activated !";
+        header("Location: DWphp/error.php");
     }
 }
 else{

@@ -92,6 +92,19 @@ class UtilizadorDAL
         return $stm->fetch();
     }
 
+    public static function ReadEmailHashDAL(Utilizador $util)
+    {
+        $dbUtilizador = new Connection();
+        $dbUtilizador -> Connect();
+        $sql = "SELECT * FROM Utilizador WHERE email=:email AND code_hash=:code_hash";
+        $val = [
+            ':email'=>$util->email,
+            ':code_hash'=>$util->code_hash,
+        ];
+        $stm = $dbUtilizador->SQuerry($sql,$val);
+        return $stm->fetch();
+    }
+
     public static function ReadVerifyDAL(Utilizador $util)
     {
         $dbUtilizador = new Connection();

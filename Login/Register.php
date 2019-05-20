@@ -58,7 +58,7 @@ function CheckBirth($birth,&$msg){
     $uu=$diff->y;
 
     if($uu<16){
-        $msg = "You Need to be above 16 to register in our Website!";
+        $_SESSION['message']  = "You Need to be above 16 to register in our Website!";
         return true;
     }
     if(empty($_POST["data_Nascimento"])){$msg = '<label>Birth date is required</label>'; return true; }
@@ -84,7 +84,7 @@ try {
             $uu = new Utilizador('', '', '', '', '', '', '', '', '');
             $uu->Nome = $_POST["Nome"];
             $uu->email = $_POST["email"];
-            $uu->pass =  md5($_POST['password']);
+            $uu->pass =  sha1($_POST['password']);
             $uu->Data_Registo = $date;
             $uu->Data_Nascimento = $_POST["data_Nascimento"];
             $uu->code_hash = md5(rand(0, 1000));

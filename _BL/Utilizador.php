@@ -76,6 +76,14 @@ public $Verify;
         return $result;
 
     }
+    public function ReadEmailHash()     {
+        $val = new UtilizadorDAL();
+        $result = $val -> ReadEmailHashDAL($this);
+        return $result;
+
+    }
+
+
     public function UpdateVerify()     {
         $val = new UtilizadorDAL();
         $val -> UpdateVerifyDAL($this);

@@ -15,7 +15,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $chk->Verify='0';
         $chk->code_hash = md5(rand(0, 1000));
         $chk->UpdateVerify();
-
         $email=$_POST['email'];
         $name=$check[1];
         $hash=$check[7];
@@ -27,7 +26,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $headers = 'From:TheClassicGamerComp@gmail.com';
         $msg = '  Hello ' . $name . ',
 Please Click This link to Reset your password:
-http://localhost/DWphp/Login/Reset.php?email=' . $email . '&code_hash=' . $hash;
+http://localhost/DWphp/Login/Reset.php?email='.$email.'&code_hash='.$hash;
 
         mail($to, $subject, $msg, $headers);
     }

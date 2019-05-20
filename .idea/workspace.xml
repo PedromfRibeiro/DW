@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bb2d7fa-4efd-4973-bf84-472c4d1e6d42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Login/Reset.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Login/ResetPassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/error.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login/Forgot.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Forgot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/LoginScript.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/Reset.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Reset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/ResetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/ResetPassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login/Verify.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Verify.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_BL/Utilizador.php" beforeDir="false" afterPath="$PROJECT_DIR$/_BL/Utilizador.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_DAL/Conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/_DAL/Conexao.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_DAL/UtilizadorDAL.php" beforeDir="false" afterPath="$PROJECT_DIR$/_DAL/UtilizadorDAL.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/Header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/LogIn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/Login_form.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,61 +62,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Login/Verify.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="7" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Login/Reset.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Login/ResetPassword.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Login/Register.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="33" />
+            <state relative-caret-position="357">
+              <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
               <folding>
                 <element signature="n#checkPassword#0;n#!!top" />
-                <element signature="n#checkEmail#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Login/Forgot.php">
+        <entry file="file://$PROJECT_DIR$/Login/Verify.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="309">
+              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://1cea5c26-baad-4cb4-81ff-12ca08899fab/schema/dwphp/table/utilizador">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true">
-                <filter text="" />
-              </filtering>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Login/Forgot.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -137,8 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Name</find>
-      <find>phps</find>
       <find>login</find>
       <find>id</find>
       <find>$id_Utilizador</find>
@@ -167,6 +131,8 @@
       <find>POST</find>
       <find>Reset</find>
       <find>register</find>
+      <find>Sorry, Verification failed,try again!</find>
+      <find>pass</find>
     </findStrings>
     <replaceStrings>
       <replace>$dbJogo</replace>
@@ -225,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_DAL/insert.php" />
         <option value="$PROJECT_DIR$/_DAL/%%RESET%%.PHP" />
         <option value="$PROJECT_DIR$/_DAL/Insert.php" />
         <option value="$PROJECT_DIR$/Index2.html" />
@@ -264,18 +229,19 @@
         <option value="$PROJECT_DIR$/Index.php" />
         <option value="$PROJECT_DIR$/_js/LogIn.js" />
         <option value="$PROJECT_DIR$/_includes/Header.php" />
-        <option value="$PROJECT_DIR$/Login/login.php" />
-        <option value="$PROJECT_DIR$/_BL/Utilizador.php" />
         <option value="$PROJECT_DIR$/Login/register.php" />
         <option value="$PROJECT_DIR$/Login/resetPass.php" />
-        <option value="$PROJECT_DIR$/Login/Register.php" />
         <option value="$PROJECT_DIR$/_DAL/Conexao.php" />
-        <option value="$PROJECT_DIR$/Login/Verify.php" />
-        <option value="$PROJECT_DIR$/Login/Forgot.php" />
-        <option value="$PROJECT_DIR$/_DAL/UtilizadorDAL.php" />
         <option value="$PROJECT_DIR$/Login/Resetpass.php" />
-        <option value="$PROJECT_DIR$/Login/ResetPassword.php" />
+        <option value="$PROJECT_DIR$/Login/login.php" />
+        <option value="$PROJECT_DIR$/Login/error.php" />
+        <option value="$PROJECT_DIR$/_DAL/UtilizadorDAL.php" />
+        <option value="$PROJECT_DIR$/_BL/Utilizador.php" />
         <option value="$PROJECT_DIR$/Login/Reset.php" />
+        <option value="$PROJECT_DIR$/Login/Register.php" />
+        <option value="$PROJECT_DIR$/Login/ResetPassword.php" />
+        <option value="$PROJECT_DIR$/Login/Forgot.php" />
+        <option value="$PROJECT_DIR$/Login/Verify.php" />
       </list>
     </option>
   </component>
@@ -352,14 +318,14 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\DWphp\Login" />
-      <recent name="C:\xampp\htdocs\DWphp\Admin" />
-      <recent name="C:\xampp\htdocs\DWphp" />
-      <recent name="C:\xampp\htdocs\DWphp\_BL" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\DWphp\_DAL" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\DWphp\Login" />
+      <recent name="C:\xampp\htdocs\DWphp" />
+      <recent name="C:\xampp\htdocs\DWphp\Admin" />
+      <recent name="C:\xampp\htdocs\DWphp\_BL" />
       <recent name="C:\xampp\htdocs\DWphp\_DAL" />
     </key>
   </component>
@@ -375,7 +341,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Web Page.ResetPasswrod">
+  <component name="RunManager" selected="PHP Web Page.Reset">
     <configuration name="phpTeste.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8995/DWphp/phpTeste.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -403,7 +369,7 @@
     <configuration name="Login" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Login/login.php">
       <method v="2" />
     </configuration>
-    <configuration name="ResetPasswrod" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="xDebug" start_url="http://localhost/DWphp/Login/Resetpass.php?email=prs.p.ribeiro@gmail.com&amp;code_hash=20aee3a5f4643755a79ee5f6a73050ac">
+    <configuration name="Reset" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="xDebug" start_url="http://localhost/DWphp/Login/Reset.php?email=prs.p.ribeiro@gmail.com&amp;code_hash=20aee3a5f4643755a79ee5f6a73050ac">
       <method v="2" />
     </configuration>
     <configuration name="Table" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Table.php">
@@ -432,7 +398,7 @@
       <item itemvalue="PHP Web Page.Admingeneros.php" />
       <item itemvalue="PHP Web Page.Login" />
       <item itemvalue="PHP Web Page.Forgot.php" />
-      <item itemvalue="PHP Web Page.ResetPasswrod" />
+      <item itemvalue="PHP Web Page.Reset" />
       <item itemvalue="PHP Web Page.register" />
       <item itemvalue="PHP Web Page.Verify" />
       <item itemvalue="PHP Web Page.Verify (1)" />
@@ -495,7 +461,8 @@
       <workItem from="1558055017555" duration="12458000" />
       <workItem from="1558104447481" duration="16833000" />
       <workItem from="1558173288554" duration="20059000" />
-      <workItem from="1558366775977" duration="265000" />
+      <workItem from="1558366775977" duration="3307000" />
+      <workItem from="1558388680450" duration="5656000" />
     </task>
     <task id="LOCAL-00002" summary="DAL&#10;Connected DB &#10; Select from Genero TESTE">
       <created>1555345812520</created>
@@ -616,11 +583,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558175749435</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Reset Password PHP">
+      <created>1558367326069</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1558367326069</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149865000" />
+    <option name="totallyTimeSpent" value="158563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -628,11 +602,11 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.24946696" />
       <window_info id="Favorites" order="1" side_tool="true" weight="0.32995737" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.12178517" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.123298034" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3279743" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3268921" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3279743" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49546143" weight="0.25187567" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49546143" weight="0.4347826" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
@@ -731,7 +705,8 @@
     <MESSAGE value="Php Teste almost" />
     <MESSAGE value="Login" />
     <MESSAGE value="Registar completo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registar completo" />
+    <MESSAGE value="Reset Password PHP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reset Password PHP" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -922,13 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/server_databases.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -992,33 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_BL/Utilizador.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_DAL/UtilizadorDAL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="n#ReadDAL#0;n#UtilizadorDAL#0;n#!!top" />
-            <element signature="n#ReadALLDAL#0;n#UtilizadorDAL#0;n#!!top" />
-            <element signature="n#DeleteDAL#0;n#UtilizadorDAL#0;n#!!top" />
-            <element signature="n#CreateTable#0;n#UtilizadorDAL#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_DAL/Conexao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1033,31 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login/Verify.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login/Register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="33" />
-          <folding>
-            <element signature="n#checkPassword#0;n#!!top" />
-            <element signature="n#checkEmail#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login/Forgot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://1cea5c26-baad-4cb4-81ff-12ca08899fab/schema/dwphp/table/utilizador">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1067,17 +983,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login/ResetPassword.php">
+    <entry file="file://$PROJECT_DIR$/Login/Reset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="344">
+          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login/Reset.php">
+    <entry file="file://$PROJECT_DIR$/_DAL/Conexao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_BL/Utilizador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_DAL/UtilizadorDAL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="58" column="36" lean-forward="true" selection-start-line="51" selection-start-column="12" selection-end-line="58" selection-end-column="36" />
+          <folding>
+            <element signature="n#CreateDAL#0;n#UtilizadorDAL#0;n#!!top" />
+            <element signature="n#ReadDAL#0;n#UtilizadorDAL#0;n#!!top" />
+            <element signature="n#ReadALLDAL#0;n#UtilizadorDAL#0;n#!!top" />
+            <element signature="n#DeleteDAL#0;n#UtilizadorDAL#0;n#!!top" />
+            <element signature="n#CreateTable#0;n#UtilizadorDAL#0;n#!!top" />
+            <element signature="n#ReadEmailHashDAL#0;n#UtilizadorDAL#0;n#!!top" />
+            <element signature="n#UpdateVerifyDAL#0;n#UtilizadorDAL#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" selection-start-line="10" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login/Register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" selection-start-line="5" selection-end-line="26" selection-end-column="1" />
+          <folding>
+            <element signature="n#checkPassword#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login/ResetPassword.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+          <folding>
+            <element signature="n#checkPassword#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login/Verify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login/Forgot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
         </state>
       </provider>
     </entry>
