@@ -1,9 +1,10 @@
+<?php include('_includes/Header.php'); ?>
+<meta charset="utf-8" />
 <!DOCTYPE html>
 <html lang="pt-pt">
 
-    <?php
-    include '_includes/Header.php  ';
-    ?>
+
+
     <link href="_css/MainPage.css" type="text/css" rel="stylesheet"/>
 
 <body>

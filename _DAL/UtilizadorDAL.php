@@ -10,14 +10,17 @@ class UtilizadorDAL
 
         $PDO = new Connection();
         $PDO->Connect();
-        $sql = "INSERT INTO utilizador set Nome=:Nome, pass=:pass, Data_Registo=:Data_Registo, Autorizacao=:Autorizacao,Data_Nascimento=:Data_Nascimento,email=:email;";
+        $sql = "INSERT INTO utilizador set Nome=:Nome, pass=:pass, Data_Registo=:Data_Registo, Autorizacao=:Autorizacao,Data_Nascimento=:Data_Nascimento,email=:email,code_hash=:code_hash,Verify=:Verify;";
         $val =array(
             ':Nome'=>$util->Nome,
             ':pass'=>$util->pass,
             ':Data_Registo'=>$util->Data_Registo,
             ':Autorizacao'=>$util->Autorizacao,
             ':Data_Nascimento'=>$util->Data_Nascimento,
+            ':code_hash'=>$util->code_hash,
+            ':Verify'=>'0',
             ':email'=>$util->email);
+
     $PDO->SQuerry($sql, $val);
     }
 
@@ -45,7 +48,7 @@ class UtilizadorDAL
     }
 
 
-    public static function Update(Utilizador $util)
+    public static function UpdateDAL(Utilizador $util)
     {
         $dbUtilizador = new Connection();
         $dbUtilizador->Connect();
@@ -54,7 +57,7 @@ class UtilizadorDAL
         $dbUtilizador->SQuerry($sql, $arrayGen);
     }
 
-    public static function Delete(Utilizador $util)
+    public static function DeleteDAL(Utilizador $util)
     {
         $dbUtilizador = new Connection();
         $dbUtilizador -> Connect();
@@ -63,6 +66,7 @@ class UtilizadorDAL
         return $dbUtilizador->SQuerry($sql,$val);
 
     }
+
     public static function CreateTable(){
         $dbUtilizador = new Connection();
         $dbUtilizador -> Connect();
@@ -70,4 +74,38 @@ class UtilizadorDAL
         return $dbUtilizador->SQuerry($sql,null);
     }
 
+    public static function ReadEmailDAL(Utilizador $util)
+    {
+        $dbUtilizador = new Connection();
+        $dbUtilizador -> Connect();
+        $sql = "SELECT * FROM Utilizador WHERE email=:email ";
+        $val = [
+            ':email'=>$util->email,
+        ];
+        $stm = $dbUtilizador->SQuerry($sql,$val);
+        return $stm->fetch();
+    }
+
+
+    public static function ReadVerifyDAL(Utilizador $util)
+    {
+        $dbUtilizador = new Connection();
+        $dbUtilizador -> Connect();
+        $sql = "SELECT * FROM Utilizador WHERE email=:email AND code_hash=:code_hash And Verify='0'";
+        $val = [
+            ':email'=>$util->email,
+            ':code_hash'=>$util->code_hash,
+        ];
+        $stm = $dbUtilizador->SQuerry($sql,$val);
+        return $stm->fetch();
+    }
+
+    public static function UpdateVerifyDAL(Utilizador $util)
+    {
+        $dbUtilizador = new Connection();
+        $dbUtilizador->Connect();
+        $sql = "UPDATE Utilizador set Verify='1' where email=:email ;";
+        $val =array(':email'=>$util->email);
+        $dbUtilizador->SQuerry($sql, $val);
+    }
 }
