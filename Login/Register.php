@@ -1,8 +1,7 @@
 <?php
 session_start();
+include('../_includes/Header.php');
 require_once '../_BL/Utilizador.php';
-
-
 
 function checkPassword($pwd,&$msg) {
 
@@ -30,7 +29,7 @@ else return false;
 function checkEmail($email,&$msg){
     $chk = new Utilizador('', '', '', '', '', '', '', '', '');
     $chk->email =$email;
-    $check=$chk->ReadEmailVerify();
+    $check=$chk->ReadEmail();
 
     if (empty($email)) {
         $msg= "Email is empty!";
@@ -38,7 +37,7 @@ function checkEmail($email,&$msg){
     }
 
     if($check>0){
-        $msg = '<label>The email already in use!</label>';
+        $msg = '<label>The email is already in use!</label>';
         return true;
     }
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
@@ -77,7 +76,9 @@ try {
         $pass = !empty($_POST['password']) ? trim($_POST['password']) : null;
 
        if (empty($_POST["Nome"])) {$message = '<label>All fields are required</label>';}
-        if (checkEmail   ($_POST['email']   ,$message) || checkPassword($_POST["password"],$message) || CheckBirth   ($_POST['data_Nascimento']   ,$message) ){}
+       if (   checkEmail   ($_POST['email']   ,$message)
+           || checkPassword($_POST["password"],$message)
+           || CheckBirth   ($_POST['data_Nascimento']   ,$message) ){}
 
         else {
             $uu = new Utilizador('', '', '', '', '', '', '', '', '');
@@ -100,7 +101,7 @@ try {
                 $uu->Create();
 
 
-                $to = '';
+                $to = $_POST["email"];
                 $subject = 'Acount Verification(The Classic Gamer)';
                 $headers = 'From:TheClassicGamerComp@gmail.com';
                 $msg = '
@@ -139,7 +140,7 @@ if(isset($message))
 }
 ?>
 <h1>Register</h1>
-<form action="register.php" method="post">
+<form action="Register.php" method="post">
     <label for="Nome">Nome</label>
     <input type="text" id="Nome" name="Nome"><br>
     <label for="email">email</label>
@@ -148,6 +149,10 @@ if(isset($message))
     <input type="text" id="password" name="password"><br>
     <input type="date" id="data_Nascimento" name="data_Nascimento"><br>
     <input type="submit" name="register" value="Register"></button>
+    <form method="get"  action="Register.php" >
+        <a href="../Index.php" class="btn btn-info">Home</a>
+    </form>
+
 </form>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once '../_BL/Utilizador.php';
+include('../_includes/Header.php');
 try
 {
     if(isset($_POST["login"]))
@@ -61,6 +62,13 @@ catch(PDOException $error)
         <input type="password" name="password" class="form-control" />
         <br />
         <input type="submit" name="login" class="btn btn-info" value="Login" />
+        <form method="get"  action="Register.php" >
+            <a href="Register.php" class="btn btn-info">Registar</a>
+        </form>
+        <form method="get"  action="Forgot.php" >
+            <a href="Forgot.php" class="btn btn-info">resetPass</a>
+        </form>
+
     </form>
 </div>
 <br />
