@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="_css/Styles.css" type="text/css" rel="stylesheet"/>
+    <link href="../_css/Styles.css" type="text/css" rel="stylesheet"/>
 
 
 
@@ -32,7 +32,7 @@
 
         <nav class="navbar md navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="Index.php">
-                <img src="_imagens/Logo.png" class="Menu_img" alt="Menu">
+                <img src="../_imagens/Logo.png" class="Menu_img" alt="Menu">
                 The Classic Gamer
             </a>
 
@@ -67,7 +67,7 @@
     <!-- ./Header -->
 
 
-    <link rel="stylesheet" href="_css/Plataforma.css"/>
+    <link rel="stylesheet" href="../_css/Plataforma.css"/>
 </head>
 <body>
 
@@ -82,7 +82,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/android.png" alt="Android" class="img-responsive">
+                    <img src="../_imagens/_plat/android.png" alt="Android" class="img-responsive">
                     </a>
                     <div class="overlay">
                         <p>Android</p>
@@ -91,7 +91,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/battle-net.png" alt="Battle Net" class="img-responsive">
+                    <img src="../_imagens/_plat/battle-net.png" alt="Battle Net" class="img-responsive">
                         </a>
                     <div class="overlay">
                         <p>Battle Net</p>
@@ -100,7 +100,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/ea-origin.png" alt="Origin" class="img-responsive">
+                    <img src="../_imagens/_plat/ea-origin.png" alt="Origin" class="img-responsive">
                         </a>
                     <div class="overlay">
                         <p>Origin</p>
@@ -109,7 +109,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/epic.png" alt="Epic Games" class="img-responsive"/>
+                    <img src="../_imagens/_plat/epic.png" alt="Epic Games" class="img-responsive"/>
                         </a>
                     <div class="overlay">
                         <p>Epic Games</p>
@@ -118,7 +118,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                <img src="_imagens/_plat/free2play.png" alt="Free2Play" class="img-responsive">
+                <img src="../_imagens/_plat/free2play.png" alt="Free2Play" class="img-responsive">
                         </a>
                 <div class="overlay">
                     <p>Free2Play</p>
@@ -127,7 +127,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                <img src="_imagens/_plat/gog-com.png" alt="GOG COM" class="img-responsive">
+                <img src="../_imagens/_plat/gog-com.png" alt="GOG COM" class="img-responsive">
                         </a>
                 <div class="overlay">
                     <p>GOG.COM</p>
@@ -136,7 +136,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/ncsoft.png" alt="NCSOFT" class="img-responsive">
+                    <img src="../_imagens/_plat/ncsoft.png" alt="NCSOFT" class="img-responsive">
                         </a>
                     <div class="overlay">
                         <p>NCSOFT</p>
@@ -145,7 +145,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/nintendo.png" alt="Nintendo" class="img-responsive">
+                    <img src="../_imagens/_plat/nintendo.png" alt="Nintendo" class="img-responsive">
                         </a>
                     <div class="overlay">
                         <p>Nintendo</p>
@@ -154,7 +154,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/other.png" alt="Other" class="img-responsive">
+                    <img src="../_imagens/_plat/other.png" alt="Other" class="img-responsive">
                         </a>
                     <div class="overlay">
                         <p>Other</p>
@@ -163,7 +163,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/playstation-3.png" alt="Playstation 3" class="img-responsive">
+                    <img src="../_imagens/_plat/playstation-3.png" alt="Playstation 3" class="img-responsive">
                         </a>
                     <div class="overlay">
                         <p>Playstation 3</p>
@@ -172,7 +172,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/playstation-4.png" alt="Playstation 4" class="img-responsive">
+                    <img src="../_imagens/_plat/playstation-4.png" alt="Playstation 4" class="img-responsive">
                         </a>
                     <div class="overlay">
                         <p>Playstation 4</p>
@@ -182,7 +182,7 @@
 
 
                 <div class="wrapper"><a href="">
-                    <img src="_imagens/_plat/steam.png" alt="Steam" class="img-responsive">
+                    <img src="../_imagens/_plat/steam.png" alt="Steam" class="img-responsive">
                     </a>
                     <div class="overlay">
                         <p>Steam</p>
@@ -191,7 +191,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/uplay.png" alt="Uplay" class="img-responsive">
+                    <img src="../_imagens/_plat/uplay.png" alt="Uplay" class="img-responsive">
                         </a>
                     <div class="overlay">
                         <p>Uplay</p>
@@ -200,7 +200,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/xbox-360.png" alt="Xbox 360" class="img-responsive">
+                    <img src="../_imagens/_plat/xbox-360.png" alt="Xbox 360" class="img-responsive">
                         </a>
                     <div class="overlay">
                         <p>Xbox 360</p>
@@ -209,7 +209,7 @@
 
                 <div class="wrapper">
                     <a href="">
-                    <img src="_imagens/_plat/xbox-one.png" alt="Xbox One" class="img-responsive">
+                    <img src="../_imagens/_plat/xbox-one.png" alt="Xbox One" class="img-responsive">
                         </a>
                     <div class="overlay">
                         <p>Xbox One</p>
@@ -224,48 +224,4 @@
 </div>
 
 </body>
-<!-- Footer -->
-<section id="footer">
-    <div class="container">
-        <div class="row text-center text-xs-center text-sm-left text-md-left">
-            <div class="col-xs-12 col-sm-4 col-md-3">
-
-                <ul class="list-unstyled quick-links">
-                    <li><a href="Index.php#AboutUs"><i class="fa fa-angle-double-right"></i>About Us</a></li>
-                    <li><a href="Index.php#Customer"><i class="fa fa-angle-double-right"></i>Customer Support</a></li>
-                    <li><a href="Index.php#FAQ"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-
-                <ul class="list-unstyled quick-links">
-                    <li><a href="Footer2.php"><i class="fa fa-angle-double-right"></i>Terms and Conditions</a></li>
-                    <li><a href="Footer2.php"><i class="fa fa-angle-double-right"></i>Privacy Policy</a></li>
-                    <li><a href="Footer2.php"><i class="fa fa-angle-double-right"></i>Commissions and Fees</a></li>
-
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-
-                <ul class="list-unstyled quick-links">
-                    <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href=""><i class="fa fa-instagram"></i></a></li>
-                    <li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
-                    <li class="list-inline-item"><a href="" target="_blank"><i class="fa fa-envelope"></i></a></li>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2  text-white">
-                        <p class="h6">&copy ClassicGamer.net All right Reversed</a></p>
-                    </div>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- ./Footer -->
-
-
-
 </html>

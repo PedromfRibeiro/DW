@@ -79,7 +79,7 @@ try {
        if (   checkEmail   ($_POST['email']   ,$message)
            || checkPassword($_POST["password"],$message)
            || CheckBirth   ($_POST['data_Nascimento']   ,$message) ){}
-
+       if($_POST['newpassword']== $_POST['confirmpassword']){$_SESSION['message']  = "The two password you entered don't match, try again!";}
         else {
             $uu = new Utilizador('', '', '', '', '', '', '', '', '');
             $uu->Nome = $_POST["Nome"];
