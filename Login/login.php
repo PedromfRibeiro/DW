@@ -5,22 +5,28 @@ try
 {
     if(isset($_POST["login"]))
     {
-        if(empty($_POST["username"]) || empty($_POST["password"]))
+        if(empty($_POST["email"]) || empty($_POST["password"]))
         {
             $message = '<label>All fields are required</label>';
         }
         else
         {
             $uu = new Utilizador('','','','','','','','','');
-            $uu->email=$_POST["username"];
-            $uu->pass= md5($_POST['password']);;
+            $uu->email=$_POST["email"];
+            $uu->pass= sha1($_POST['password']);;
 
             $statement=$uu->Read();
 
-            if($statement > 0)
+            if(!($statement['Verify']==1)){
+                $_SESSION["message"]="Conta não verificada, verifique o seu email!";
+                header("Location: error.php");
+
+            }
+            else if($statement > 0)
             {
-                $_SESSION["username"] = $_POST["username"];
-                header("location:../Genero.php");
+                $_SESSION["email"] = $_POST["email"];
+                $_SESSION["message"]="Log In com sucesso";
+                header("Location: Sucess.php");
             }
             else
             {
@@ -54,13 +60,20 @@ catch(PDOException $error)
     ?>
     <h3 align="">PHP Login Script using PDO</h3><br />
     <form method="post">
-        <label>Username</label>
-        <input type="text" name="username" class="form-control" />
+        <label>email</label>
+        <input type="text" name="email" class="form-control" />
         <br />
         <label>Password</label>
         <input type="password" name="password" class="form-control" />
         <br />
         <input type="submit" name="login" class="btn btn-info" value="Login" />
+        <form method="get"  action="Register.php" >
+            <a href="Register.php" class="btn btn-info">Registar</a>
+        </form>
+        <form method="get"  action="Forgot.php" >
+            <a href="Forgot.php" class="btn btn-info">resetPass</a>
+        </form>
+
     </form>
 </div>
 <br />

@@ -5,7 +5,7 @@ class Connection
 
     public function Connect(){
         try {
-            $conexao = new PDO("mysql:host=localhost; dbname=dwphp","dwphp","" );
+            $conexao = new PDO("mysql:host=localhost; dbname=dwphp","dwphp","dw123");
             return $conexao;
 
         } catch (PDOException $erro) {

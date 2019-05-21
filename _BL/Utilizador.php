@@ -70,12 +70,20 @@ public $Verify;
         $result = $val -> ReadVerifyDAL($this);
         return $result;
     }
-    public function ReadEmailVerify()     {
+    public function ReadEmail()     {
         $val = new UtilizadorDAL();
         $result = $val -> ReadEmailDAL($this);
         return $result;
 
     }
+    public function ReadEmailHash()     {
+        $val = new UtilizadorDAL();
+        $result = $val -> ReadEmailHashDAL($this);
+        return $result;
+
+    }
+
+
     public function UpdateVerify()     {
         $val = new UtilizadorDAL();
         $val -> UpdateVerifyDAL($this);
