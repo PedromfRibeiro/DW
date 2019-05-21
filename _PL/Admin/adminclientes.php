@@ -2,9 +2,9 @@
 <html lang="pt-pt">
 <head>
     <?php
-    include '_Includes/Header.php';
+    include '_includes/Header.php';
     ?>
-    <link href="../_css/admingames.css" type="text/css" rel="stylesheet"/>
+    <link href="../../_css/admingames.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -89,6 +89,6 @@
 
 </body>
 <?php
-include '_Includes/Footer.php';
+include '_includes/Footer.php';
 ?>
 </html>

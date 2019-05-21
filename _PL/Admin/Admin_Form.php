@@ -2,10 +2,10 @@
 <html lang="pt-pt">
 
     <?php
-    include '_Includes/Header.php';
+    include '_includes/Header.php';
     ?>
 <head>
-    <link href="../_css/Admin_form.css" type="text/css" rel="stylesheet"/>
+    <link href="../../_css/Admin_form.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>

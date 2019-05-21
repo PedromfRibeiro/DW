@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8bb2d7fa-4efd-4973-bf84-472c4d1e6d42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Login/Logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Login/Sucess.php" afterDir="false" />
+    <list default="true" id="8bb2d7fa-4efd-4973-bf84-472c4d1e6d42" name="Default Changelist" comment="Login Completo">
+      <change afterPath="$PROJECT_DIR$/_PL/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Forgot.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Forgot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Verify.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Verify.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Admin_Form.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Admin/Admin_Form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/adminclientes.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Admin/adminclientes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/adminencomendas.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Admin/adminencomendas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/admingames.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Admin/admingames.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/admingeneros.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Admin/admingeneros.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/adminplataforma.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Admin/adminplataforma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Footer2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Genero.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Genero.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/Forgot.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/Forgot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/Logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/Register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/Reset.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/Reset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/ResetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/ResetPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/Sucess.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/Sucess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/Verify.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/Verify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plataforma.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Plataforma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produtos.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Produtos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shopping_cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Shopping_cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_css/ee.css" beforeDir="false" afterPath="$PROJECT_DIR$/_css/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/Footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/_includes/Footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/_includes/Header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_js/Produto.js" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/_js/Produto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpTeste.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/phpTeste.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,58 +84,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Login/ResetPassword.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="41" column="37" selection-start-line="41" selection-end-line="42" />
-              <folding>
-                <element signature="n#checkPassword#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Login/Verify.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Login/Forgot.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Login/login.php">
+        <entry file="file://$PROJECT_DIR$/_PL/Plataforma.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Login/Sucess.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Login/Logout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="4725">
+              <caret line="225" column="7" selection-start-line="225" selection-start-column="7" selection-end-line="225" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -208,21 +188,11 @@
     </excluded-from-favorite>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/_includes/Header.php" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/_PL/_includes/Header.php" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_DAL/Insert.php" />
-        <option value="$PROJECT_DIR$/Index2.html" />
-        <option value="$PROJECT_DIR$/_css/Index2Style.css" />
-        <option value="$PROJECT_DIR$/_DAL/ConexaoTT.php" />
-        <option value="$PROJECT_DIR$/adminclientes.php" />
-        <option value="$PROJECT_DIR$/_DAL/reset.php" />
-        <option value="$PROJECT_DIR$/_DAL/dddd.php" />
-        <option value="$PROJECT_DIR$/Index2.php" />
-        <option value="$PROJECT_DIR$/_DAL/CrudGlobal.php" />
-        <option value="$PROJECT_DIR$/_DAL/ww.php" />
         <option value="$PROJECT_DIR$/ww.php" />
         <option value="$PROJECT_DIR$/LogIn.php" />
         <option value="$PROJECT_DIR$/Update TESTE.php" />
@@ -258,12 +228,22 @@
         <option value="$PROJECT_DIR$/_DAL/UtilizadorDAL.php" />
         <option value="$PROJECT_DIR$/_BL/Utilizador.php" />
         <option value="$PROJECT_DIR$/Login/Reset.php" />
-        <option value="$PROJECT_DIR$/Login/Register.php" />
         <option value="$PROJECT_DIR$/Login/ResetPassword.php" />
         <option value="$PROJECT_DIR$/Login/Forgot.php" />
         <option value="$PROJECT_DIR$/Login/Logout.php" />
         <option value="$PROJECT_DIR$/Login/Verify.php" />
+        <option value="$PROJECT_DIR$/Login/Register.php" />
+        <option value="$PROJECT_DIR$/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/Login/login.php" />
+        <option value="$PROJECT_DIR$/_PL/Index.php" />
+        <option value="$PROJECT_DIR$/_PL/Plataforma.php" />
+        <option value="$PROJECT_DIR$/_PL/Produto.php" />
+        <option value="$PROJECT_DIR$/_PL/Profile.php" />
+        <option value="$PROJECT_DIR$/_PL/Register.php" />
+        <option value="$PROJECT_DIR$/_PL/Shopping_cart.php" />
+        <option value="$PROJECT_DIR$/_PL/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/_PL/_includes/Header.php" />
+        <option value="$PROJECT_DIR$/_PL/Genero.php" />
       </list>
     </option>
   </component>
@@ -288,6 +268,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -298,33 +279,17 @@
             <path>
               <item name="DWphp" type="b2602c69:ProjectViewProjectNode" />
               <item name="DWphp" type="462c0819:PsiDirectoryNode" />
-              <item name="_BL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DWphp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DWphp" type="462c0819:PsiDirectoryNode" />
               <item name="_DAL" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DWphp" type="b2602c69:ProjectViewProjectNode" />
               <item name="DWphp" type="462c0819:PsiDirectoryNode" />
-              <item name="_includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DWphp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DWphp" type="462c0819:PsiDirectoryNode" />
-              <item name="_js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DWphp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DWphp" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
+              <item name="_PL" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -340,16 +305,16 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\DWphp\Login" />
+      <recent name="C:\xampp\htdocs\DWphp\_DAL" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\DWphp\_PL" />
       <recent name="C:\xampp\htdocs\DWphp\Login" />
       <recent name="C:\xampp\htdocs\DWphp" />
       <recent name="C:\xampp\htdocs\DWphp\Admin" />
       <recent name="C:\xampp\htdocs\DWphp\_BL" />
-      <recent name="C:\xampp\htdocs\DWphp\_DAL" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\DWphp\Login" />
-      <recent name="C:\xampp\htdocs\DWphp\_DAL" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -364,77 +329,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Web Page.Login">
-    <configuration name="phpTeste.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8995/DWphp/phpTeste.php" useBuiltInWebServerPort="true">
+  <component name="RunManager">
+    <configuration name="_PL/Genero.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/_PL/Genero.php">
       <method v="2" />
     </configuration>
-    <configuration name="AdminCliente.php " type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/AdminCliente.php">
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="DWphp/_PL/Genero.php">
       <method v="2" />
     </configuration>
-    <configuration name="Admin_form.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Admin_form.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="Admingames.php " type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Admingames.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="Admingeneros.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Admingeneros.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="Forgot.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Login/Forgot.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="GeneroDAL.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/_DAL/GeneroDAL.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="Index" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Index.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="Login" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Login/login.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="Reset" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="xDebug" start_url="http://localhost/DWphp/Login/Reset.php?email=prs.p.ribeiro@gmail.com&amp;code_hash=20aee3a5f4643755a79ee5f6a73050ac">
-      <method v="2" />
-    </configuration>
-    <configuration name="Table" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Table.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="Verify (1)" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="http://localhost/DWphp/Login/Verify.php?email=Teste1&amp;code_hash=81448138f5f163ccdba4acc69819f280">
-      <method v="2" />
-    </configuration>
-    <configuration name="Verify" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Login/Verify.php">
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="">
-      <method v="2" />
-    </configuration>
-    <configuration name="phpTeste.php" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="xDebug" start_url="/DWphp/phpTeste.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="register" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/Login/register.php">
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="JavaScript Debug.phpTeste.php" />
-      <item itemvalue="PHP Web Page.Admin_form.php" />
-      <item itemvalue="PHP Web Page.AdminCliente.php " />
-      <item itemvalue="PHP Web Page.Index" />
-      <item itemvalue="PHP Web Page.Admingeneros.php" />
-      <item itemvalue="PHP Web Page.Login" />
-      <item itemvalue="PHP Web Page.Forgot.php" />
-      <item itemvalue="PHP Web Page.Reset" />
-      <item itemvalue="PHP Web Page.register" />
-      <item itemvalue="PHP Web Page.Verify" />
-      <item itemvalue="PHP Web Page.Verify (1)" />
-      <item itemvalue="PHP Web Page.Admingames.php " />
-      <item itemvalue="PHP Web Page.Table" />
-      <item itemvalue="PHP Web Page.phpTeste.php" />
-      <item itemvalue="PHP Web Page.GeneroDAL.php" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.phpTeste.php" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -485,7 +386,8 @@
       <workItem from="1558104447481" duration="16833000" />
       <workItem from="1558173288554" duration="20059000" />
       <workItem from="1558366775977" duration="3307000" />
-      <workItem from="1558388680450" duration="9057000" />
+      <workItem from="1558388680450" duration="9450000" />
+      <workItem from="1558433876163" duration="2498000" />
     </task>
     <task id="LOCAL-00002" summary="DAL&#10;Connected DB &#10; Select from Genero TESTE">
       <created>1555345812520</created>
@@ -620,11 +522,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558394413319</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Login Completo">
+      <created>1558401140364</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1558401140365</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161964000" />
+    <option name="totallyTimeSpent" value="164855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -632,17 +541,17 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.24946696" />
       <window_info id="Favorites" order="1" side_tool="true" weight="0.32995737" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.123298034" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.18532526" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3268921" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3279743" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49546143" visible="true" weight="0.4347826" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49546143" weight="0.4347826" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.31832796" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.30756843" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3290461" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5045386" side_tool="true" weight="0.41384864" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
@@ -651,7 +560,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.3192964" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3192133" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" side_tool="true" weight="0.24946696" />
@@ -737,7 +646,8 @@
     <MESSAGE value="Registar completo" />
     <MESSAGE value="Reset Password PHP" />
     <MESSAGE value="Login all done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login all done" />
+    <MESSAGE value="Login Completo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login Completo" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -747,90 +657,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/db_structure.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_BL/Encomenda.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_DAL/EncomendaDAL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_BL/Genero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_BL/Stock.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_DAL/GeneroDAL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_DAL/PlataformaDAL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="43" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_DAL/StockDAL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_BL/Jogo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="49" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_DAL/JogoDAL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="129" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_BL/Plataforma.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_BL/Venda.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_DAL/VendaDAL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -838,51 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phpTeste.php">
+    <entry file="file://$PROJECT_DIR$/_PL/phpTeste.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="54" selection-start-line="54" selection-end-line="54" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/adminclientes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/admingames.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Admin_Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/adminencomendas.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/adminplataforma.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/admingeneros.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Footer2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="164" column="3" selection-start-line="164" selection-end-line="165" />
         </state>
       </provider>
     </entry>
@@ -896,13 +681,6 @@
     <entry file="file://$PROJECT_DIR$/_js/Login_form.js" />
     <entry file="file://$PROJECT_DIR$/_js/LogIn.js" />
     <entry file="file://$PROJECT_DIR$/Login/LoginScript.php" />
-    <entry file="file://$PROJECT_DIR$/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1659">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/server_databases.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -989,49 +767,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login/Reset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_DAL/Conexao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login/error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" selection-start-line="10" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login/Register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" selection-start-line="5" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="n#checkPassword#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_DAL/UtilizadorDAL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="124" column="55" selection-start-line="124" selection-start-column="55" selection-end-line="124" selection-end-column="75" />
-          <folding>
-            <element signature="n#CreateDAL#0;n#UtilizadorDAL#0;n#!!top" />
-            <element signature="n#ReadDAL#0;n#UtilizadorDAL#0;n#!!top" />
-            <element signature="n#ReadALLDAL#0;n#UtilizadorDAL#0;n#!!top" />
-            <element signature="n#DeleteDAL#0;n#UtilizadorDAL#0;n#!!top" />
-            <element signature="n#CreateTable#0;n#UtilizadorDAL#0;n#!!top" />
-            <element signature="n#ReadEmailHashDAL#0;n#UtilizadorDAL#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1042,54 +781,220 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login/ResetPassword.php">
+    <entry file="file://$PROJECT_DIR$/_PL/Login/Verify.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="41" column="37" selection-start-line="41" selection-end-line="42" />
-          <folding>
-            <element signature="n#checkPassword#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login/Sucess.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login/Logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login/Verify.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="323">
           <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/Header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1113">
-          <caret line="53" column="74" selection-start-line="53" selection-start-column="74" selection-end-line="53" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login/Forgot.php">
+    <entry file="file://$PROJECT_DIR$/_PL/Login/Forgot.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login/login.php">
+    <entry file="file://$PROJECT_DIR$/_PL/Login/Sucess.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Login/Logout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="147">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Login/ResetPassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="62" column="88" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="88" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#checkPassword#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Login/Register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1140">
+          <caret line="81" column="7" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
+          <folding>
+            <element signature="n#checkPassword#0;n#!!top" />
+            <element signature="n#checkEmail#0;n#!!top" />
+            <element signature="n#CheckBirth#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Admin/Admin_Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Admin/admingames.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Admin/admingeneros.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Admin/adminclientes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Admin/adminencomendas.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Admin/adminplataforma.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Login/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" selection-start-line="10" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Login/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Login/Reset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Footer2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="164" column="3" selection-start-line="164" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/_includes/Footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Shopping_cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1077">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_css/Header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1924" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_css/genero.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/_js/Produto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Genero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/_includes/Header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="n#header#0;n#head#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_DAL/UtilizadorDAL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+          <folding>
+            <element signature="n#CreateDAL#0;n#UtilizadorDAL#0;n#!!top" />
+            <element signature="n#ReadALLDAL#0;n#UtilizadorDAL#0;n#!!top" />
+            <element signature="n#DeleteDAL#0;n#UtilizadorDAL#0;n#!!top" />
+            <element signature="n#CreateTable#0;n#UtilizadorDAL#0;n#!!top" />
+            <element signature="n#ReadEmailHashDAL#0;n#UtilizadorDAL#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2457">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Produto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Plataforma.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4725">
+          <caret line="225" column="7" selection-start-line="225" selection-start-column="7" selection-end-line="225" selection-end-column="7" />
         </state>
       </provider>
     </entry>

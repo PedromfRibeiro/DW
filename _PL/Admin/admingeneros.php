@@ -2,9 +2,9 @@
 <html lang="pt-pt">
 <head>
     <?php
-    require '_Includes/Header.php';
+    require '_includes/Header.php';
     ?>
-    <link href="../_css/admingeneros.css" type="text/css" rel="stylesheet"/>
+    <link href="../../_css/admingeneros.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>
