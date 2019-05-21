@@ -16,6 +16,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $chk->code_hash = md5(rand(0, 1000));
         $chk->UpdateVerify();
         $email=$_POST['email'];
+        $check=$chk->ReadEmail();
         $name=$check[1];
         $hash=$check[7];
 

@@ -19,7 +19,7 @@ if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['code_hash'])
         $verify->Verify='1';
         $verify->UpdateVerify();
         $_SESSION['message'] = "Account has been activated !";
-        header("Location: DWphp/error.php");
+        header("Location: Sucess.php");
     }
 }
 else{
