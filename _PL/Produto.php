@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
-    <script src="_js/Produto.js"></script>
+    <title>The Classic Gamer</title>
+
     <?php
     include '_includes/Header.php';
     ?>
-
-    <link href="../_css/Produto.css" rel="stylesheet">
-    <meta name="robots" content="noindex,follow" />
-
+    <link type="text/css" rel="stylesheet" href="../_css/Styles.css" />
+    <link type="text/css" rel="stylesheet" href="../_css/Header.css" />
+    <link type="text/css" rel="stylesheet" href="../_css/Produto.css"/>
 </head>
-
-
 <body>
 
 <div class="plat">

@@ -1,10 +1,16 @@
 <?php
-// Always start this first
 session_start();
 
-// Destroying the session clears the $_SESSION variable, thus "logging" the user
-// out. This also happens automatically when the browser is closed
+$_SESSION = array();
+
+if (ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 42000,
+        $params["path"], $params["domain"],
+        $params["secure"], $params["httponly"]
+    );
+}
+
+// Por último, destrói a sessão
 session_destroy();
 header("location:../Index.php");
-
-?>

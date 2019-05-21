@@ -47,8 +47,23 @@
 
 
                 <ul class="navbar-nav ml-auto">
+
+                    <?php
+                    if(empty($_SESSION)){
+                        ?>
+                        <li class="nav-item">
+                            <a class="nav-link" id="loginCSS" href="index.php?=login">Login </a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="loginCSS" href="index.php?=login">Register </a></li>
+                    <?php } ?>
+
+                    <?php
+                    if(!empty($_SESSION)){
+                    ?>
                     <li class="nav-item">
-                        <a class="nav-link" id="loginCSS" href="../Login/login.php">Login </a></li>
+                        <a class="nav-link" id="loginCSS" href="index.php?=login">Logout </a></li><?php
+                    }
+                    ?>
                     <li class="nav-item">
                         <a class="nav-link" href="Profile.php">Profile</a>
                     </li>
