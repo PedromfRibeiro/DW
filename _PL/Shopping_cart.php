@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
-</head>
+    <title>The Classic Gamer</title>
 
+    <?php
+    include '_includes/Header.php';
+    ?>
+    <link type="text/css" rel="stylesheet" href="../_css/Styles.css" />
+    <link type="text/css" rel="stylesheet" href="../_css/Header.css" />
+
+
+
+</head>
 
 <body>
 <div class="container">

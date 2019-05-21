@@ -1,16 +1,18 @@
-<?php include('_includes/Header.php'); ?>
-<meta charset="utf-8" />
 <!DOCTYPE html>
 <html lang="pt-pt">
+<head>
+    <title>The Classic Gamer</title>
+
+    <?php
+    include '_includes/Header.php';
+    ?>
+    <link type="text/css" rel="stylesheet" href="../_css/Styles.css" />
+    <link type="text/css" rel="stylesheet" href="../_css/Header.css" />
+    <link type="text/css" rel="stylesheet" href="../_css/MainPage.css"/>
 
 
-
-    <link href="../_css/MainPage.css" type="text/css" rel="stylesheet"/>
-
+</head>
 <body>
-
-
-
 <div class="Section P1">
     <div class="indexdiv ">
         <section>
