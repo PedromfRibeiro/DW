@@ -3,7 +3,10 @@ session_start();?>
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
-    <?php include "_includes/Head.php";?>
+    <?php include "_includes/Head.php";
+    require_once  "C:/xampp/htdocs/DWphp/_PL/_Controller/UserController.php";
+
+    ?>
     <title>The Classic Gamer</title>
     <link type="text/css" rel="stylesheet" href="../_css/Styles.css" />
     <link type="text/css" rel="stylesheet" href="../_css/Header.css" />
@@ -38,7 +41,7 @@ session_start();?>
             <ul class="navbar-nav ml-auto">
 
                 <?php
-                if(1){
+                if(empty(UserController::isUserLoggedIn())){
                     ?>
                     <li class="nav-item">
                         <a class="nav-link" id="loginCSS" href="?page=Login/login">Login </a></li>
@@ -47,11 +50,15 @@ session_start();?>
                 <?php } ?>
 
                 <?php
-                if(1){
-                    ?>
-                    <li class="nav-item">
-                        <a class="nav-link" id="loginCSS" href="?page=Logout">Logout </a></li>
-                <?php } ?>
+                if(!empty(UserController::isUserLoggedIn())){                    ?>
+                    <form method="POST"  action="?page=Login/Logout" >
+                        <input type="submit" name="Logout" class="btn btn-info" value="Logout" />
+                    </form>
+
+
+                <?php
+
+                } ?>
                 <li class="nav-item">
                     <a class="nav-link" href="?page=Profile">Profile</a>
                 </li>

@@ -5,7 +5,7 @@ if(isset($_POST["login"]))
 {
 
     UserController::Login();
-
+?><script type="text/javascript">window.location="?page=MainPage"</script><?php
 }
 ?>
 
