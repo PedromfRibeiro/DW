@@ -1,6 +1,6 @@
 <?php
 
-require_once ('../_DAL/UtilizadorDAL.php');
+require'C:/xampp/htdocs/DWphp/_DAL/UtilizadorDAL.php';
 
 
 class Utilizador

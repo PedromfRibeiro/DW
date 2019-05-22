@@ -2,7 +2,7 @@
 <html lang="pt-pt">
 <head>
     <?php
-    require '_includes/Header.php';
+    require '_includes/Head.php';
     ?>
     <link href="../../_css/admingeneros.css" type="text/css" rel="stylesheet"/>
 

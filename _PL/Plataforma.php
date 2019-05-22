@@ -3,9 +3,7 @@
 <head>
     <title>The Classic Gamer</title>
 
-    <?php
-    include '_includes/Header.php';
-    ?>
+
     <link type="text/css" rel="stylesheet" href="../_css/Styles.css" />
     <link type="text/css" rel="stylesheet" href="../_css/Header.css" />
     <link type="text/css" rel="stylesheet" href="../_css/Plataforma.css"/>

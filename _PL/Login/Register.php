@@ -1,7 +1,6 @@
 <?php
 session_start();
-include('../_includes/Header.php');
-require_once '../_BL/Utilizador.php';
+require_once 'C:/xampp/htdocs/DWphp/_BL/Utilizador.php';
 
 function checkPassword($pwd,&$msg) {
 
@@ -79,7 +78,7 @@ try {
        if (   checkEmail   ($_POST['email']   ,$message)
            || checkPassword($_POST["password"],$message)
            || CheckBirth   ($_POST['data_Nascimento']   ,$message) ){}
-       if($_POST['newpassword']== $_POST['confirmpassword']){$_SESSION['message']  = "The two password you entered don't match, try again!";}
+       if(1){$_SESSION['message']  = "The two password you entered don't match, try again!";}
         else {
             $uu = new Utilizador('', '', '', '', '', '', '', '', '');
             $uu->Nome = $_POST["Nome"];

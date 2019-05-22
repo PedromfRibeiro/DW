@@ -2,7 +2,7 @@
 <html lang="pt-pt">
 <head>
     <?php
-    include '_includes/Header.php';
+    include '_includes/Head.php';
     ?>
     <link href="../../_css/admingames.css" type="text/css" rel="stylesheet"/>
 

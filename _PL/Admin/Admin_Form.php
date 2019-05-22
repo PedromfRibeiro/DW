@@ -2,7 +2,7 @@
 <html lang="pt-pt">
 
     <?php
-    include '_includes/Header.php';
+    include '_includes/Head.php';
     ?>
 <head>
     <link href="../../_css/Admin_form.css" type="text/css" rel="stylesheet"/>

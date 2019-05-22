@@ -1,5 +1,5 @@
 <?php
-require_once "Conexao.php";
+require_once  'C:/xampp/htdocs/DWphp/_DAL/Conexao.php';
 
 
 class UtilizadorDAL
