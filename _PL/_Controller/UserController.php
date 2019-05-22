@@ -219,8 +219,14 @@ http://localhost/DWphp/Login/Verify.php?email=' . $uu->email . '&code_hash=' . $
     }
 
     public static function isUserLoggedIn(){
-        return(isset($_SESSION['userid']));
+        return(isset($_SESSION['email']));
     }
+
+    public static function Logout(){
+        session_destroy();
+        $_SESSION = array();
+    }
+
 
     public static function getLoggedUser(){
         $user=null;

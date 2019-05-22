@@ -1,16 +1,8 @@
 <?php
-session_start();
+if(isset($_POST["Logout"]))
+{
 
-$_SESSION = array();
-
-if (ini_get("session.use_cookies")) {
-    $params = session_get_cookie_params();
-    setcookie(session_name(), '', time() - 42000,
-        $params["path"], $params["domain"],
-        $params["secure"], $params["httponly"]
-    );
+    UserController::Logout();
 }
-
-// Por último, destrói a sessão
-session_destroy();
-header("location:../Index.php");
+?>
+<script type="text/javascript">window.location="?page=MainPage"</script>
