@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e5dc535-3947-4119-af51-912d58a34dbd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_PL/MainPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_BL/Utilizador.php" beforeDir="false" afterPath="$PROJECT_DIR$/_BL/Utilizador.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_DAL/UtilizadorDAL.php" beforeDir="false" afterPath="$PROJECT_DIR$/_DAL/UtilizadorDAL.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Genero.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Genero.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_PL/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Login/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/Register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Plataforma.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Plataforma.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Produtos.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Produtos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Shopping_cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Shopping_cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/_includes/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/_includes/Header.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_PL/Index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="66" column="22" lean-forward="true" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
+            <state relative-caret-position="315">
+              <caret line="63" column="15" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
@@ -63,7 +49,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_PL/_includes/Header.php">
+        <entry file="file://$PROJECT_DIR$/_PL/_includes/Head.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -88,6 +74,11 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Pedro Miguel Ferreira Ribeiro &lt;a37556@alunos.ipb.pt&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -213,20 +204,30 @@
       <workItem from="1558485256232" duration="892000" />
       <workItem from="1558513240580" duration="1033000" />
       <workItem from="1558514414037" duration="418000" />
+      <workItem from="1558514857047" duration="1129000" />
     </task>
+    <task id="LOCAL-00001" summary="Debug">
+      <created>1558515031844</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558515031844</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2343000" />
+    <option name="totallyTimeSpent" value="3472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -286,11 +287,22 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_BL/Utilizador.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/_includes/Footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="14" selection-end-line="42" />
         </state>
       </provider>
     </entry>
@@ -318,20 +330,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_PL/_includes/Header.php">
+    <entry file="file://$PROJECT_DIR$/_PL/_includes/Head.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_PL/_includes/Footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="14" selection-end-line="42" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_PL/Index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="66" column="22" lean-forward="true" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
+        <state relative-caret-position="315">
+          <caret line="63" column="15" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
           <folding>
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />

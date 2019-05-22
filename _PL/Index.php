@@ -63,7 +63,6 @@
 </header>
 <!-- Header -->
 
-
 <?php
 $option=$_GET["page"];
 $page="$option.php";
