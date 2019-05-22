@@ -4,7 +4,7 @@
     <?php
     include '_includes/Head.php';
     ?>
-    <link href="../../_css/admingames.css" type="text/css" rel="stylesheet"/>
+    <link href="../../_css/admingames.css" type="text/css" rel="stylesheet"/>9
 </head>
 <body>
 <div class="container">

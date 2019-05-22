@@ -1,4 +1,7 @@
 <head>
+    <?php
+    include '../_includes/Head.php';
+    ?>
     <link href="C:/xampp/htdocs/DWphp/_css/admingeneros.css" type="text/css" rel="stylesheet"/>
 
 </head>
