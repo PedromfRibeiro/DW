@@ -2,7 +2,7 @@
 <html lang="pt-pt">
 <head>
     <?php
-    include '_includes/Head.php';
+    include '../_includes/Head.php';
     ?>
     <link href="../../_css/adminplataforma.css" type="text/css" rel="stylesheet"/>
 
@@ -79,7 +79,4 @@
 </div>
 
 </body>
-<?php
-include '_includes/Footer.php';
-?>
 </html>

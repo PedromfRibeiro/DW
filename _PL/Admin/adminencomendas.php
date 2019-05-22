@@ -90,7 +90,4 @@
 </div>
 
 </body>
-<?php
-include '_includes/Footer.php';
-?>
 </html>
