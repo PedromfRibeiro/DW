@@ -1,3 +1,5 @@
+<?php
+session_start();?>
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -36,7 +38,7 @@
             <ul class="navbar-nav ml-auto">
 
                 <?php
-                if(empty($_SESSION)){
+                if(1){
                     ?>
                     <li class="nav-item">
                         <a class="nav-link" id="loginCSS" href="?page=Login/login">Login </a></li>
@@ -45,7 +47,7 @@
                 <?php } ?>
 
                 <?php
-                if(!empty($_SESSION)){
+                if(1){
                     ?>
                     <li class="nav-item">
                         <a class="nav-link" id="loginCSS" href="?page=Logout">Logout </a></li>

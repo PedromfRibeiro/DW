@@ -1,5 +1,5 @@
 <?php
-require_once ('_DAL/GeneroDAL.php');
+require_once ('../_DAL/GeneroDAL.php');
 
 class Genero
 {

@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-pt">
 <head>
-    <?php
-    require '_includes/Head.php';
-    ?>
-    <link href="../../_css/admingeneros.css" type="text/css" rel="stylesheet"/>
+    <link href="C:/xampp/htdocs/DWphp/_css/admingeneros.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -36,7 +31,7 @@
 							</span>
                 <?php
 
-                require_once '_BL/Genero.php';
+                require_once 'C:/xampp/htdocs/DWphp/_BL/Genero.php';
 
                 $POD = new Genero('','');
                 $BFetch = ($POD->ReadALL());
@@ -100,7 +95,7 @@ $POD=null;
 								<label for="checkbox1"></label>
 							</span>
                 <?php
-                require_once '_BL/Plataforma.php';
+                require_once 'C:/xampp/htdocs/DWphp/_BL/Plataforma.php';
 
                 $GetPlat = new Plataforma('','');
                 $PlatFetch = ($GetPlat->ReadALL());

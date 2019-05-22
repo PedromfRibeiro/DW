@@ -1,5 +1,5 @@
 <?php
-require_once ('_DAL/PlataformaDAL.php');
+require_once ('C:/xampp/htdocs/DWphp/_DAL/PlataformaDAL.php');
 
 class Plataforma
 {
