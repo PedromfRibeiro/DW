@@ -16,7 +16,10 @@ $u->email=$_SESSION['email'];
 $BFetch = ($u->ReadEmail());
 
 
-    ?><div class="container">
+    ?>
+
+
+<div class="container">
     <div class="row profile">
         <div class="col-md-3">
             <div class="profile-sidebar">
@@ -32,6 +35,7 @@ $BFetch = ($u->ReadEmail());
                     </div>
                     <div class="profile-usertitle-email">
                         <?php echo  $BFetch['email']; ?>
+                        <?php echo  $BFetch['code_hash']; ?>
 
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 <?php
-require_once  "C:/xampp/htdocs/DWphp/_PL/_Controller/UserController.php";
+require_once dirname(__FILE__)."/../../_Controller/UserController.php";
 
 if(isset($_POST["login"]))
 {
@@ -8,6 +8,8 @@ if(isset($_POST["login"]))
 ?><script type="text/javascript">window.location="?page=MainPage"</script><?php
 }
 ?>
+
+
 
 <body>
 

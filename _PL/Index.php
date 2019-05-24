@@ -1,17 +1,31 @@
 <?php
-session_start();?>
+
+
+require_once  dirname(__FILE__) . "/../_Controller/MainController.php";
+MainController::process();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
-    <?php include "_includes/Head.php";
-    require_once  "C:/xampp/htdocs/DWphp/_PL/_Controller/UserController.php";
-
-    ?>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>The Classic Gamer</title>
-    <link type="text/css" rel="stylesheet" href="../_css/Styles.css" />
-    <link type="text/css" rel="stylesheet" href="../_css/Header.css" />
-    <link type="text/css" rel="stylesheet" href="../_css/MainPage.css"/>
 
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Includes-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--CSS-->
+    <script src="sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_css/Header.css"/>
+    <link rel="stylesheet" type="text/css" href="../_css/Styles.css" />
+    <link type="text/css" rel="stylesheet" href="../_css/MainPage.css"/>
 
 </head>
 <body>
@@ -50,15 +64,11 @@ session_start();?>
                 <?php } ?>
 
                 <?php
-                if(!empty(UserController::isUserLoggedIn())){                    ?>
+                if(!empty(UserController::isUserLoggedIn())){   ?>
                     <form method="POST"  action="?page=Login/Logout" >
                         <input type="submit" name="Logout" class="btn btn-info" value="Logout" />
                     </form>
-
-
-                <?php
-
-                } ?>
+                <?php   }   ?>
                 <li class="nav-item">
                     <a class="nav-link" href="?page=Profile">Profile</a>
                 </li>
