@@ -115,10 +115,6 @@
     }
 }
 
-Swal.fire({
-    position: 'top-end',
-    type: 'success',
-    title: 'Your work has been saved',
-    showConfirmButton: false,
-    timer: 1500
-})
+#idLog{
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

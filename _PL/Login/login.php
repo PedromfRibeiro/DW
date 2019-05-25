@@ -1,18 +1,4 @@
-<?php
-require_once dirname(__FILE__)."/../../_Controller/UserController.php";
-
-if(isset($_POST["login"]))
-{
-
-    UserController::Login();
-?><script type="text/javascript">window.location="?page=MainPage"</script><?php
-}
-?>
-
-
-
 <body>
-
 <br />
 <div class="container" style="width:500px;">
     <h3 align="">PHP Login Script using PDO</h3><br />
@@ -23,16 +9,16 @@ if(isset($_POST["login"]))
         <label>Password</label>
         <input type="password" name="password" class="form-control" />
         <br />
-        <input type="submit" name="login" class="btn btn-info" value="Login" />
+        <form method="POST">
+            <input type="submit" name="login" class="btn btn-info" value="login" />
+        </form>
         <form method="get"  action="?page=Login/Register" >
             <a href="?page=Login/Register" class="btn btn-info">Registar</a>
         </form>
         <form method="get"  action="?page=Login/Forgot" >
             <a href="?page=Login/Forgot" class="btn btn-info">resetPass</a>
         </form>
-
     </form>
 </div>
 <br />
 </body>
-</html>

@@ -3,12 +3,17 @@
 session_start();
 require_once '../_BL/Utilizador.php';
 
-function checkPassword($pwd) {
+function checkPassword($pwd,$pwd2) {
 
     if (empty($pwd)) {
         $_SESSION['message'] = "Password is empty!";
         return true;
     }
+    if (empty($pwd2)) {
+        $_SESSION['message'] = "Password is empty!";
+        return true;
+    }
+
     if (strlen($pwd) < 8 || strlen($pwd) > 24) {
         $_SESSION['message'] = "Password too short!";
         return true;

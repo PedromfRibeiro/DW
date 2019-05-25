@@ -1,8 +1,6 @@
 <?php
-
-
 require_once  dirname(__FILE__) . "/../_Controller/MainController.php";
-MainController::process();
+require_once  dirname(__FILE__) . "/../_Controller/UserController.php";
 
 ?>
 <!DOCTYPE html>
@@ -21,11 +19,22 @@ MainController::process();
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--CSS-->
+    <!--JS-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="sweetalert2.all.min.js"></script>
+    <script src="../_js/Login.js"></script>
+
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
+    <!--CSS-->
     <link rel="stylesheet" type="text/css" href="../_css/Header.css"/>
     <link rel="stylesheet" type="text/css" href="../_css/Styles.css" />
     <link type="text/css" rel="stylesheet" href="../_css/MainPage.css"/>
+    <link rel="stylesheet" href="../_js/Login.js"/>
 
 </head>
 <body>
@@ -68,10 +77,11 @@ MainController::process();
                     <form method="POST"  action="?page=Login/Logout" >
                         <input type="submit" name="Logout" class="btn btn-info" value="Logout" />
                     </form>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?page=Profile">Profile</a>
+                    </li>
                 <?php   }   ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="?page=Profile">Profile</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link " href="?page=Shopping_cart">Shopping Cart</a>
                 </li>
@@ -81,8 +91,8 @@ MainController::process();
     </nav>
 </header>
 <!-- Header -->
-
 <?php
+MainController::process();
 $option=$_GET["page"];
 $page="$option.php";
 require_once $page;
