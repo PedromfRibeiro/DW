@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1e5dc535-3947-4119-af51-912d58a34dbd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/_Controller/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/_Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Login/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/Register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Login/ResetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/ResetPassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_css/LogIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/_css/LogIn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/_js/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_PL/Login/Verify.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/Verify.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,15 +12,34 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dwphp@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="DWphp" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_PL/Index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
+            <state relative-caret-position="-189">
               <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
             </state>
           </provider>
@@ -36,45 +49,27 @@
         <entry file="file://$PROJECT_DIR$/_Controller/MainController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
-              <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+            <state relative-caret-position="57">
+              <caret line="174" column="25" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
               <folding>
-                <element signature="e#136#202#0#PHP" />
                 <element signature="n#Login#0;n#UserController#0;n#!!top" />
-                <element signature="e#364#1240#0#PHP" />
-                <element signature="e#522#1240#0#PHP" />
-                <element signature="e#745#1230#0#PHP" />
-                <element signature="e#925#1230#0#PHP" />
-                <element signature="e#1131#1230#0#PHP" />
+                <element signature="n#Register#0;n#UserController#0;n#!!top" />
+                <element signature="n#Checkmail#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
                 <element signature="n#pass#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
                 <element signature="n#Birth#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
-                <element signature="e#3283#4619#0#PHP" />
                 <element signature="n#AnimatedNotify#0;n#UserController#0;n#!!top" />
-                <element signature="e#5283#5533#0#HTML" />
-                <element signature="e#5314#5523#0#HTML" />
-                <element signature="e#5376#5381#0#PHP" />
-                <element signature="e#5420#5425#0#PHP" />
-                <element signature="e#5543#5548#0#PHP" />
-                <element signature="e#5558#5724#0#PHP" />
-                <element signature="e#5585#5695#0#HTML" />
-                <element signature="n#processemail#0;n#UserController#0;n#!!top" />
-                <element signature="e#5928#6017#0#PHP" />
-                <element signature="n#processLogout#0;n#UserController#0;n#!!top" />
                 <element signature="n#isUserLoggedIn#0;n#UserController#0;n#!!top" />
                 <element signature="n#Logout#0;n#UserController#0;n#!!top" />
                 <element signature="n#getLoggedUser#0;n#UserController#0;n#!!top" />
-                <element signature="e#6440#6610#0#PHP" />
-                <element signature="e#6536#6600#0#PHP" />
                 <element signature="n#IsUserLoggedAdmin#0;n#UserController#0;n#!!top" />
-                <element signature="e#6756#6827#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -83,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_PL/Login/Register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="56" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="56" />
+            <state relative-caret-position="42">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -112,6 +107,10 @@
       <find>false</find>
       <find>return true;</find>
       <find>$pwd</find>
+      <find>$Mesg</find>
+      <find>Please make sure your email adress is valid</find>
+      <find>$_SESSION[&quot;Mesg&quot;]</find>
+      <find>$_SESSION['message']</find>
     </findStrings>
     <replaceStrings>
       <replace>email</replace>
@@ -122,6 +121,8 @@
       <replace>&quot;</replace>
       <replace>true</replace>
       <replace>$_POST['password']</replace>
+      <replace>$_SESSION[&quot;Mesg&quot;</replace>
+      <replace>$_SESSION[&quot;Mesg&quot;]</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -157,23 +158,25 @@
         <option value="$PROJECT_DIR$/_PL/Login/login.php" />
         <option value="$PROJECT_DIR$/_PL/Index.php" />
         <option value="$PROJECT_DIR$/_Controller/MainController.php" />
-        <option value="$PROJECT_DIR$/_PL/Login/Register.php" />
         <option value="$PROJECT_DIR$/_PL/Login/ResetPassword.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b60828c5-662f-45e6-a7f7-64fe1091d619/console.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1cea5c26-baad-4cb4-81ff-12ca08899fab/console_1.sql" />
+        <option value="$PROJECT_DIR$/_PL/Login/Register.php" />
         <option value="$PROJECT_DIR$/_Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/_PL/Login/Verify.php" />
       </list>
     </option>
   </component>
-  <component name="PhpDebugGeneral" hide_empty_superglobals="false" listening_started="true" />
+  <component name="PhpDebugGeneral" xdebug_show_addresses="true" hide_empty_superglobals="false" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="c0d84c4d-fb35-428a-86ea-c37024cf67ff" name="xDebug" />
     </servers>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="83" />
-    <option name="y" value="-17" />
-    <option name="width" value="1070" />
-    <option name="height" value="738" />
+    <option name="x" value="455" />
+    <option name="width" value="918" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -213,6 +216,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -251,10 +255,14 @@
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xDebug" start_url="/DWphp/_PL/Login/login.php">
       <method v="2" />
     </configuration>
+    <configuration name="verify" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="53e2f627-b1a7-4dfa-bfa7-5b83cc034776" server_name="xDebug" start_url="localhost/DWphp/_PL/Index.php?page=Login/Verify&amp;email=prs.p.ribeiro@gmail.com&amp;code_hash=8613985ec49eb8f757ae6439e879bb2a">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="PHP Web Page._PL/Login/login.php" />
       <item itemvalue="PHP Web Page._PL/Login/Register.php" />
       <item itemvalue="PHP Web Page._PL/Index.php" />
+      <item itemvalue="PHP Web Page.verify" />
       <item itemvalue="PHP Web Page.Admin/admingeneros" />
     </list>
   </component>
@@ -281,6 +289,8 @@
       <workItem from="1558802802894" duration="2582000" />
       <workItem from="1558806970033" duration="812000" />
       <workItem from="1558807935739" duration="6147000" />
+      <workItem from="1558827706543" duration="5365000" />
+      <workItem from="1558882519095" duration="2540000" />
     </task>
     <task id="LOCAL-00001" summary="Debug">
       <created>1558515031844</created>
@@ -331,11 +341,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558735180474</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Login animado">
+      <created>1558827747465</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1558827747465</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Registro animado">
+      <created>1558832971664</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1558832971664</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51977000" />
+    <option name="totallyTimeSpent" value="59882000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -348,8 +372,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919486" weight="0.10514372" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.13388805" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.102118" />
       <window_info id="Favorites" order="2" sideWeight="0.50080514" side_tool="true" weight="0.102118" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,10 +390,11 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32850242" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.32850242" />
       <window_info anchor="bottom" id="Statistic" order="12" weight="0.5507246" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
@@ -439,7 +465,9 @@
     <MESSAGE value="Debug" />
     <MESSAGE value="Login and Logout" />
     <MESSAGE value="Work on going" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work on going" />
+    <MESSAGE value="Login animado" />
+    <MESSAGE value="Registro animado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registro animado" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_PL/_includes/Footer.php" />
@@ -555,13 +583,6 @@
     <entry file="file://$PROJECT_DIR$/Notfound.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/_BL/Utilizador.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1328">
-          <caret line="74" column="28" lean-forward="true" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_css/LogIn.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="987">
@@ -622,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_PL/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_PL/Login/ResetPassword.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-279">
@@ -636,54 +650,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_PL/Login/Register.php">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b60828c5-662f-45e6-a7f7-64fe1091d619/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="56" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="56" />
+        <state>
+          <caret selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1cea5c26-baad-4cb4-81ff-12ca08899fab/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Admin/admingames.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/filter/filter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="300" column="9" selection-start-line="300" selection-start-column="9" selection-end-line="300" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_Controller/MainController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_BL/Utilizador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Login/Register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Login/Verify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+        <state relative-caret-position="57">
+          <caret line="174" column="25" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
           <folding>
-            <element signature="e#136#202#0#PHP" />
             <element signature="n#Login#0;n#UserController#0;n#!!top" />
-            <element signature="e#364#1240#0#PHP" />
-            <element signature="e#522#1240#0#PHP" />
-            <element signature="e#745#1230#0#PHP" />
-            <element signature="e#925#1230#0#PHP" />
-            <element signature="e#1131#1230#0#PHP" />
+            <element signature="n#Register#0;n#UserController#0;n#!!top" />
+            <element signature="n#Checkmail#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
             <element signature="n#pass#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
             <element signature="n#Birth#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
-            <element signature="e#3283#4619#0#PHP" />
             <element signature="n#AnimatedNotify#0;n#UserController#0;n#!!top" />
-            <element signature="e#5283#5533#0#HTML" />
-            <element signature="e#5314#5523#0#HTML" />
-            <element signature="e#5376#5381#0#PHP" />
-            <element signature="e#5420#5425#0#PHP" />
-            <element signature="e#5543#5548#0#PHP" />
-            <element signature="e#5558#5724#0#PHP" />
-            <element signature="e#5585#5695#0#HTML" />
-            <element signature="n#processemail#0;n#UserController#0;n#!!top" />
-            <element signature="e#5928#6017#0#PHP" />
-            <element signature="n#processLogout#0;n#UserController#0;n#!!top" />
             <element signature="n#isUserLoggedIn#0;n#UserController#0;n#!!top" />
             <element signature="n#Logout#0;n#UserController#0;n#!!top" />
             <element signature="n#getLoggedUser#0;n#UserController#0;n#!!top" />
-            <element signature="e#6440#6610#0#PHP" />
-            <element signature="e#6536#6600#0#PHP" />
             <element signature="n#IsUserLoggedAdmin#0;n#UserController#0;n#!!top" />
-            <element signature="e#6756#6827#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
         </state>
       </provider>
     </entry>

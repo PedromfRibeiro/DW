@@ -12,10 +12,8 @@ class UserController
         if (isset($_POST['register'])) {
             self::Register();
         }
-
-        $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-        if($host == 'http://localhost/DWphp/_PL/Login/Verify.php')
-        {self::VerifyEmail();
+        if (isset($_POST['Ativar'])){
+            self::VerifyEmail();
         }
 
 
@@ -157,8 +155,7 @@ class UserController
                 Hello ' . $_POST["Nome"] . ',
 Thank you for Signing up!
 Please Click This link to activate your account:
-http://localhost/DWphp/_PL/Login/Verify.php?email=' . $uu->email . '&code_hash=' . $uu->code_hash;
-
+http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&code_hash=' . $uu->code_hash;
                     mail($to, $subject, $mail, $headers);
                     self::AnimatedNotify($typ,$_SESSION["Mesg"],$main);
 
@@ -173,8 +170,11 @@ http://localhost/DWphp/_PL/Login/Verify.php?email=' . $uu->email . '&code_hash='
         }
 
         public static function VerifyEmail(){
-
+            $main=0;
+            $typ="error";
             if (isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['code_hash']) && !empty($_GET['code_hash'])) {
+
+
 
                 $verify = new Utilizador('', '', '', '', '', '', '', '', '');
                 $verify->email = $_GET['email'];
@@ -182,21 +182,24 @@ http://localhost/DWphp/_PL/Login/Verify.php?email=' . $uu->email . '&code_hash='
 
                 $result_of_Verify = $verify->ReadVerify();
                 if (empty($result_of_Verify)) {
-                    $_SESSION['message'] = "Account has already been activated or the URL is invalid!";
-                    header("Location: error.php");
+                    $_SESSION["Mesg"] = "Account has already been activated or the URL is invalid!";
+
                 } else {
-                    $_SESSION['message'] = "Your Account has been activated!";
+                    $_SESSION["Mesg"] = "Your Account has been activated!";
                     $verify->code_hash = md5(rand(0, 1000));
                     $verify->Verify = '1';
                     $verify->UpdateVerify();
-                    $_SESSION['message'] = "Account has been activated !";
-                    header("Location: Sucess.php");
+                    $_SESSION["Mesg"] = "Account has been activated !";
+                    $typ = "sucess";
+                    $main=1;
                 }
-            } else {
-                $_SESSION['Message'] = "Invalid parameters provided for account verification!";
-                header("Location: error.php");
+            }
+            else {
+                $_SESSION["Mesg"] = "Invalid parameters provided for account verification!";
+                self::AnimatedNotify($typ,$_SESSION["Mesg"],$main);
 
             }
+            self::AnimatedNotify($typ,$_SESSION["Mesg"],$main);
 
         }
 
