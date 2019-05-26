@@ -13,94 +13,126 @@ class UserController
             self::Register();
         }
 
+        $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+        if($host == 'http://localhost/DWphp/_PL/Login/Verify.php')
+        {self::VerifyEmail();
+        }
+
+
+
+
 
     }
-        
-    public static function Login(){
-        $main="0";
-        if(empty($_POST["email"]) || empty($_POST["password"]))
-        {
-            $typ = "error";
-            $Mesg='Missing data to continue';
-        }
-        else {
-            $uu = new Utilizador('', '', '', '', '', '', '', '', '');
 
-            $uu->email = $_POST["email"];
-            $uu->pass = sha1($_POST['password']);;
-
-            $statement = $uu->Read();
-
-            if (!($statement['Verify'] == 1)){
-                $typ = "warning";
-                $Mesg='Email nao verificado! Por favor verifique o seu email!';
-            }
-            else if ($statement>0) {
-                $typ = "success";
-                $Mesg='Sucess to LogIn!';
-                $main="1";
-                $_SESSION["email"]=$_POST["email"];
+        public static function Login(){
+            $main="0";
+            if(empty($_POST["email"]) || empty($_POST["password"]))
+            {
+                $typ = "error";
+                $_SESSION["Mesg"]='Missing data to continue';
             }
             else {
-                $typ = "error";
-                $Mesg='Something went Wrong!';
+                $uu = new Utilizador('', '', '', '', '', '', '', '', '');
+
+                $uu->email = $_POST["email"];
+                $uu->pass = sha1($_POST['password']);;
+
+                $statement = $uu->Read();
+
+                if (!($statement['Verify'] == 1)){
+                    $typ = "warning";
+                    $_SESSION["Mesg"]='Email nao verificado! Por favor verifique o seu email!';
+                }
+                else if ($statement>0) {
+                    $typ = "success";
+                    $_SESSION["Mesg"]='Sucess to LogIn!';
+                    $main="1";
+                    $_SESSION["email"]=$_POST["email"];
+                }
+                else {
+                    $typ = "error";
+                    $_SESSION["Mesg"]='Something went Wrong!';
+                }
             }
-        }
-        self::AnimatedNotify($typ,$Mesg,$main);
-    }
-    
-    public static function Register(){
-
-
-
-        function pass(&$Mesg){
-            if (empty($_POST['password']) || empty($_POST['newpassword'])) {$Mesg= "Password is empty!";}
-            if (!(strcmp($_POST['password'],$_POST['newpassword']))){$Mesg = "The two password you entered don't match, try again!";}
-            if (strlen($_POST['password']) < 8 || strlen($_POST['password']) > 24){$Mesg= "Password too short!";}
-            if (!preg_match("#[0-9]+#", $_POST['password'])) {$Mesg= "Password must include at least one number!";}
-            if (!preg_match("#[a-zA-Z]+#", $_POST['password'])) {$Mesg = "Password must include at least one letter!";}
-
-
+            self::AnimatedNotify($typ,$_SESSION["Mesg"],$main);
         }
 
+        public static function Register(){
+
+            function Checkmail(){
+
+                $chk = new Utilizador('', '', '', '', '', '', '', '', '');
+                $chk->email =$_POST['email'];
+                $check=$chk->ReadEmail();
+
+                if (empty($_POST['email']))
+                {$_SESSION["Mesg"]= "Email is empty!"; return true;}
+
+                else if($check>0)
+                {$_SESSION["Mesg"]= "The email is already in use!";return true;}
+
+                else if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+                {$_SESSION["Mesg"]= "Please make sure your email adress is valid";return true;}
+
+                return false;}
+
+            function pass(){
+                $array1=$_POST['password'];
+                $array2=$_POST['newpassword'];
 
 
+                if (empty($_POST['password']) || empty($_POST['newpassword'])) {
+                    $_SESSION["Mesg"]= "Password is empty!"; return true;}
+
+                else if ((strcmp($array1,$array2))!==0){
+                    $_SESSION["Mesg"]= "The two passwords you entered dont match, try again!"; return true;}
+
+                else if (strlen($_POST['password']) < 8 || strlen($_POST['password']) > 24){
+                    $_SESSION["Mesg"]= "Password too short!";return true;}
+
+                else if (!preg_match("#[0-9]+#", $_POST['password'])) {
+                    $_SESSION["Mesg"]= "Password must include at least one number!";return true;}
+
+                else if (!preg_match("#[a-zA-Z]+#", $_POST['password'])) {
+                    $_SESSION["Mesg"] = "Password must include at least one letter!";return true;}
+
+                else{return false;}
+            }
+
+            function Birth($birth){
+                $d1 = new DateTime("$birth");
+                $d2 = new DateTime("now");
+                $diff = $d1->diff($d2);
+                $uu=$diff->y;
+
+                if($uu<16){
+                    $_SESSION["Mesg"]= "You Need to be above 16 to register in our Website!";
+                    return true; }
+
+                if(empty($birth)){
+                    $_SESSION["Mesg"]= "Birth date is required";
+                    return true; }
+
+                else {return false;}
+            }
 
 
+            if (empty($_POST["Nome"])) {
+                $typ = "error";$main="0"; $_SESSION["Mesg"]= "All fields are required";}
 
-        function Checkmail(&$Mesg){
-
-            $chk = new Utilizador('', '', '', '', '', '', '', '', '');
-            $chk->email =$_POST['email'];
-            $check=$chk->ReadEmail();
-
-               if (empty($_POST['email'])) {$Mesg= "Email is empty!"; return true;}
-               else if($check>0){$Mesg= "The email is already in use!";return true;}
-               else if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){$Mesg= "Please make sure your email adress is valid";return true;}
-               //else if ($_POST['email'] == trim($_POST['email']) && strpos($_POST['email'], ' ') !== true){$Mesg= "Please make sure your email adress is valid";return true;}
-            return false;}
-        function Birth($birth,&$Mesg){
-            $d1 = new DateTime("$birth");
-            $d2 = new DateTime("now");
-            $diff = $d1->diff($d2);
-            $uu=$diff->y;
-
-            if($uu<16){$Mesg= "You Need to be above 16 to register in our Website!"; return true; }
-            if(empty($_POST["data_Nascimento"])){$Mesg= "Birth date is required";    return true; }
-            else return false;
-        }
-
-         $date = date("D M d, Y G:i");
-
-            if (empty($_POST["Nome"])) { $typ = "error";$main="0"; $Mesg= "All fields are required";}
-            if (Checkmail($Mesg) || pass($Mesg) || Birth($_POST['data_Nascimento'],$Mesg)){$typ = "error"; $main="0";self::AnimatedNotify($typ,$Mesg,$main);return false;}
+            else if (Checkmail() || pass() || (Birth($_POST['data_Nascimento']))) {
+                $typ = "error";
+                $main="0";
+                self::AnimatedNotify($typ,$_SESSION["Mesg"],$main);
+                return false;
+            }
             else {
 
                 $uu = new Utilizador('', '', '', '', '', '', '', '', '');
                 $uu->Nome = $_POST["Nome"];
                 $uu->email = $_POST["email"];
                 $uu->pass =  sha1($_POST['password']);
-                $uu->Data_Registo = $date;
+                $uu->Data_Registo = Date("now");
                 $uu->Data_Nascimento = $_POST["data_Nascimento"];
                 $uu->code_hash = md5(rand(0, 1000));
                 $uu->Verify = '0';
@@ -109,13 +141,13 @@ class UserController
                 $statement = $uu->Read();
 
                 if ($statement > 0) {
-                    $Mesg= "Data already exist!";
+                    $_SESSION["Mesg"]= "Data already exist!";
                     $typ = "error";$main="0";
                 } else {
                     $uu->Create();
 
                     $typ ="success";
-                    $Mesg="Thank you to sign in! Check you email to confirm!";
+                    $_SESSION["Mesg"]="Thank you to sign in! Check you email to confirm!";
                     $main="1";
 
                     $to = $_POST["email"];
@@ -125,15 +157,51 @@ class UserController
                 Hello ' . $_POST["Nome"] . ',
 Thank you for Signing up!
 Please Click This link to activate your account:
-http://localhost/DWphp/Login/Verify.php?email=' . $uu->email . '&code_hash=' . $uu->code_hash;
+http://localhost/DWphp/_PL/Login/Verify.php?email=' . $uu->email . '&code_hash=' . $uu->code_hash;
 
                     mail($to, $subject, $mail, $headers);
+                    self::AnimatedNotify($typ,$_SESSION["Mesg"],$main);
 
                 }
-            }
-        self::AnimatedNotify($typ,$Mesg,$main);
 
-    }
+            }
+
+            self::AnimatedNotify($typ,$_SESSION["Mesg"],$main);
+
+
+
+        }
+
+        public static function VerifyEmail(){
+
+            if (isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['code_hash']) && !empty($_GET['code_hash'])) {
+
+                $verify = new Utilizador('', '', '', '', '', '', '', '', '');
+                $verify->email = $_GET['email'];
+                $verify->code_hash = $_GET['code_hash'];
+
+                $result_of_Verify = $verify->ReadVerify();
+                if (empty($result_of_Verify)) {
+                    $_SESSION['message'] = "Account has already been activated or the URL is invalid!";
+                    header("Location: error.php");
+                } else {
+                    $_SESSION['message'] = "Your Account has been activated!";
+                    $verify->code_hash = md5(rand(0, 1000));
+                    $verify->Verify = '1';
+                    $verify->UpdateVerify();
+                    $_SESSION['message'] = "Account has been activated !";
+                    header("Location: Sucess.php");
+                }
+            } else {
+                $_SESSION['Message'] = "Invalid parameters provided for account verification!";
+                header("Location: error.php");
+
+            }
+
+        }
+
+
+
 
     public static function AnimatedNotify($typ,$Mesg,$main){?>
         <script>
@@ -152,19 +220,6 @@ http://localhost/DWphp/Login/Verify.php?email=' . $uu->email . '&code_hash=' . $
             </script>
             <?php
         }
-    }
-
-    private static function processemail(){
-        $user = new Utilizador('','','','','','','','','');
-        $user-> email = $_POST('email');
-        $user-> pass = $_POST('password');
-        if($user-> ReadEmail()){
-            $_SESSION['userid'] = $user->idUtilizador;
-        }
-    }
-
-    public static function processLogout(){
-        $_SESSION=[];
     }
 
     public static function isUserLoggedIn(){

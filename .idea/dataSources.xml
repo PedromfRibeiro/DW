@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="dwphp@localhost" uuid="1cea5c26-baad-4cb4-81ff-12ca08899fab">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/dwphp</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+        <property name="serverTimezone" value="Europe/Lisbon" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="User Data Source - jdbc:mysql://localhost:3306/dwphp" uuid="b60828c5-662f-45e6-a7f7-64fe1091d619">
+      <driver-ref>java.sql.Driver</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/dwphp</jdbc-url>
+      <driver-properties>
+        <property name="serverTimezone" value="Europe/Lisbon" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>
