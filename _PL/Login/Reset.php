@@ -7,7 +7,7 @@
 <body>
 
 <h1>Reset</h1>
-<form action="ResetPassword.php" method="POST">
+<form method="POST">
     <label for="newpassword">password</label>
     <input type="text" id="newpassword" name="newpassword"><br>
     <label for="confirmpassword">confirmpassword</label>

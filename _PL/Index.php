@@ -74,8 +74,8 @@ require_once  dirname(__FILE__) . "/../_Controller/UserController.php";
 
                 <?php
                 if(!empty(UserController::isUserLoggedIn())){   ?>
-                    <form method="POST"  action="?page=Login/Logout" >
-                        <input type="submit" name="Logout" class="btn btn-info" value="Logout" />
+                    <form method="POST" >
+                        <input type="submit" name="LogOut" class="btn btn-info" value="Logout" />
                     </form>
                     <li class="nav-item">
                         <a class="nav-link" href="?page=Profile">Profile</a>

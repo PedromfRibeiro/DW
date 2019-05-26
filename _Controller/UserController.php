@@ -12,12 +12,19 @@ class UserController
         if (isset($_POST['register'])) {
             self::Register();
         }
+        if (isset($_POST['Logout'])) {
+            self::Logout();
+        }
         if (isset($_POST['Ativar'])){
             self::VerifyEmail();
         }
-        if (isset($_POST['Reset'])){
-            self::Reset();
+        if(isset($_POST['forgot'])){
+            self::Reset1form();
         }
+        if (isset($_POST['Reset'])){
+            self::Reset2part();
+        }
+
 
 
 
@@ -206,7 +213,43 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&
 
         }
 
-        public static function Reset(){
+        public static function Reset1form(){
+$typ="error";
+$main="0";
+                $chk = new Utilizador('', '', '', '', '', '', '', '', '');
+                $chk->email=$_POST['email'];
+                $check=$chk->ReadEmail();
+
+                if(empty($check)){
+                    $_SESSION["Mesg"] ="User with that email dosen't exist!";
+                }
+                else{
+                    $chk->Verify='0';
+                    $chk->code_hash = md5(rand(0, 1000));
+                    $chk->UpdateVerify();
+                    $email=$_POST['email'];
+                    $check=$chk->ReadEmail();
+                    $name=$check[1];
+                    $hash=$check[7];
+
+                    $typ="sucess";
+                    $main="1";
+                    $_SESSION["Mesg"] ="<p>Please check your email<span>$email</span>"."for a confirmation link to complete password reset!</p>";
+
+                    $to = $_POST["email"];
+                    $subject = 'Password Resset(The Classic Gamer)';
+                    $headers = 'From:TheClassicGamerComp@gmail.com';
+                    $msg = '  Hello ' . $name . ',
+Please Click This link to Reset your password:
+http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email='.$email.'&code_hash='.$hash;
+
+                    mail($to, $subject, $msg, $headers);
+                }
+            self::AnimatedNotify($typ,$_SESSION["Mesg"],$main);
+    }
+
+
+        public static function Reset2part(){
 
             if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['code_hash']) && !empty($_GET['code_hash'])){
 
@@ -220,18 +263,95 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&
                 $check=$rss->ReadEmailHash();
 
                 if(empty($check)){
-                    $_SESSION['message'] ="Invalid URL for password reset!";
-                    header("Location: error.php");
-                }}
+                    $_SESSION["Mesg"] ="Invalid URL for password reset!";
+                }
             else{
-                $_SESSION['message'] ="Sorry, Verification failed,try again!";
-                header("Location: error.php");
+                $_SESSION["Mesg"] ="Sorry, Verification failed,try again!";
 
             }
 
 
-            ?>
+
         }
+
+            $typ="error";
+            $main="0";
+
+            function checkPassword($pwd,$pwd2) {
+
+                if (empty($pwd)) {
+                    $_SESSION["Mesg"]= "Password is empty!";
+                    return true;
+                }
+                if (empty($pwd2)) {
+                    $_SESSION["Mesg"]= "Password is empty!";
+                    return true;
+                }
+
+                if (strlen($pwd) < 8 || strlen($pwd) > 24) {
+                    $_SESSION["Mesg"]= "Password too short!";
+                    return true;
+                }
+
+                if (!preg_match("#[0-9]+#", $pwd)) {
+                    $_SESSION["Mesg"]= "Password must include at least one number!";
+                    return true;
+                }
+
+                if (!preg_match("#[a-zA-Z]+#", $pwd)) {
+                    $_SESSION["Mesg"] = "Password must include at least one letter!";
+                    return true;
+                }
+                else return false;
+            }
+
+
+            if($_POST['newpassword']== $_POST['confirmpassword']){
+
+
+                    $email = $_POST['email'];
+                    $code_hash= $_POST['code_hash'];
+                    $rss = new Utilizador('', '', '', '', '', '', '', '', '');
+
+                    $rss->email=$email;
+                    $rss->code_hash =$code_hash;
+                    $check =$rss->Reademail();
+
+                    if (empty($check)) {
+                       $_SESSION["Mesg"] = "User with that email dosen't exist!";
+
+
+                    }
+                    if(checkPassword($_POST['newpassword'],$_POST['confirmpassword'])){}
+
+                    else {
+                        $rss ->Nome=$check['Nome'];
+                        $rss->pass=sha1($_POST['newpassword']);
+                        $rss ->Data_Registo=$check['Data_Registo'];
+                        $rss ->Autorizacao=$check['Autorizacao'];
+                        $rss ->Data_Nascimento=$check['Data_Nascimento'];
+                        $rss ->email=$check['email'];
+                        $rss->Verify='1';
+
+                        $rss->code_hash = md5(rand(0, 1000));
+                        $rss->Update();
+
+                        $typ="sucess";
+                        $main="1";
+
+                        $_SESSION["Mesg"] = "<p>Your Password has been updated!</p>";
+
+                    }}
+                else{
+                   $_SESSION["Mesg"] = "The two password you entered don't match, try again!";
+                }
+            self::AnimatedNotify($typ,$_SESSION["Mesg"],$main);
+
+            }
+
+
+
+
 
 
 
@@ -261,6 +381,8 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&
     public static function Logout(){
         session_destroy();
         $_SESSION = array();
+        self::AnimatedNotify("sucess","Até a proxima","1");
+
     }
 
     public static function getLoggedUser(){
