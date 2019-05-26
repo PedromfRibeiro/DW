@@ -15,6 +15,9 @@ class UserController
         if (isset($_POST['Ativar'])){
             self::VerifyEmail();
         }
+        if (isset($_POST['Reset'])){
+            self::Reset();
+        }
 
 
 
@@ -203,6 +206,32 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&
 
         }
 
+        public static function Reset(){
+
+            if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['code_hash']) && !empty($_GET['code_hash'])){
+
+                $email=$_GET['email'];
+                $code_hash=$_GET['code_hash'];
+
+                $rss = new Utilizador('', '', '', '', '', '', '', '', '');
+
+                $rss->email=$email;
+                $rss->code_hash=$code_hash;
+                $check=$rss->ReadEmailHash();
+
+                if(empty($check)){
+                    $_SESSION['message'] ="Invalid URL for password reset!";
+                    header("Location: error.php");
+                }}
+            else{
+                $_SESSION['message'] ="Sorry, Verification failed,try again!";
+                header("Location: error.php");
+
+            }
+
+
+            ?>
+        }
 
 
 

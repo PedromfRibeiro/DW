@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1e5dc535-3947-4119-af51-912d58a34dbd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/_Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_PL/Login/Verify.php" beforeDir="false" afterPath="$PROJECT_DIR$/_PL/Login/Verify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_PL/Login/Sucess.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_PL/Login/error.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +36,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_PL/Index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-189">
@@ -57,14 +57,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="174" column="25" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
+            <state relative-caret-position="292">
+              <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
               <folding>
                 <element signature="n#Login#0;n#UserController#0;n#!!top" />
                 <element signature="n#Register#0;n#UserController#0;n#!!top" />
                 <element signature="n#Checkmail#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
                 <element signature="n#pass#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
                 <element signature="n#Birth#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
+                <element signature="n#VerifyEmail#0;n#UserController#0;n#!!top" />
                 <element signature="n#AnimatedNotify#0;n#UserController#0;n#!!top" />
                 <element signature="n#isUserLoggedIn#0;n#UserController#0;n#!!top" />
                 <element signature="n#Logout#0;n#UserController#0;n#!!top" />
@@ -75,12 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_PL/Login/Register.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_PL/Login/Reset.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="21" />
-            </state>
+            <state relative-caret-position="-615" />
           </provider>
         </entry>
       </file>
@@ -162,8 +161,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b60828c5-662f-45e6-a7f7-64fe1091d619/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1cea5c26-baad-4cb4-81ff-12ca08899fab/console_1.sql" />
         <option value="$PROJECT_DIR$/_PL/Login/Register.php" />
-        <option value="$PROJECT_DIR$/_Controller/UserController.php" />
         <option value="$PROJECT_DIR$/_PL/Login/Verify.php" />
+        <option value="$PROJECT_DIR$/_Controller/UserController.php" />
       </list>
     </option>
   </component>
@@ -290,7 +289,7 @@
       <workItem from="1558806970033" duration="812000" />
       <workItem from="1558807935739" duration="6147000" />
       <workItem from="1558827706543" duration="5365000" />
-      <workItem from="1558882519095" duration="2540000" />
+      <workItem from="1558882519095" duration="2851000" />
     </task>
     <task id="LOCAL-00001" summary="Debug">
       <created>1558515031844</created>
@@ -355,11 +354,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558832971664</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Verify email on controller and animated">
+      <created>1558885294529</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1558885294529</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59882000" />
+    <option name="totallyTimeSpent" value="60193000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -374,7 +380,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.13388805" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.13388805" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.102118" />
       <window_info id="Favorites" order="2" sideWeight="0.50080514" side_tool="true" weight="0.102118" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -467,7 +473,8 @@
     <MESSAGE value="Work on going" />
     <MESSAGE value="Login animado" />
     <MESSAGE value="Registro animado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registro animado" />
+    <MESSAGE value="Verify email on controller and animated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verify email on controller and animated" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_PL/_includes/Footer.php" />
@@ -688,6 +695,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_PL/Login/Verify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="7" selection-start-line="3" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_PL/Login/Register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -695,23 +716,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_PL/Login/Verify.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="174" column="25" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
+        <state relative-caret-position="292">
+          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
           <folding>
             <element signature="n#Login#0;n#UserController#0;n#!!top" />
             <element signature="n#Register#0;n#UserController#0;n#!!top" />
             <element signature="n#Checkmail#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
             <element signature="n#pass#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
             <element signature="n#Birth#0;n#!!block;n#Register#0;n#UserController#0;n#!!top" />
+            <element signature="n#VerifyEmail#0;n#UserController#0;n#!!top" />
             <element signature="n#AnimatedNotify#0;n#UserController#0;n#!!top" />
             <element signature="n#isUserLoggedIn#0;n#UserController#0;n#!!top" />
             <element signature="n#Logout#0;n#UserController#0;n#!!top" />
@@ -721,11 +736,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_PL/Index.php">
+    <entry file="file://$PROJECT_DIR$/_PL/Login/Reset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
-        </state>
+        <state relative-caret-position="-615" />
       </provider>
     </entry>
   </component>
