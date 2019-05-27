@@ -1,7 +1,7 @@
 <?php
 require_once  dirname(__FILE__) . "/../_Controller/MainController.php";
 require_once  dirname(__FILE__) . "/../_Controller/UserController.php";
-
+MainController::process();
 ?>
 <!DOCTYPE html>
 <html lang="pt-pt">
@@ -92,7 +92,11 @@ require_once  dirname(__FILE__) . "/../_Controller/UserController.php";
 </header>
 <!-- Header -->
 <?php
-MainController::process();
+
+if( isset($_SESSION["Mesg"])){
+    UserController::AnimatedNotify("error",  $_SESSION["Mesg"], 0);
+    unset($_SESSION["Mesg"]);
+}
 $option=$_GET["page"];
 $page="$option.php";
 require_once $page;
