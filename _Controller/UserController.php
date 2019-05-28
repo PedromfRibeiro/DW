@@ -16,7 +16,7 @@ class UserController
         if (isset($_POST['LogOut'])) {
             self::Logout();
         }
-        if (isset($_POST['Ativar'])) {
+        if ($_GET['page'] == "Login/Verify") {
             self::VerifyEmail();
         }
         if (isset($_POST['forgot'])) {
@@ -31,38 +31,35 @@ class UserController
 
     public static function Login()
     {
-        $main = "0";
-        if (empty($_POST["email"]) || empty($_POST["password"])) {
-            $typ = "error";
-            $_SESSION["Mesg"] = 'Missing data to continue';
-        } else {
-            $uu = new Utilizador('', '', '', '', '', '', '', '', '');
+        $_SESSION["Controll"]["Type"] = "error";
 
+        if (empty($_POST["email"]) || empty($_POST["password"])) {
+            $_SESSION["Controll"]["Mensage"] = 'Missing data to continue';
+        } else {
+
+            $uu = new Utilizador('', '', '', '', '', '', '', '', '');
             $uu->email = $_POST["email"];
             $uu->pass = sha1($_POST['password']);;
-
             $statement = $uu->Read();
 
             if (!($statement['Verify'] == 1)) {
-                $typ = "warning";
-                $_SESSION["Mesg"] = 'Email nao verificado! Por favor verifique o seu email!';
+                $_SESSION["Controll"]["Type"] = "warning";
+                $_SESSION["Controll"]["Mensage"] = 'Email nao verificado! Por favor verifique o seu email!';
             } else if ($statement > 0) {
-                $typ = "success";
-                $_SESSION["Mesg"] = 'Sucess to LogIn!';
-                $main = "1";
                 $_SESSION["email"] = $_POST["email"];
+                $_SESSION["Controll"]["Type"] = "success";
+                $_SESSION["Controll"]["Mensage"] = 'success to LogIn!';
                 header("Location: index.php?page=MainPage");
                 exit();
             } else {
-                $typ = "error";
-                $_SESSION["Mesg"] = 'Something went Wrong!';
+                $_SESSION["Controll"]["Mensage"] = 'Something went Wrong!';
             }
         }
-        //self::AnimatedNotify($typ, $_SESSION["Mesg"], $main);
     }
 
     public static function Register()
     {
+        $_SESSION["Controll"]["Type"] = "error";
 
         function Checkmail()
         {
@@ -72,13 +69,13 @@ class UserController
             $check = $chk->ReadEmail();
 
             if (empty($_POST['email'])) {
-                $_SESSION["Mesg"] = "Email is empty!";
+                $_SESSION["Controll"]["Mensage"] = "Email is empty!";
                 return true;
             } else if ($check > 0) {
-                $_SESSION["Mesg"] = "The email is already in use!";
+                $_SESSION["Controll"]["Mensage"] = "The email is already in use!";
                 return true;
             } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                $_SESSION["Mesg"] = "Please make sure your email adress is valid";
+                $_SESSION["Controll"]["Mensage"] = "Please make sure your email adress is valid";
                 return true;
             }
 
@@ -92,19 +89,19 @@ class UserController
 
 
             if (empty($_POST['password']) || empty($_POST['newpassword'])) {
-                $_SESSION["Mesg"] = "Password is empty!";
+                $_SESSION["Controll"]["Mensage"] = "Password is empty!";
                 return true;
             } else if ((strcmp($array1, $array2)) !== 0) {
-                $_SESSION["Mesg"] = "The two passwords you entered dont match, try again!";
+                $_SESSION["Controll"]["Mensage"] = "The two passwords you entered dont match, try again!";
                 return true;
             } else if (strlen($_POST['password']) < 8 || strlen($_POST['password']) > 24) {
-                $_SESSION["Mesg"] = "Password too short!";
+                $_SESSION["Controll"]["Mensage"] = "Password too short!";
                 return true;
             } else if (!preg_match("#[0-9]+#", $_POST['password'])) {
-                $_SESSION["Mesg"] = "Password must include at least one number!";
+                $_SESSION["Controll"]["Mensage"] = "Password must include at least one number!";
                 return true;
             } else if (!preg_match("#[a-zA-Z]+#", $_POST['password'])) {
-                $_SESSION["Mesg"] = "Password must include at least one letter!";
+                $_SESSION["Controll"]["Mensage"] = "Password must include at least one letter!";
                 return true;
             } else {
                 return false;
@@ -119,12 +116,12 @@ class UserController
             $uu = $diff->y;
 
             if ($uu < 16) {
-                $_SESSION["Mesg"] = "You Need to be above 16 to register in our Website!";
+                $_SESSION["Controll"]["Mensage"] = "You Need to be above 16 to register in our Website!";
                 return true;
             }
 
             if (empty($birth)) {
-                $_SESSION["Mesg"] = "Birth date is required";
+                $_SESSION["Controll"]["Mensage"] = "Birth date is required";
                 return true;
             } else {
                 return false;
@@ -133,13 +130,8 @@ class UserController
 
 
         if (empty($_POST["Nome"])) {
-            $typ = "error";
-            $main = "0";
-            $_SESSION["Mesg"] = "All fields are required";
+            $_SESSION["Controll"]["Mensage"] = "All fields are required";
         } else if (Checkmail() || pass() || (Birth($_POST['data_Nascimento']))) {
-            $typ = "error";
-            $main = "0";
-            self::AnimatedNotify($typ, $_SESSION["Mesg"], $main);
             return false;
         } else {
 
@@ -156,15 +148,12 @@ class UserController
             $statement = $uu->Read();
 
             if ($statement > 0) {
-                $_SESSION["Mesg"] = "Data already exist!";
-                $typ = "error";
-                $main = "0";
+                $_SESSION["Controll"]["Mensage"] = "Data already exist!";
             } else {
                 $uu->Create();
+                $_SESSION["Controll"]["Type"] = "success";
+                $_SESSION["Controll"]["Mensage"] = "Thank you to sign in! Check you email to confirm!";
 
-                $typ = "success";
-                $_SESSION["Mesg"] = "Thank you to sign in! Check you email to confirm!";
-                $main = "1";
 
                 $to = $_POST["email"];
                 $subject = 'Acount Verification(The Classic Gamer)';
@@ -175,23 +164,15 @@ Thank you for Signing up!
 Please Click This link to activate your account:
 http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&code_hash=' . $uu->code_hash;
                 mail($to, $subject, $mail, $headers);
-                self::AnimatedNotify($typ, $_SESSION["Mesg"], $main);
-
             }
-
         }
-
-        self::AnimatedNotify($typ, $_SESSION["Mesg"], $main);
-
-
     }
 
     public static function VerifyEmail()
     {
-        $main = 0;
-        $typ = "error";
-        if (isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['code_hash']) && !empty($_GET['code_hash'])) {
+        $_SESSION["Controll"]["Type"] = "error";
 
+        if (isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['code_hash']) && !empty($_GET['code_hash'])) {
 
             $verify = new Utilizador('', '', '', '', '', '', '', '', '');
             $verify->email = $_GET['email'];
@@ -199,36 +180,35 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&
 
             $result_of_Verify = $verify->ReadVerify();
             if (empty($result_of_Verify)) {
-                $_SESSION["Mesg"] = "Account has already been activated or the URL is invalid!";
-
+                $_SESSION["Controll"]["Mensage"] = "Account has already been activated or the URL is invalid!";
+                header("Location: index.php?page=MainPage");
+                exit();
             } else {
-                $_SESSION["Mesg"] = "Your Account has been activated!";
                 $verify->code_hash = md5(rand(0, 1000));
                 $verify->Verify = '1';
                 $verify->UpdateVerify();
-                $_SESSION["Mesg"] = "Account has been activated !";
-                $typ = "sucess";
-                $main = 1;
+                $_SESSION["Controll"]["Mensage"] = "Account has been activated!";
+                $_SESSION["Controll"]["Type"] = "success";
+                header("Location: index.php?page=MainPage");
+                exit();
             }
         } else {
-            $_SESSION["Mesg"] = "Invalid parameters provided for account verification!";
-            self::AnimatedNotify($typ, $_SESSION["Mesg"], $main);
-
+            $_SESSION["Controll"]["Mensage"] = "Invalid parameters provided for account verification!";
+            header("Location: index.php?page=MainPage");
+            exit();
         }
-        self::AnimatedNotify($typ, $_SESSION["Mesg"], $main);
-
     }
 
     public static function Reset1form()
     {
-        $typ = "error";
-        $main = "0";
+        $_SESSION["Controll"]["Type"] = "error";
+
         $chk = new Utilizador('', '', '', '', '', '', '', '', '');
         $chk->email = $_POST['email'];
         $check = $chk->ReadEmail();
 
         if (empty($check)) {
-            $_SESSION["Mesg"] = "User with that email dosen't exist!";
+            $_SESSION["Controll"]["Mensage"] = "User with that email dosen't exist!";
         } else {
             $chk->Verify = '0';
             $chk->code_hash = md5(rand(0, 1000));
@@ -238,9 +218,8 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&
             $name = $check[1];
             $hash = $check[7];
 
-            $typ = "sucess";
-            $main = "1";
-            $_SESSION["Mesg"] = "<p>Please check your email<span>$email</span>" . "for a confirmation link to complete password reset!</p>";
+            $_SESSION["Controll"]["Type"] = "success";
+            $_SESSION["Controll"]["Mensage"] = "<p>Please check your email<span>$email</span>" . "for a confirmation link to complete password reset!</p>";
 
             $to = $_POST["email"];
             $subject = 'Password Resset(The Classic Gamer)';
@@ -251,7 +230,6 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
 
             mail($to, $subject, $msg, $headers);
         }
-        self::AnimatedNotify($typ, $_SESSION["Mesg"], $main);
     }
 
     public static function Reset2part()
@@ -269,42 +247,42 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
             $check = $rss->ReadEmailHash();
 
             if (empty($check)) {
-                $_SESSION["Mesg"] = "Invalid URL for password reset!";
+                $_SESSION["Controll"]["Mensage"] = "Invalid URL for password reset!";
             } else {
-                $_SESSION["Mesg"] = "Sorry, Verification failed,try again!";
+                $_SESSION["Controll"]["Mensage"] = "Sorry, Verification failed,try again!";
 
             }
 
 
         }
 
-        $typ = "error";
-        $main = "0";
+        $_SESSION["Controll"]["Type"] = "error";
+
 
         function checkPassword($pwd, $pwd2)
         {
 
             if (empty($pwd)) {
-                $_SESSION["Mesg"] = "Password is empty!";
+                $_SESSION["Controll"]["Mensage"] = "Password is empty!";
                 return true;
             }
             if (empty($pwd2)) {
-                $_SESSION["Mesg"] = "Password is empty!";
+                $_SESSION["Controll"]["Mensage"] = "Password is empty!";
                 return true;
             }
 
             if (strlen($pwd) < 8 || strlen($pwd) > 24) {
-                $_SESSION["Mesg"] = "Password too short!";
+                $_SESSION["Controll"]["Mensage"] = "Password too short!";
                 return true;
             }
 
             if (!preg_match("#[0-9]+#", $pwd)) {
-                $_SESSION["Mesg"] = "Password must include at least one number!";
+                $_SESSION["Controll"]["Mensage"] = "Password must include at least one number!";
                 return true;
             }
 
             if (!preg_match("#[a-zA-Z]+#", $pwd)) {
-                $_SESSION["Mesg"] = "Password must include at least one letter!";
+                $_SESSION["Controll"]["Mensage"] = "Password must include at least one letter!";
                 return true;
             } else return false;
         }
@@ -322,7 +300,7 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
             $check = $rss->Reademail();
 
             if (empty($check)) {
-                $_SESSION["Mesg"] = "User with that email dosen't exist!";
+                $_SESSION["Controll"]["Mensage"] = "User with that email dosen't exist!";
 
 
             }
@@ -339,17 +317,15 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
                 $rss->code_hash = md5(rand(0, 1000));
                 $rss->Update();
 
-                $typ = "sucess";
-                $main = "1";
+                $_SESSION["Controll"]["Type"] = "success";
 
-                $_SESSION["Mesg"] = "<p>Your Password has been updated!</p>";
+
+                $_SESSION["Controll"]["Mensage"] = "Your Password has been updated!";
 
             }
         } else {
-            $_SESSION["Mesg"] = "The two password you entered don't match, try again!";
+            $_SESSION["Controll"]["Mensage"] = "The two password you entered don't match, try again!";
         }
-        self::AnimatedNotify($typ, $_SESSION["Mesg"], $main);
-
     }
 
     public static function isUserLoggedIn()
@@ -362,15 +338,34 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
         session_destroy();
         $_SESSION = array();
         session_start();
-        $_SESSION["Mesg"] = "Logout efetuado";
+        $_SESSION["Controll"]["Type"] = "success";
+        $_SESSION["Controll"]["Mensage"] = "Logout efetuado";
         header("Location: index.php?page=MainPage");
         exit();
     }
 
-
-    public static function AnimatedNotify($typ, $Mesg, $main)
+    public static function IsUserLoggedAdmin()
     {
-        print "<script>
+        if(!empty(self::isUserLoggedIn())){
+            $uu = new Utilizador('', '', '', '', '', '', '', '', '');
+            $uu->email = $_SESSION["email"];
+            $statement = $uu->ReadEmail();
+                if($statement['Autorizacao']==1){
+                    $_SESSION["Controll"]["Type"] = 'warnin';
+                    $_SESSION["Controll"]["Mensage"] = 'Admin';
+
+
+                }
+
+        }
+        else{return 0;
+        }
+    }
+
+    public static function AnimatedNotify($typ, $Mesg)
+    {
+        print
+            "<script>
             Swal.fire({
                 position: 'center',
                 type: '$typ',
@@ -378,55 +373,6 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
                 showConfirmButton: false,
                 timer: 2000
             })</script>";
-    }
-
-
-    public static function AnimatedNotify_old($typ, $Mesg, $main)
-    {
-        ?>
-        <script>
-            Swal.fire({
-                position: 'center',
-                type: '<?php echo $typ?>',
-                title: '<?php echo $Mesg?>',
-                showConfirmButton: false,
-                timer: 2000
-            })</script>
-        <?php
-
-        if ($main == 1) {
-            ?>
-            <script>
-                setTimeout(function () {
-                    window.location = "?page=MainPage"
-                }, 2350);
-            </script>
-            <?php
-        }
-    }
-
-    public static function getLoggedUser()
-    {
-        $user = null;
-        $userid = isset($_SESSION['userid']) ? $_SESSION['userid'] : null;
-        if ($userid != null) {
-            $user = new User();
-            $user->id = $userid;
-            if ($user->readById()) {
-                $user = null;
-            }
-        }
-        return ($user);
-    }
-
-    public static function IsUserLoggedAdmin()
-    {
-        $res = false;
-        $user = self::getLoggedUser();
-        if ($user != null && $user = admin == 1) {
-            $res = true;
-        }
-        return ($res);
     }
 
 }

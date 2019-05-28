@@ -34,7 +34,6 @@ MainController::process();
     <link rel="stylesheet" type="text/css" href="../_css/Header.css"/>
     <link rel="stylesheet" type="text/css" href="../_css/Styles.css" />
     <link type="text/css" rel="stylesheet" href="../_css/MainPage.css"/>
-    <link rel="stylesheet" href="../_js/Login.js"/>
 
 </head>
 <body>
@@ -71,7 +70,14 @@ MainController::process();
                     <li class="nav-item">
                         <a class="nav-link" id="loginCSS" href="?page=Login/Register">Register </a></li>
                 <?php } ?>
-
+                <?php
+                if(!empty(UserController::isUserLoggedIn()) AND empty(UserController::IsUserLoggedAdmin())){
+                ?>
+                <li class="nav-item">
+                    <a class="nav-link" id="loginCSS" href="?page=Admin/admingames">Login </a></li>
+                <li class="nav-item">
+                    <a class="nav-link" id="loginCSS" href="?page=Admin/admingeneros">Register </a></li>
+                <?php } ?>
                 <?php
                 if(!empty(UserController::isUserLoggedIn())){   ?>
                     <form method="POST" >
@@ -92,11 +98,9 @@ MainController::process();
 </header>
 <!-- Header -->
 <?php
-
-if( isset($_SESSION["Mesg"])){
-    UserController::AnimatedNotify("error",  $_SESSION["Mesg"], 0);
-    unset($_SESSION["Mesg"]);
-}
+if( isset($_SESSION["Controll"])){
+UserController::AnimatedNotify($_SESSION["Controll"]["Type"],$_SESSION["Controll"]["Mensage"]);
+unset($_SESSION["Controll"]);}
 $option=$_GET["page"];
 $page="$option.php";
 require_once $page;

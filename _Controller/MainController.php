@@ -7,7 +7,6 @@ class MainController
     public static function process(){
         session_start();
         UserController::process1();
-
     }
 }
 
