@@ -1,12 +1,56 @@
-<!DOCTYPE html>
-<html lang="pt-pt">
-<head>
-    <?php
-    include_once 'C:/xampp/htdocs/DWphp/_PL/_includes/Head.php';
-    ?>
-    <link href="../../_css/Admin/admingames.css" type="text/css" rel="stylesheet"/>
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
 
-</head>
+    /* The popup form - hidden by default */
+    .form-popup {
+        display: none;
+        position: fixed;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+    }
+
+    /* Full-width input fields */
+    .form-container input[type=text], .form-container input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+        background-color: red;
+    }
+
+</style>
 <body>
 <div class="container">
     <div class="table-wrapper">
@@ -14,48 +58,6 @@
             <div class="row">
                 <div class="col-sm-6">
                     <h2>Manage <b>Cliente</b></h2>
-                </div>
-                <div class="col-sm-6">
-                    <a href="#addCliente" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Add New Cliente</span></a>
-
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
-                        Add User
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
-                         aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5>Add Client</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                        </div>
-
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
@@ -87,11 +89,43 @@
                     echo '<td>' . $row['Verify'] . '</td>';
 
                     echo '<td>
-                        <a href="#editUtilizador" onclick="this" class="edit" ><i class="material-icons" title="Edit" >&#xE254;</i></a>
+                        <a href="#editUtilizador" name="editUtilizador" onclick="openForm()" class="edit" ><i class="material-icons" title="Edit" >&#xE254;</i></a>
+                <div class="form-popup" id="myForm">
+                        <form class="form-container">
+                        <h1>Login</h1>
+
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
+
+                <script>
+                    function openForm() {
+                        document.getElementById("myForm").style.display = "block";
+                    }
+
+                    function closeForm() {
+                        document.getElementById("myForm").style.display = "none";
+                    }
+                </script>
+                        
+                        
+                        
+                        
+                        
+                        
                         <a href="#deleteUtiizador" onclick="this" class="delete"><i class="material-icons" title="Delete">&#xE872;</i></a>
                     </td>';
                     echo '</tr>';
-                }$POD=null;
+                }$BFetch->closeCursor();
+                $POD=null;
+
             ?>
         </table>
         <div class="clearfix">
@@ -110,4 +144,3 @@
 </div>
 
 </body>
-</html>
