@@ -20,6 +20,21 @@ class MainController
                     $_SESSION['Hrefs'] = '_css/MainPage.css'; //css
 break;
                 }
+            case 'Genero':
+                {
+                    $_SESSION['Hrefs'] = '_css/genero.css';
+                    break;
+            }
+            case 'Plataforma':
+                {
+                    $_SESSION['Hrefs'] = '_css/Plataforma.css';
+                    break;
+                }
+            case 'Produto':
+                {
+                    $_SESSION['Hrefs'] = '_css/Produto.css';
+                    break;
+                }
         }
     }
 }
