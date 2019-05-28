@@ -1,10 +1,3 @@
-<head>
-    <?php
-    include '../_includes/Head.php';
-    ?>
-    <link href="C:/xampp/htdocs/DWphp/_css/admingeneros.css" type="text/css" rel="stylesheet"/>
-
-</head>
 <body>
 
 <div class="Section P1">
@@ -140,4 +133,3 @@ $POD=null;
 
 
 </body>
-</html>

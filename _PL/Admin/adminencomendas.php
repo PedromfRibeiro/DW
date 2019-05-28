@@ -4,7 +4,7 @@
     <?php
     include '_includes/Head.php';
     ?>
-    <link href="../../_css/adminencomendas.css" type="text/css" rel="stylesheet"/>
+    <link href="../../_css/Admin/adminencomendas.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>

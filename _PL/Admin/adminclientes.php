@@ -4,7 +4,7 @@
     <?php
     include_once 'C:/xampp/htdocs/DWphp/_PL/_includes/Head.php';
     ?>
-    <link href="../../_css/admingames.css" type="text/css" rel="stylesheet"/>
+    <link href="../../_css/Admin/admingames.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>

@@ -330,6 +330,7 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
 
     public static function isUserLoggedIn()
     {
+
         return (isset($_SESSION["email"]));
     }
 
@@ -351,15 +352,11 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
             $uu->email = $_SESSION["email"];
             $statement = $uu->ReadEmail();
                 if($statement['Autorizacao']==1){
-                    $_SESSION["Controll"]["Type"] = 'warnin';
-                    $_SESSION["Controll"]["Mensage"] = 'Admin';
-
-
+                    return $_SESSION['admin']=1;
                 }
 
         }
-        else{return 0;
-        }
+        else{return 0;}
     }
 
     public static function AnimatedNotify($typ, $Mesg)

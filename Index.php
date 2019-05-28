@@ -1,7 +1,9 @@
 <?php
-require_once  dirname(__FILE__) . "/../_Controller/MainController.php";
-require_once  dirname(__FILE__) . "/../_Controller/UserController.php";
+require_once dirname(__FILE__) . "/_Controller/MainController.php";
+require_once dirname(__FILE__) . "/_Controller/UserController.php";
 MainController::process();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-pt">
@@ -22,7 +24,7 @@ MainController::process();
     <!--JS-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="sweetalert2.all.min.js"></script>
-    <script src="../_js/Login.js"></script>
+    <script src="_js/Login.js"></script>
 
     <script src="sweetalert2.all.min.js"></script>
     <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
@@ -31,9 +33,11 @@ MainController::process();
     <link rel="stylesheet" href="sweetalert2.min.css">
 
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="../_css/Header.css"/>
-    <link rel="stylesheet" type="text/css" href="../_css/Styles.css" />
-    <link type="text/css" rel="stylesheet" href="../_css/MainPage.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/Header.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/Styles.css" />
+    <link type="text/css" rel="stylesheet" href="_css/<?php echo $_GET["page"]?>.css"/>
+
+
 
 </head>
 <body>
@@ -43,7 +47,7 @@ MainController::process();
 
     <nav class="navbar md navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="Index.php?page=MainPage">
-            <img src="../_imagens/Logo.png" class="Menu_img" alt="Menu">
+            <img src="_imagens/Logo.png" class="Menu_img" alt="Menu">
             The Classic Gamer
         </a>
 
@@ -71,12 +75,13 @@ MainController::process();
                         <a class="nav-link" id="loginCSS" href="?page=Login/Register">Register </a></li>
                 <?php } ?>
                 <?php
-                if(!empty(UserController::isUserLoggedIn()) AND empty(UserController::IsUserLoggedAdmin())){
+                UserController::IsUserLoggedAdmin();
+                if(!empty(UserController::isUserLoggedIn()) && empty($_SESSION['admin'])){
                 ?>
                 <li class="nav-item">
                     <a class="nav-link" id="loginCSS" href="?page=Admin/admingames">Login </a></li>
                 <li class="nav-item">
-                    <a class="nav-link" id="loginCSS" href="?page=Admin/admingeneros">Register </a></li>
+                    <a class="nav-link" id="loginCSS" href="?page=Admin/adminplataforma">Register </a></li>
                 <?php } ?>
                 <?php
                 if(!empty(UserController::isUserLoggedIn())){   ?>
@@ -102,7 +107,7 @@ if( isset($_SESSION["Controll"])){
 UserController::AnimatedNotify($_SESSION["Controll"]["Type"],$_SESSION["Controll"]["Mensage"]);
 unset($_SESSION["Controll"]);}
 $option=$_GET["page"];
-$page="$option.php";
+$page="_PL/$option.php";
 require_once $page;
 ?>
 
