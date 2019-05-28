@@ -352,11 +352,10 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
             $uu->email = $_SESSION["email"];
             $statement = $uu->ReadEmail();
                 if($statement['Autorizacao']==1){
-                    return $_SESSION['admin']=1;
+                    return $_SESSION['admin']="1";
                 }
-
         }
-        else{return 0;}
+        return (isset($_SESSION['admin']));
     }
 
     public static function AnimatedNotify($typ, $Mesg)

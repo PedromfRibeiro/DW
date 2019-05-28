@@ -23,19 +23,11 @@ MainController::process();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--JS-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="sweetalert2.all.min.js"></script>
-    <script src="_js/Login.js"></script>
-
-    <script src="sweetalert2.all.min.js"></script>
-    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
-    <script src="sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
 
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="_css/Header.css"/>
     <link rel="stylesheet" type="text/css" href="_css/Styles.css" />
-    <link type="text/css" rel="stylesheet" href="_css/<?php echo $_GET["page"]?>.css"/>
+    <link type="text/css" rel="stylesheet" href="<?php echo $_SESSION['Hrefs']?>"/>
 
 
 
@@ -73,17 +65,9 @@ MainController::process();
                         <a class="nav-link" id="loginCSS" href="?page=Login/login">Login </a></li>
                     <li class="nav-item">
                         <a class="nav-link" id="loginCSS" href="?page=Login/Register">Register </a></li>
-                <?php } ?>
-                <?php
-                UserController::IsUserLoggedAdmin();
-                if(!empty(UserController::isUserLoggedIn()) && empty($_SESSION['admin'])){
-                ?>
-                <li class="nav-item">
-                    <a class="nav-link" id="loginCSS" href="?page=Admin/admingames">Login </a></li>
-                <li class="nav-item">
-                    <a class="nav-link" id="loginCSS" href="?page=Admin/adminplataforma">Register </a></li>
-                <?php } ?>
-                <?php
+
+                    <?php
+                }
                 if(!empty(UserController::isUserLoggedIn())){   ?>
                     <form method="POST" >
                         <input type="submit" name="LogOut" class="btn btn-info" value="Logout" />
@@ -91,7 +75,18 @@ MainController::process();
                     <li class="nav-item">
                         <a class="nav-link" href="?page=Profile">Profile</a>
                     </li>
-                <?php   }   ?>
+
+                <?php
+                if(UserController::IsUserLoggedAdmin()){?>
+                    <li class="nav-item">
+                        <a class="nav-link" id="loginCSS" href="?page=Login/login">Logfsdfsdfin </a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="loginCSS" href="?page=Login/Register">Regisdfsdfster </a></li>
+
+                <?php }  }
+
+
+                ?>
 
                 <li class="nav-item">
                     <a class="nav-link " href="?page=Shopping_cart">Shopping Cart</a>
@@ -110,7 +105,6 @@ $option=$_GET["page"];
 $page="_PL/$option.php";
 require_once $page;
 ?>
-
 <!-- Footer -->
 <section id="footer">
     <div class="container">
