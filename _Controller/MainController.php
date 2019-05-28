@@ -35,6 +35,11 @@ break;
                     $_SESSION['Hrefs'] = '_css/Produto.css';
                     break;
                 }
+            case 'Produtos':
+                {
+                    $_SESSION['Hrefs'] = '_css/Produtos.css';
+                    break;
+                }
         }
     }
 }
