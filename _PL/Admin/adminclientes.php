@@ -25,7 +25,6 @@
             $POD = new Utilizador('', '', '', '', '', ' ', ' ', ' ', ' ');
             $BFetch = ($POD->ReadALL());
             while ($row = $BFetch->fetch()) {
-
                 echo '<tr>';
 
                 echo '<td>' . $row['Nome'] . '</td>';
@@ -41,7 +40,6 @@
                 echo '<a href="#deleteUtiizador" onclick="this" class="delete"><i class="material-icons" title="Delete">&#xE872;</i></a>';
                 echo '</td>';
                 echo '</tr>';
-
             }
             $BFetch->closeCursor();
             $POD = null;
@@ -59,79 +57,86 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
-                        <form class="form-container" method="post">
-                            <h1> Atuzalizar Cliente</h1>
+                        <form class="form-container" >
+                            <h1> Atuzalizar Cliente</h1 >
 
-                            <label for="Nome"><b> Nome</b></label>
-                            <input type="text" placeholder="Enter Name" name="Nome" required>
+                            <label for="Nome" ><b > Nome</b ></label >
+                            <inxuired >
 
-                            <br>
+                                <br >
 
-                            <label for="Autorizaçao"><b> Autorizaçao</b></label>
-                            <input type="number" placeholder="Enter Authorization" name="Autorizacao" required>
+                                <label for="Data de Registo" ><b > Data de Registo </b ></label >
+                                <input type = "date" placeholder = "Enter Register Date" name = "Dta_Registo" required >
 
-                            <label for="Data Nascimento"><b> Data de Nascimento </b></label>
-                            <input type="date" placeholder="Enter Birth Date" name="Data_Nascimento" required>
+                                <br >
 
-                            <br>
+                                <label for="Autorizaçao" ><b > Autorizaçao</b ></label >
+                                <input type = "number" placeholder = "Enter Authorization" name = "Autorizacao" required >
 
-                            <label for="email"><b> Email</b></label>
-                            <input type="text" placeholder="Enter Email" name="email" required>
+                                <label for="Data Nascimento" ><b > Data de Nascimento </b ></label >
+                                <input type = "date" placeholder = "Enter Birth Date" name = "Data_Nascimento" required >
 
-                            <label for="Verify"><b> Verify</b></label>
-                            <input type="number" placeholder="Enter Verify" name="Verify" required>
+                                <br >
 
-                            <button type="submit" class="btn" name='Update_Cliente'> Update</button>
-                            <button type="button" class="btn cancel" onclick="closeForm()"> Close</button>
-                        </form>
+                                <label for="email" ><b > Email</b ></label >
+                                <input type = "text" placeholder = "Enter Email" name = "email" required >
+
+                                <label for="Verify" ><b > Verify</b ></label >
+                                <input type = "number" placeholder = "Enter Verify" name = "Verify" required >
+
+                                <button type = "submit" class="btn" > Update</button >
+                                <button type = "button" class="btn cancel" onclick = "closeForm()" > Close</button >
+                        </form >
 
                     </div>
                 </div>
             </div>
 
-            <script>
-                function openForm() {
-                    document.getElementById("myForm").style.display = "block";
-                }
+                <script >
+                    function openForm()
+                    {
+                        document . getElementById("myForm") . style . display = "block";
+                    }
 
-                function closeForm() {
-                    document.getElementById("myForm").style.display = "none";
-                }
-            </script>
+                    function closeForm()
+                    {
+                        document . getElementById("myForm") . style . display = "none";
+                    }
+                </script >
 
-            <div class="form-popup" id="myForm">
-                <form class="form-container">
-                    <h1> Atuzalizar Cliente</h1>
+                        <div class="form-popup" id = "myForm" >
+                            <form class="form-container" >
+                                <h1> Atuzalizar Cliente</h1 >
 
-                    <label for="Nome"><b> Nome</b></label>
-                    <inxuired>
+                                <label for="Nome" ><b > Nome</b ></label >
+                                <inxuired >
 
-                        <br>
+                                <br >
 
-                        <label for="Data de Registo"><b> Data de Registo </b></label>
-                        <input type="date" placeholder="Enter Register Date" name="Dta_Registo" required>
+                                <label for="Data de Registo" ><b > Data de Registo </b ></label >
+                                <input type = "date" placeholder = "Enter Register Date" name = "Dta_Registo" required >
 
-                        <br>
+                                <br >
 
-                        <label for="Autorizaçao"><b> Autorizaçao</b></label>
-                        <input type="number" placeholder="Enter Authorization" name="Autorizacao" required>
+                                <label for="Autorizaçao" ><b > Autorizaçao</b ></label >
+                                <input type = "number" placeholder = "Enter Authorization" name = "Autorizacao" required >
 
-                        <label for="Data Nascimento"><b> Data de Nascimento </b></label>
-                        <input type="date" placeholder="Enter Birth Date" name="Data_Nascimento" required>
+                                <label for="Data Nascimento" ><b > Data de Nascimento </b ></label >
+                                <input type = "date" placeholder = "Enter Birth Date" name = "Data_Nascimento" required >
 
-                        <br>
+                                <br >
 
-                        <label for="email"><b> Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required>
+                                <label for="email" ><b > Email</b ></label >
+                                <input type = "text" placeholder = "Enter Email" name = "email" required >
 
-                        <label for="Verify"><b> Verify</b></label>
-                        <input type="number" placeholder="Enter Verify" name="Verify" required>
+                                <label for="Verify" ><b > Verify</b ></label >
+                                <input type = "number" placeholder = "Enter Verify" name = "Verify" required >
 
-                        <button type="submit" class="btn"> Update</button>
-                        <button type="button" class="btn cancel" onclick="closeForm()"> Close</button>
-                </form>
-            </div>
-
+                                <button type = "submit" class="btn" > Update</button >
+                                <button type = "button" class="btn cancel" onclick = "closeForm()" > Close</button >
+                            </form >
+                        </div >
+                        
 
         </table>
         <div class="clearfix">
@@ -139,7 +144,7 @@
             <ul class="pagination">
                 <li class="page-item disabled"><a href="#">Previous</a></li>
                 <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                <li class="page-item"><a  class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
                 <li class="page-item"><a href="#" class="page-link">3</a></li>
                 <li class="page-item"><a href="#" class="page-link">4</a></li>
                 <li class="page-item"><a href="#" class="page-link">5</a></li>
