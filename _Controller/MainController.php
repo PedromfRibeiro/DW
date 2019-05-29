@@ -12,19 +12,18 @@ class MainController
     public static function Href()
     {
         $option = $_GET["page"];
-        $dir = dirname(__FILE__, 2);
         switch ($option) {
 
             case 'MainPage':
                 {
                     $_SESSION['Hrefs'] = '_css/MainPage.css'; //css
-break;
+                    break;
                 }
             case 'Genero':
                 {
                     $_SESSION['Hrefs'] = '_css/genero.css';
                     break;
-            }
+                }
             case 'Plataforma':
                 {
                     $_SESSION['Hrefs'] = '_css/Plataforma.css';
@@ -38,6 +37,51 @@ break;
             case 'Produtos':
                 {
                     $_SESSION['Hrefs'] = '_css/Produtos.css';
+                    break;
+                }
+            case 'Profile':
+                {
+                    $_SESSION['Hrefs'] = '_css/Profile.css'; //css
+                    break;
+                }
+            case 'Register':
+                {
+                    $_SESSION['Hrefs'] = '_css/Register.css';
+                    break;
+                }
+            case 'Shopping_cart':
+                {
+                    $_SESSION['Hrefs'] = '_css/Shopping_cart.css';
+                    break;
+                }
+            case 'Admin/Admin_form':
+                {
+                    $_SESSION['Hrefs'] = '_css/Admin/Admin_form.css';
+                    break;
+                }
+            case 'Admin/adminclientes':
+                {
+                    $_SESSION['Hrefs'] = '_css/Admin/adminclientes.css';
+                    break;
+                }
+            case 'Admin/adminencomendas':
+                {
+                    $_SESSION['Hrefs'] = '_css/Admin/adminencomendas.css'; //css
+                    break;
+                }
+            case 'Admin/admingames':
+                {
+                    $_SESSION['Hrefs'] = '_css/Admin/admingames.css';
+                    break;
+                }
+            case 'Admin/admingeneros':
+                {
+                    $_SESSION['Hrefs'] = '_css/Admin/admingeneros.css';
+                    break;
+                }
+            case 'Admin/adminplataforma':
+                {
+                    $_SESSION['Hrefs'] = '_css/Admin/adminplataforma.css';
                     break;
                 }
         }
