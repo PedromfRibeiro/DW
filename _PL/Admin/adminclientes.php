@@ -23,11 +23,7 @@
             <?php
 
             require_once 'C:/xampp/htdocs/DWphp/_BL/Utilizador.php';
-            if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
-                $currentPage = $_GET['pagina'];
-            }else{
-                $currentPage = $_POST["pagina"];
-            }
+         $currentPage=0;
             $amountofrecords=4;
             $initialrecord=$currentPage*$amountofrecords;
             $lastrecord=($initialrecord+$amountofrecords);
@@ -100,11 +96,6 @@
 
                             <br >
 
-                            <label for="Data de Registo" ><b > Data de Registo </b ></label >
-                            <input class="form-control" type = "date" placeholder = "Enter Register Date" name = "Data_Registo" >
-
-                            <br >
-
                             <label for="Autorizaçao" ><b > Autorizaçao</b ></label >
                             <input class="form-control" type = "number" placeholder = "Enter Authorization" name = "Autorizacao"  >
 
@@ -124,11 +115,11 @@
                             <input class="form-control" type = "number" placeholder = "Enter Verify" name = "Verify" >
 
                             <br>
-
-                            <button type="button" class="btn btn-primary" name="Create">Create</button>
-                            <button type="button" class="btn btn-primary" name="update">Save changes</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div >
+<form method="post"><button type="submit" class="btn btn-primary" name="Create_Cliente">Create</button>
+    <button type="submit" class="btn btn-primary" name="Update_Cliente">Save changes</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</form>
+                             </div >
 
                     </div>
                 </div>
@@ -140,7 +131,7 @@
             <div class="hint-text">Showing <b>1</b> out of <b>25</b> entries</div>
             <ul class="pagination">
                 <li class="page-item"><a>Previous</a></li>
-                <li class="page-item active" name="pagina" value="0"><a>0</a></li>
+                <button class="page-item active" name="pagina" value="0"><a>0</a></button>
                 <li class="page-item"><a>Next</a></li>
                 <button type="button" name="nextpage">Next</button>
                 <?php

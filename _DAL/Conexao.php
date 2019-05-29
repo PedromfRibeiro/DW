@@ -30,8 +30,8 @@ class Connection
         $stmte->setFetchMode(PDO::FETCH_CLASS,'Utilizador');
         //$stmte->setFetchMode(PDO::FETCH_OBJ,'Utilizador');
         $stmte->execute($obj);
-        //return $stmte->fetch(PDO::FETCH_LAZY);
-        return  $stmte->fetchObject();
+        return $stmte->fetch(PDO::FETCH_LAZY);
+        //return  $stmte->fetchObject();
 
     }
 }
