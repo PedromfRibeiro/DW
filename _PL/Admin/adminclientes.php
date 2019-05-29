@@ -23,10 +23,10 @@
             <?php
 
             require_once 'C:/xampp/htdocs/DWphp/_BL/Utilizador.php';
-         $currentPage=0;
+         $currentPage=1;
             $amountofrecords=4;
-            $initialrecord=$currentPage*$amountofrecords;
-            $lastrecord=($initialrecord+$amountofrecords);
+            $initialrecord=($currentPage*$amountofrecords)-$amountofrecords;
+            $lastrecord=$initialrecord+$amountofrecords;
             $POD = new Utilizador('', '', '', '', '', ' ', ' ', ' ', ' ');
             $BFetch = ($POD->ReadALL());
             for ($recordcounter = 0; $recordcounter<=$lastrecord && $recordcounter>=$initialrecord && $row = $BFetch->fetch() ; $recordcounter++) {

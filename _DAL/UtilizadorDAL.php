@@ -92,7 +92,11 @@ class UtilizadorDAL
         $val = [
             ':email' => $util->email,
         ];
-        return $dbUtilizador->SQuerrys($sql,$val);
+        $stmt = $dbUtilizador->SQuerry($sql,$val);
+        $stmt->setFetchMode(PDO::FETCH_CLASS,'Utilizador');
+        //$stmte->setFetchMode(PDO::FETCH_OBJ,'Utilizador');
+
+        return $stmt->fetch();
          //return $statment->fetch();
 
     }
