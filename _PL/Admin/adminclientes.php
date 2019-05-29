@@ -47,95 +47,55 @@
             ?>
 
             <!-- The Modal -->
-            <div class="modal" id="myModal">
+            <div class="modal fade" id="myModal">
                 <div class="modal-dialog">
                     <div class="modal-content">
 
                         <!-- Modal Header -->
                         <div class="modal-header">
-                            <h4 class="modal-title">Modal Heading</h4>
+                            <h4 class="modal-title">Atualizar Cliente</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
-                        <form class="form-container" >
-                            <h1> Atuzalizar Cliente</h1 >
+                        <div class="modal-body" >
 
                             <label for="Nome" ><b > Nome</b ></label >
-                            <inxuired >
+                            <input class="form-control" type = "text" placeholder = "Enter Name" name = "Nome">
 
                                 <br >
 
                                 <label for="Data de Registo" ><b > Data de Registo </b ></label >
-                                <input type = "date" placeholder = "Enter Register Date" name = "Dta_Registo" required >
+                                <input class="form-control" type = "date" placeholder = "Enter Register Date" name = "Data_Registo" >
 
                                 <br >
 
                                 <label for="Autorizaçao" ><b > Autorizaçao</b ></label >
-                                <input type = "number" placeholder = "Enter Authorization" name = "Autorizacao" required >
+                                <input class="form-control" type = "number" placeholder = "Enter Authorization" name = "Autorizacao"  >
+
+                                <br>
 
                                 <label for="Data Nascimento" ><b > Data de Nascimento </b ></label >
-                                <input type = "date" placeholder = "Enter Birth Date" name = "Data_Nascimento" required >
+                                <input class="form-control" type = "date" placeholder = "Enter Birth Date" name = "Data_Nascimento" >
 
                                 <br >
 
                                 <label for="email" ><b > Email</b ></label >
-                                <input type = "text" placeholder = "Enter Email" name = "email" required >
+                                <input class="form-control" type = "text" placeholder = "Enter Email" name = "email" >
+
+                                <br>
 
                                 <label for="Verify" ><b > Verify</b ></label >
-                                <input type = "number" placeholder = "Enter Verify" name = "Verify" required >
+                                <input class="form-control" type = "number" placeholder = "Enter Verify" name = "Verify" >
 
-                                <button type = "submit" class="btn" > Update</button >
-                                <button type = "button" class="btn cancel" onclick = "closeForm()" > Close</button >
-                        </form >
+                                <br>
+
+                            <button type="button" class="btn btn-primary" name="update">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div >
 
                     </div>
                 </div>
             </div>
-
-                <script >
-                    function openForm()
-                    {
-                        document . getElementById("myForm") . style . display = "block";
-                    }
-
-                    function closeForm()
-                    {
-                        document . getElementById("myForm") . style . display = "none";
-                    }
-                </script >
-
-                        <div class="form-popup" id = "myForm" >
-                            <form class="form-container" >
-                                <h1> Atuzalizar Cliente</h1 >
-
-                                <label for="Nome" ><b > Nome</b ></label >
-                                <inxuired >
-
-                                <br >
-
-                                <label for="Data de Registo" ><b > Data de Registo </b ></label >
-                                <input type = "date" placeholder = "Enter Register Date" name = "Dta_Registo" required >
-
-                                <br >
-
-                                <label for="Autorizaçao" ><b > Autorizaçao</b ></label >
-                                <input type = "number" placeholder = "Enter Authorization" name = "Autorizacao" required >
-
-                                <label for="Data Nascimento" ><b > Data de Nascimento </b ></label >
-                                <input type = "date" placeholder = "Enter Birth Date" name = "Data_Nascimento" required >
-
-                                <br >
-
-                                <label for="email" ><b > Email</b ></label >
-                                <input type = "text" placeholder = "Enter Email" name = "email" required >
-
-                                <label for="Verify" ><b > Verify</b ></label >
-                                <input type = "number" placeholder = "Enter Verify" name = "Verify" required >
-
-                                <button type = "submit" class="btn" > Update</button >
-                                <button type = "button" class="btn cancel" onclick = "closeForm()" > Close</button >
-                            </form >
-                        </div >
                         
 
         </table>
