@@ -25,6 +25,9 @@ class UserController
         if (isset($_POST['Reset'])) {
             self::Reset2part();
         }
+        if (isset($_POST['Update_Cliente'])) {
+            self::UpdateCliente();
+        }
 
 
     }
@@ -347,13 +350,13 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
 
     public static function IsUserLoggedAdmin()
     {
-        if(!empty(self::isUserLoggedIn())){
+        if (!empty(self::isUserLoggedIn())) {
             $uu = new Utilizador('', '', '', '', '', '', '', '', '');
             $uu->email = $_SESSION["email"];
             $statement = $uu->ReadEmail();
-                if($statement['Autorizacao']==1){
-                    return $_SESSION['admin']="1";
-                }
+            if ($statement['Autorizacao'] == 1) {
+                return $_SESSION['admin'] = "1";
+            }
         }
         return (isset($_SESSION['admin']));
     }
@@ -370,5 +373,28 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
                 timer: 2000
             })</script>";
     }
+
+    //Form
+
+    public static function UpdateCliente()
+    {
+
+        $up = new Utilizador('', '', '', '', '', '', '', '', '');
+        $up->email = $_POST["email"];
+        $statment = $up->ReadEmail();
+
+        $up=$statment;
+        $up->idUtilizador = $statment->idUtilizador;
+        $up->Nome = $_POST['Nome'];
+        $up->pass = $statment->pass;
+        $up->Data_Registo = $statment->Data_Registo;
+        $up->Autorizacao = $statment->Autorizacao;
+        $up->Data_Nascimento = $statment->Data_Nascimento;
+        $up->code_hash = $statment->code_hash;
+        $up->Verify = $statment->Verify;
+
+        $up->Update();
+    }
+
 
 }

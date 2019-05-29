@@ -1,21 +1,21 @@
 <?php
 
-require'C:/xampp/htdocs/DWphp/_DAL/UtilizadorDAL.php';
+require 'C:/xampp/htdocs/DWphp/_DAL/UtilizadorDAL.php';
 
 
 class Utilizador
 {
-public $idUtilizador;
-public $Nome;
-public $pass;
-public $Data_Registo;
-public $Autorizacao;
-public $Data_Nascimento;
-public $email;
-public $code_hash;
-public $Verify;
+    public $idUtilizador;
+    public $Nome;
+    public $pass;
+    public $Data_Registo;
+    public $Autorizacao;
+    public $Data_Nascimento;
+    public $email;
+    public $code_hash;
+    public $Verify;
 
-    public function __construct($idUtilizador, $Nome, $pass, $Data_Registo, $Autorizacao, $Data_Nascimento, $email, $code_hash, $Verify)
+    public function __construct($idUtilizador=null, $Nome=null, $pass=null, $Data_Registo=null, $Autorizacao=null, $Data_Nascimento=null, $email=null, $code_hash=null, $Verify=null)
     {
         $this->idUtilizador = $idUtilizador;
         $this->Nome = $Nome;
@@ -34,58 +34,70 @@ public $Verify;
         $val = new UtilizadorDAL();
         $val->CreateDAL($this);
     }
-    public function Read()     {
+
+    public function Read()
+    {
         $val = new UtilizadorDAL();
-        $result = $val -> ReadDAL($this);
+        $result = $val->ReadDAL($this);
         return $result;
 
     }
 
-    public function ReadALL()    {
+    public function ReadALL()
+    {
         $val = new UtilizadorDAL();
-        $rr =$val -> ReadALLDAL();
+        $rr = $val->ReadALLDAL();
         return $rr;
 
     }
 
-    public function Update()     {
+    public function Update()
+    {
         $val = new UtilizadorDAL();
-        $val -> UpdateDAL($this);
-
-    }
-    public function Delete()     {
-        $val = new UtilizadorDAL();
-        $val -> DeleteDAL($this);
-    }
-
-    public function CreateTable(){
-        $val = new UtilizadorDAL();
-        $val -> CreateTable();
-
+        $val->UpdateDAL($this);
 
     }
 
-    public function ReadVerify()     {
+    public function Delete()
+    {
         $val = new UtilizadorDAL();
-        $result = $val -> ReadVerifyDAL($this);
+        $val->DeleteDAL($this);
+    }
+
+    public function CreateTable()
+    {
+        $val = new UtilizadorDAL();
+        $val->CreateTable();
+
+
+    }
+
+    public function ReadVerify()
+    {
+        $val = new UtilizadorDAL();
+        $result = $val->ReadVerifyDAL($this);
         return $result;
     }
-    public function ReadEmail()     {
-        $val = new UtilizadorDAL();
-        $result = $val -> ReadEmailDAL($this);
-        return $result;
 
-    }
-    public function ReadEmailHash()     {
+    public function ReadEmail()
+    {
         $val = new UtilizadorDAL();
-        $result = $val -> ReadEmailHashDAL($this);
+        $result = $val->ReadEmailDAL($this);
         return $result;
 
     }
 
-
-    public function UpdateVerify()     {
+    public function ReadEmailHash()
+    {
         $val = new UtilizadorDAL();
-        $val -> UpdateVerifyDAL($this);
+        $result = $val->ReadEmailHashDAL($this);
+        return $result;
+
+    }
+
+    public function UpdateVerify()
+    {
+        $val = new UtilizadorDAL();
+        $val->UpdateVerifyDAL($this);
     }
 }
