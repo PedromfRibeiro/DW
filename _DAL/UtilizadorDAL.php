@@ -19,7 +19,7 @@ class UtilizadorDAL
             ':Verify' => '0',
             ':email' => $util->email);
 
-        $PDO->SQuerry($sql, $val);
+        return $PDO->SQuerry($sql, $val);
     }
 
     public static function ReadDAL(Utilizador $util)
@@ -87,17 +87,28 @@ class UtilizadorDAL
     public static function ReadEmailDAL(Utilizador $util)
     {
         $dbUtilizador = new Connection();
+        $dbUtilizador -> Connect();
+        $sql = "SELECT * FROM Utilizador WHERE email=:email ";
+        $val = [
+            ':email'=>$util->email,
+        ];
+        $stm = $dbUtilizador->SQuerry($sql,$val);
+        return $stm->fetch();
+    }
+    public static function ReadEmailOBJDAL(Utilizador $util)
+    {
+        $User = new Utilizador();
+        $dbUtilizador = new Connection();
         $dbUtilizador->Connect();
         $sql = "SELECT * FROM Utilizador where email=:email";
         $val = [
             ':email' => $util->email,
         ];
         $stmt = $dbUtilizador->SQuerry($sql,$val);
-        $stmt->setFetchMode(PDO::FETCH_CLASS,'Utilizador');
-        //$stmte->setFetchMode(PDO::FETCH_OBJ,'Utilizador');
+        $stmt->setFetchMode(PDO::FETCH_INTO,$User);
+        $User=$stmt->fetch();
+        return $User;
 
-        return $stmt->fetch();
-         //return $statment->fetch();
 
     }
 
@@ -136,7 +147,7 @@ class UtilizadorDAL
             ':email' => $util->email,
             ':code_hash' => $util->code_hash,
             ':Verify' => $util->Verify);
-        $dbUtilizador->SQuerry($sql, $val);
+        return $dbUtilizador->SQuerry($sql, $val);
     }
 
 

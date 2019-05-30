@@ -28,6 +28,9 @@ class UserController
         if (isset($_POST['Update_Cliente'])) {
             self::UpdateCliente();
         }
+        if (isset($_POST['DeleteCliente'])) {
+            self::DeleteCliente();
+        }
 
 
     }
@@ -40,7 +43,7 @@ class UserController
             $_SESSION["Controll"]["Mensage"] = 'Missing data to continue';
         } else {
 
-            $uu = new Utilizador('', '', '', '', '', '', '', '', '');
+            $uu = new Utilizador();
             $uu->email = $_POST["email"];
             $uu->pass = sha1($_POST['password']);;
             $statement = $uu->Read();
@@ -67,7 +70,7 @@ class UserController
         function Checkmail()
         {
 
-            $chk = new Utilizador('', '', '', '', '', '', '', '', '');
+            $chk = new Utilizador();
             $chk->email = $_POST['email'];
             $check = $chk->ReadEmail();
 
@@ -138,7 +141,7 @@ class UserController
             return false;
         } else {
 
-            $uu = new Utilizador('', '', '', '', '', '', '', '', '');
+            $uu = new Utilizador();
             $uu->Nome = $_POST["Nome"];
             $uu->email = $_POST["email"];
             $uu->pass = sha1($_POST['password']);
@@ -177,7 +180,7 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&
 
         if (isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['code_hash']) && !empty($_GET['code_hash'])) {
 
-            $verify = new Utilizador('', '', '', '', '', '', '', '', '');
+            $verify = new Utilizador();
             $verify->email = $_GET['email'];
             $verify->code_hash = $_GET['code_hash'];
 
@@ -206,7 +209,7 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&
     {
         $_SESSION["Controll"]["Type"] = "error";
 
-        $chk = new Utilizador('', '', '', '', '', '', '', '', '');
+        $chk = new Utilizador();
         $chk->email = $_POST['email'];
         $check = $chk->ReadEmail();
 
@@ -243,7 +246,7 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
             $email = $_GET['email'];
             $code_hash = $_GET['code_hash'];
 
-            $rss = new Utilizador('', '', '', '', '', '', '', '', '');
+            $rss = new Utilizador();
 
             $rss->email = $email;
             $rss->code_hash = $code_hash;
@@ -296,7 +299,7 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
 
             $email = $_POST['email'];
             $code_hash = $_POST['code_hash'];
-            $rss = new Utilizador('', '', '', '', '', '', '', '', '');
+            $rss = new Utilizador();
 
             $rss->email = $email;
             $rss->code_hash = $code_hash;
@@ -351,7 +354,7 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
     public static function IsUserLoggedAdmin()
     {
         if (!empty(self::isUserLoggedIn())) {
-            $uu = new Utilizador('', '', '', '', '', '', '', '', '');
+            $uu = new Utilizador();
             $uu->email = $_SESSION["email"];
             $statement = $uu->ReadEmail();
             if ($statement['Autorizacao'] == 1) {
@@ -379,21 +382,53 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
     public static function UpdateCliente()
     {
 
-        $up = new Utilizador('', '', '', '', '', '', '', '', '');
+        $up = new Utilizador();
         $up->email = $_POST["email"];
-        $statment = $up->ReadEmail();
+        $statment = $up->ReadEmailOBJ();
+        if($statment->Nome!=$_POST['Nome'])$statment->Nome=$_POST['Nome'];
+        if($statment->Data_Nascimento!=$_POST['Data_Nascimento'])$statment->Data_Nascimento=$_POST['Data_Nascimento'];
+        if($statment->Autorizacao!=$_POST['Autorizacao'])$statment->Autorizacao=$_POST['Autorizacao'];
+        if($statment->code_hash!=$_POST['code_hash'])$statment->code_hash=$_POST['code_hash'];
+        if($statment->Verify!=$_POST['Verify'])$statment->Verify=$_POST['Verify'];
+        $statment->Update();
+    }
+    public static function DeleteCliente(){
+        print
+            "<script>
+            const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false,
+})
 
-        $up=$statment;
-        $up->idUtilizador = $statment->idUtilizador;
-        $up->Nome = $_POST['Nome'];
-        $up->pass = $statment->pass;
-        $up->Data_Registo = $statment->Data_Registo;
-        $up->Autorizacao = $statment->Autorizacao;
-        $up->Data_Nascimento = $statment->Data_Nascimento;
-        $up->code_hash = $statment->code_hash;
-        $up->Verify = $statment->Verify;
-
-        $up->Update();
+swalWithBootstrapButtons.fire({
+  title: 'Are you sure?',
+  text: \"You won't be able to revert this!\",
+  type: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Yes, delete it!',
+  cancelButtonText: 'No, cancel!',
+  reverseButtons: true
+}).then((result) => {
+  if (result.value) {
+    swalWithBootstrapButtons.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+  } else if (
+    // Read more about handling dismissals
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      'Cancelled',
+      'Your imaginary file is safe :)',
+      'error'
+    )
+  }
+})</script>";
     }
 
 

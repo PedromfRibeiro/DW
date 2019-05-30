@@ -15,7 +15,7 @@ class Utilizador
     public $code_hash;
     public $Verify;
 
-    public function __construct($idUtilizador=null, $Nome=null, $pass=null, $Data_Registo=null, $Autorizacao=null, $Data_Nascimento=null, $email=null, $code_hash=null, $Verify=null)
+    public function __construct($idUtilizador="", $Nome="", $pass="", $Data_Registo="", $Autorizacao="", $Data_Nascimento="", $email="", $code_hash="", $Verify="")
     {
         $this->idUtilizador = $idUtilizador;
         $this->Nome = $Nome;
@@ -31,73 +31,68 @@ class Utilizador
 
     public function Create()
     {
-        $val = new UtilizadorDAL();
-        $val->CreateDAL($this);
+        return UtilizadorDAL::CreateDAL($this);
     }
 
     public function Read()
     {
-        $val = new UtilizadorDAL();
-        $result = $val->ReadDAL($this);
-        return $result;
+        return UtilizadorDAL::ReadDAL($this);
+
 
     }
 
     public function ReadALL()
     {
-        $val = new UtilizadorDAL();
-        $rr = $val->ReadALLDAL();
-        return $rr;
+        return UtilizadorDAL::ReadALLDAL();
+
 
     }
 
     public function Update()
     {
-        $val = new UtilizadorDAL();
-        $val->UpdateDAL($this);
-
+        return UtilizadorDAL::UpdateDAL($this);
     }
 
     public function Delete()
     {
-        $val = new UtilizadorDAL();
-        $val->DeleteDAL($this);
+        return UtilizadorDAL::DeleteDAL($this);
     }
 
     public function CreateTable()
     {
-        $val = new UtilizadorDAL();
-        $val->CreateTable();
+        return UtilizadorDAL::CreateTable();
 
 
     }
 
     public function ReadVerify()
     {
-        $val = new UtilizadorDAL();
-        $result = $val->ReadVerifyDAL($this);
-        return $result;
+        return UtilizadorDAL::ReadVerifyDAL($this);
+
     }
 
     public function ReadEmail()
     {
-        $val = new UtilizadorDAL();
-        $result = $val->ReadEmailDAL($this);
-        return $result;
+        return UtilizadorDAL::ReadEmailDAL($this);
+
+
+    }
+    public function ReadEmailOBJ()
+    {
+        return UtilizadorDAL::ReadEmailOBJDAL($this);
+
 
     }
 
     public function ReadEmailHash()
     {
-        $val = new UtilizadorDAL();
-        $result = $val->ReadEmailHashDAL($this);
-        return $result;
+        return UtilizadorDAL::ReadEmailHashDAL($this);
+
 
     }
 
     public function UpdateVerify()
     {
-        $val = new UtilizadorDAL();
-        $val->UpdateVerifyDAL($this);
+        return UtilizadorDAL::UpdateVerifyDAL($this);
     }
 }
