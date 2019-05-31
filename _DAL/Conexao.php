@@ -24,16 +24,6 @@ class Connection
         return  $stmte;
     }
 
-    public function SQuerrys($SQLString,$obj){
-        $pdo= $this->Connect();
-        $stmte = $pdo->prepare($SQLString);
-        $stmte->setFetchMode(PDO::FETCH_CLASS,'Utilizador');
-        //$stmte->setFetchMode(PDO::FETCH_OBJ,'Utilizador');
-        $stmte->execute($obj);
-        return $stmte->fetch(PDO::FETCH_LAZY);
-        //return  $stmte->fetchObject();
-
-    }
 }
 
 

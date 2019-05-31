@@ -15,7 +15,7 @@ class Utilizador
     public $code_hash;
     public $Verify;
 
-    public function __construct($idUtilizador="", $Nome="", $pass="", $Data_Registo="", $Autorizacao="", $Data_Nascimento="", $email="", $code_hash="", $Verify="")
+    public function __construct($idUtilizador=null, $Nome=null, $pass=null, $Data_Registo=null, $Autorizacao=null, $Data_Nascimento=null, $email=null, $code_hash=null, $Verify=null)
     {
         $this->idUtilizador = $idUtilizador;
         $this->Nome = $Nome;

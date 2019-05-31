@@ -31,6 +31,9 @@ class UserController
         if (isset($_POST['DeleteCliente'])) {
             self::DeleteCliente();
         }
+        if (isset($_POST['NewCliente'])) {
+            self::NewCliente();
+        }
 
 
     }
@@ -43,12 +46,13 @@ class UserController
             $_SESSION["Controll"]["Mensage"] = 'Missing data to continue';
         } else {
 
-            $uu = new Utilizador();
+            $uu = new Utilizador('','','','','','','','','');
             $uu->email = $_POST["email"];
             $uu->pass = sha1($_POST['password']);;
             $statement = $uu->Read();
 
-            if (!($statement['Verify'] == 1)) {
+             if($statement==false){$_SESSION["Controll"]["Mensage"] = 'Something went Wrong!';}
+            else if (($statement['Verify'] == 0)) {
                 $_SESSION["Controll"]["Type"] = "warning";
                 $_SESSION["Controll"]["Mensage"] = 'Email nao verificado! Por favor verifique o seu email!';
             } else if ($statement > 0) {
@@ -148,6 +152,7 @@ class UserController
             $uu->Data_Registo = Date("now");
             $uu->Data_Nascimento = $_POST["data_Nascimento"];
             $uu->code_hash = md5(rand(0, 1000));
+            if(isset($_POST['Autorizacao'])){$uu->Autorizacao=$_POST['Autorizacao'];}
             $uu->Verify = '0';
 
 
@@ -168,7 +173,7 @@ class UserController
                 Hello ' . $_POST["Nome"] . ',
 Thank you for Signing up!
 Please Click This link to activate your account:
-http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&code_hash=' . $uu->code_hash;
+http://localhost/DWphp/Index.php?page=Login/Verify&email=' . $uu->email . '&code_hash=' . $uu->code_hash;
                 mail($to, $subject, $mail, $headers);
             }
         }
@@ -232,7 +237,7 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Verify&email=' . $uu->email . '&
             $headers = 'From:TheClassicGamerComp@gmail.com';
             $msg = '  Hello ' . $name . ',
 Please Click This link to Reset your password:
-http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_hash=' . $hash;
+http://localhost/DWphp/Index.php?page=Login/Reset&email=' . $email . '&code_hash=' . $hash;
 
             mail($to, $subject, $msg, $headers);
         }
@@ -393,42 +398,14 @@ http://localhost/DWphp/_PL/Index.php?page=Login/Reset&email=' . $email . '&code_
         $statment->Update();
     }
     public static function DeleteCliente(){
-        print
-            "<script>
-            const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: false,
-})
+        $up = new Utilizador();
+        $up->idUtilizador = $_POST["idUtilizador"];
+        $up->Delete();
+    }
+    public static function NewCliente(){
+        self::Register();
 
-swalWithBootstrapButtons.fire({
-  title: 'Are you sure?',
-  text: \"You won't be able to revert this!\",
-  type: 'warning',
-  showCancelButton: true,
-  confirmButtonText: 'Yes, delete it!',
-  cancelButtonText: 'No, cancel!',
-  reverseButtons: true
-}).then((result) => {
-  if (result.value) {
-    swalWithBootstrapButtons.fire(
-      'Deleted!',
-      'Your file has been deleted.',
-      'success'
-    )
-  } else if (
-    // Read more about handling dismissals
-    result.dismiss === Swal.DismissReason.cancel
-  ) {
-    swalWithBootstrapButtons.fire(
-      'Cancelled',
-      'Your imaginary file is safe :)',
-      'error'
-    )
-  }
-})</script>";
+
     }
 
 

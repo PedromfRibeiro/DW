@@ -26,6 +26,8 @@ MainController::process();
 
     <!--JS-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="/_js/Utilizador.js"></script>
+
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="_css/Header.css"/>
     <link rel="stylesheet" type="text/css" href="_css/Styles.css" />
@@ -100,7 +102,7 @@ MainController::process();
 <!-- Header -->
 
 <?php
-if( isset($_SESSION["Controll"])){
+if( isset($_SESSION["Controll"]["Mensage"])){
 UserController::AnimatedNotify($_SESSION["Controll"]["Type"],$_SESSION["Controll"]["Mensage"]);
 unset($_SESSION["Controll"]);}
 $option=$_GET["page"];

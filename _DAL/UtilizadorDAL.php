@@ -32,7 +32,7 @@ class UtilizadorDAL
             ':pass' => $util->pass,
         ];
         $statment = $dbUtilizador->SQuerry($sql, $val);
-        return $statment->fetch();
+        return $statment->fetch(PDO::FETCH_ASSOC);
 
     }
 
@@ -48,7 +48,7 @@ class UtilizadorDAL
     {
         $dbUtilizador = new Connection();
         $dbUtilizador->Connect();
-        $sql = "UPDATE Utilizador set Nome=:Nome, pass=:pass, Data_Registo=:Data_Registo, Autorizacao=:Autorizacao,Data_Nascimento=:Data_Nascimento,email=:email,code_hash=:code_hash,Verify=:Verify  where email=:email ;";
+        $sql = "UPDATE utilizador set Nome=:Nome, pass=:pass, Data_Registo=:Data_Registo, Autorizacao=:Autorizacao,Data_Nascimento=:Data_Nascimento,email=:email,code_hash=:code_hash,Verify=:Verify  where email=:email ;";
         $val = array(
             ':Nome' => $util->Nome,
             ':pass' => $util->pass,
@@ -68,8 +68,8 @@ class UtilizadorDAL
     {
         $dbUtilizador = new Connection();
         $dbUtilizador->Connect();
-        $sql = "DELETE FROM `Utilizador` WHERE `Utilizador`.id=:id";
-        $val = ['id' => ($util->id)];
+        $sql = "DELETE FROM utilizador WHERE idUtilizador=:idUtilizador";
+        $val = ['idUtilizador' => ($util->idUtilizador)];
         return $dbUtilizador->SQuerry($sql, $val);
 
     }

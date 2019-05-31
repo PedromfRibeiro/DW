@@ -36,7 +36,7 @@
 
                     echo '<td>' . $row['genero'] . '</td>';
                     echo '<td>
-                        <a href="#editgeneros" onclick="this" class="edit" ><i class="material-icons" title="Edit" >&#xE254;</i></a>
+                        <a href="#editgeneros"      onclick="this" class="edit" ><i class="material-icons" title="Edit" >&#xE254;</i></a>
                         <a href="#deletegeneros" onclick="this" class="delete"><i class="material-icons" title="Delete">&#xE872;</i></a>
                     </td>';
                     echo '</tr>';
