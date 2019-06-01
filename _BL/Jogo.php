@@ -25,28 +25,27 @@ class Jogo
 
     public function Create()
     {
-        $val = new JogoDAL();
-        $val->CreateDAL($this);
+        return JogoDAL::CreateDAL($this);
+    }
+    public function Read()    {
+        return JogoDAL::ReadDAL($this);
+
     }
     public function ReadALL()    {
-        $val = new JogoDAL();
-        return $val -> ReadALLDAL();
+        return JogoDAL::ReadALLDAL();
 
     }
 
     public function Update()     {
-        $val = new JogoDAL();
-        $val -> Update($this);
+        return JogoDAL::Update($this);
 
     }
     public function Delete()     {
-        $val = new JogoDAL();
-        $val -> Delete($this);
+        return JogoDAL::Delete($this);
     }
 
     public function CreateTable(){
-        $val = new JogoDAL();
-        $val -> CreateDB();
+        return JogoDAL::CreateDB();
     }
 
 }

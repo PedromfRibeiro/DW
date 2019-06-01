@@ -4,7 +4,7 @@ require_once dirname(__FILE__) . "/../_BL/Utilizador.php";
 
 class UserController
 {
-    public static function process1()
+    public static function processUser()
     {
 
         if (isset($_POST["login"])) {
@@ -34,7 +34,6 @@ class UserController
         if (isset($_POST['NewCliente'])) {
             self::NewCliente();
         }
-
 
     }
 
@@ -101,7 +100,7 @@ class UserController
             if (empty($_POST['password']) || empty($_POST['newpassword'])) {
                 $_SESSION["Controll"]["Mensage"] = "Password is empty!";
                 return true;
-            } else if ((strcmp($array1, $array2)) !== 0) {
+            } else if ((strcmp($array1, $array2))!== 0) {
                 $_SESSION["Controll"]["Mensage"] = "The two passwords you entered dont match, try again!";
                 return true;
             } else if (strlen($_POST['password']) < 8 || strlen($_POST['password']) > 24) {
@@ -152,6 +151,7 @@ class UserController
             $uu->Data_Registo = Date("now");
             $uu->Data_Nascimento = $_POST["data_Nascimento"];
             $uu->code_hash = md5(rand(0, 1000));
+            $uu->Autorizacao=0;
             if(isset($_POST['Autorizacao'])){$uu->Autorizacao=$_POST['Autorizacao'];}
             $uu->Verify = '0';
 
@@ -380,6 +380,12 @@ http://localhost/DWphp/Index.php?page=Login/Reset&email=' . $email . '&code_hash
                 showConfirmButton: false,
                 timer: 2000
             })</script>";
+    }
+
+    public static function ErrorPage(){
+        $_SESSION["Controll"]["Type"] = "error";
+        $_SESSION["Controll"]["Mensage"] = 'You shall not Pass!';
+        header("Location: index.php?page=MainPage");
     }
 
     //Form

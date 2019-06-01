@@ -96,7 +96,8 @@
                                    value="<?php echo $Verify ?>">
 
                             <br>
-                            <button type="submit" class="btn btn-primary" name="Update_Cliente">Save changes</button>
+                            <button type="submit" class="btn btn-primary" name="Update_Cliente">Save changes
+                            </button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </form>
                     </div>
@@ -143,16 +144,18 @@ echo '<div class="modal fade" id="myCreateModal">'; ?>
                 <input class="form-control" type="text" placeholder="Enter Name" name="Nome">
                 <br>
                 <label for="Data Nascimento"><b> Data de Nascimento </b></label>
-                <input class="form-control" type="text" placeholder="Enter Password" name="password" value="DefaultPassword2019">
+                <input class="form-control" type="text" placeholder="Enter Password" name="password"
+                       value="DefaultPassword2019">
                 <label for="Data Nascimento"><b> Data de Nascimento </b></label>
-                <input class="form-control" type="text" placeholder="Enter Password" name="newpassword" value="DefaultPassword2019">
+                <input class="form-control" type="text" placeholder="Enter Password" name="newpassword"
+                       value="DefaultPassword2019">
 
                 <br>
                 <label for="Data Nascimento"><b> Data de Nascimento </b></label>
                 <input class="form-control" type="date" placeholder="Enter Birth Date" name="data_Nascimento">
                 <br>
                 <label for="email"><b> Email</b></label>
-                <input class="form-control" type="text" placeholder="Enter Email" name="email" >
+                <input class="form-control" type="text" placeholder="Enter Email" name="email">
                 <br>
                 <label for="Autorizaçao"><b> Autorizaçao</b></label>
                 <input class="form-control" type="number" placeholder="Enter Authorization" name="Autorizacao">
@@ -181,8 +184,7 @@ echo '<div class="modal fade" id="myCreateModal">'; ?>
 </div>
 </div>
 </div>
-<?php
-$_POST=array();
-?>
-</body>
 
+</body>
+       <?php
+       $_POST = array(); ?>

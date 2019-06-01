@@ -19,8 +19,8 @@ class JogoDAL{
     public static function ReadDAL(Jogo $Jogo){
         $dbJogo = new Connection();
         $dbJogo -> Connect();
-        $sql="SELECT * FROM Jogo WHERE idJogo = :idJogo";
-        $val = ['idJogo' => ($Jogo->idJogo)];
+        $sql="SELECT * FROM Jogo WHERE idJogo =:idJogo";
+        $val = array('idJogo' => ($Jogo->idJogo));
         $stm = $dbJogo->SQuerry($sql,$val);
         return  $stm->fetch();
     }

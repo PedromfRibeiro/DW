@@ -1,13 +1,16 @@
 <?php
 require_once dirname(__FILE__)."/UserController.php";
+require_once dirname(__FILE__)."/JogoController.php";
 
 
 class MainController
 {
     public static function process(){
         session_start();
-        UserController::process1();
+        UserController::processUser();
+        JogoController::processJogo();
         self::Href();
+        self::Admin();
     }
     public static function Href()
     {
@@ -84,6 +87,12 @@ class MainController
                     $_SESSION['Hrefs'] = '_css/Admin/adminplataforma.css';
                     break;
                 }
+        }
+    }
+
+    public static function Admin(){
+        if($_GET['page']=='Admin/adminclientess'){
+            if(UserController::IsUserLoggedAdmin())UserController::ErrorPage();
         }
     }
 }
