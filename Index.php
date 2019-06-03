@@ -12,6 +12,8 @@ MainController::process();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>The Classic Gamer</title>
 
+
+
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -26,12 +28,14 @@ MainController::process();
 
     <!--JS-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="/_js/Utilizador.js"></script>
 
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="_css/Header.css"/>
     <link rel="stylesheet" type="text/css" href="_css/Styles.css" />
     <link type="text/css" rel="stylesheet" href="<?php echo $_SESSION['Hrefs']?>"/>
+
+
+
 
 
 </head>

@@ -128,8 +128,8 @@
 }
 $BFetch->closeCursor();
 $POD = null;
-
-echo '<div class="modal fade" id="myCreateModal">'; ?>
+?>
+<div class="modal fade" id="myCreateModal">
 <div class="modal-dialog">
     <div class="modal-content">
 
@@ -186,5 +186,5 @@ echo '<div class="modal fade" id="myCreateModal">'; ?>
 </div>
 
 </body>
-       <?php
-       $_POST = array(); ?>
+<?php
+$_POST = array(); ?>

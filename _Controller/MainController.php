@@ -77,6 +77,16 @@ class MainController
                     $_SESSION['Hrefs'] = '_css/Admin/admingames.css';
                     break;
                 }
+            case 'Admin/adminclientess':
+                {
+                    $_SESSION['Hrefs'] = '_css/Admin/adminclientes.css';
+                    break;
+                }
+            case 'Admin/AdminMenu':
+                {
+                    $_SESSION['Hrefs'] = '_css/Admin/AdminMenu.css';
+                    break;
+                }
             case 'Admin/admingeneros':
                 {
                     $_SESSION['Hrefs'] = '_css/Admin/admingeneros.css';
@@ -92,7 +102,7 @@ class MainController
 
     public static function Admin(){
         if($_GET['page']=='Admin/adminclientess'){
-            if(UserController::IsUserLoggedAdmin())UserController::ErrorPage();
+            if(!UserController::IsUserLoggedAdmin())UserController::ErrorPage();
         }
     }
 }

@@ -35,18 +35,16 @@
         <a href="?page=Plataforma">
             <button type="button" class="btn btn-secondary btn-lg btn-block">Plataforma</button>
         </a>
-        <a href="?page=Produto">
-            <button type="button" class="btn btn-secondary btn-lg btn-block">Produto</button>
-        </a>
         <a href="?page=Produtos">
             <button type="button" class="btn btn-secondary btn-lg btn-block">Produtos</button>
         </a>
-        <a href="?page=Login/login">
+        <a href="?page=Shopping_cart">
             <button type="button" class="btn btn-secondary btn-lg btn-block">Login</button>
         </a>
-        <a href="?page=Login/Register">
-            <button type="button" class="btn btn-secondary btn-lg btn-block">Register</button>
-        </a>
+        <?php if(!empty(UserController::IsUserLoggedAdmin())){
+            print'<a href="?page=Admin/AdminMenu">
+            <button type="button" class="btn btn-secondary btn-lg btn-block">Menu de Admin</button>
+        </a>';}?>
 
     </div>
 </div>
