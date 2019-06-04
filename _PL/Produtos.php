@@ -118,7 +118,7 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
             </div>
           </div>';
             }
-            $_SESSION['Jogo']=
+
             $POD=null;
             ?>
 

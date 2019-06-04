@@ -1,3 +1,4 @@
+
 <body>
 
 <div class="plat">
@@ -38,6 +39,7 @@
                     <div class="right-column">
                         <div class="form-group">
                         <form method="post">
+                        <input type="text" name="preco" value="' . $BFetch['preco'] . '" hidden>
                         <input type="submit" name="Compra" value="Buy It!"> 
 </form>
                             
@@ -52,7 +54,6 @@
         ';
     $POD = null;
     ?>
-
 
 
 </div>

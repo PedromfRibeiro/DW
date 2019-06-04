@@ -1,6 +1,6 @@
 <?php
 
-include ('_DAL/StockDAL.php');
+require_once dirname(__FILE__) . '/../_DAL/StockDAL.php';
 
 class Stock
 {

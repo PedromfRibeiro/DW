@@ -11,7 +11,7 @@ require_once '../_BL/Genero.php';
 //require_once '../_BL/Venda.php';
 
 $date = "2012-08-06";
-$date=date("Y-m-d",strtotime($date));
+$date=date("Y-m-d");
 
 $plataforma = new Plataforma('','');
 $Genero     = new Genero('','');

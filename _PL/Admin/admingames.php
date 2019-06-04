@@ -26,11 +26,6 @@
 							</span>
                 <?php
                 require_once '_BL/Jogo.php';
-
-                $pp = new Jogo('','wqwer','2055','werttttttttttgergerg','1','1');
-                $pp -> Create();
-
-                require_once '_BL/Jogo.php';
                 require_once '_BL/Genero.php';
 
                 $POD = new Jogo('','','','','','');

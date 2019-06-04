@@ -1,10 +1,7 @@
 <?php
 require_once dirname(__FILE__) . "/_Controller/MainController.php";
 require_once dirname(__FILE__) . "/_Controller/UserController.php";
-MainController::process();
-
-
-?>
+MainController::process();?>
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>

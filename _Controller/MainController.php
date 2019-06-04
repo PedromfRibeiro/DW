@@ -1,16 +1,16 @@
 <?php
 require_once dirname(__FILE__)."/UserController.php";
 require_once dirname(__FILE__)."/JogoController.php";
-
-
 class MainController
 {
     public static function process(){
         session_start();
+
         UserController::processUser();
         JogoController::processJogo();
         self::Href();
-        self::Admin();
+        if($_GET['page']==="Admin"){self::Admin();}
+
     }
     public static function Href()
     {
@@ -106,4 +106,3 @@ class MainController
         }
     }
 }
-

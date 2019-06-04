@@ -1,50 +1,48 @@
 <?php
-require_once ('_DAL/EncomendaDAL.php');
+require_once dirname(__FILE__) . '/../_DAL/EncomendaDAL.php';
 
 class Encomenda
 {
     public $idEncomenda;
     public $data_enc;
+    public $Valor;
     public $Finalizada;
     public $id_utilizador;
 
-    public function __construct($idEncomenda, $data_enc, $Finalizada, $id_utilizador)
+    public function __construct($idEncomenda=null, $data_enc=null,$Valor=null, $Finalizada=null, $id_utilizador=null)
     {
         $this->idEncomenda = $idEncomenda;
         $this->data_enc = $data_enc;
+        $this->Valor = $Valor;
         $this->Finalizada = $Finalizada;
         $this->id_utilizador = $id_utilizador;
     }
-public function Create(){
-    $val = new EncomendaDAl();
-    $val -> CreateDAL($this);
-}
-public function Read()     {
-    $val = new EncomendaDAl();
-    $result = $val -> ReadDAL($this);
-    return $result;
+    public function Create(){
+        return EncomendaDAL::CreateDAL($this);
+    }
+    public function Read()     {
+        return EncomendaDAL::ReadDAL($this);
+    }
+    public function ReadALL()    {
+        return EncomendaDAL::ReadALLDAL();
+    }
 
-}
-public function ReadALL()    {
-    $val = new EncomendaDAl();
-    $rr =$val -> ReadALLDAL();
-    return $rr;
-
-}
-
-public function Update()     {
-    $val = new EncomendaDAl();
-    $val -> Update($this);
-
-}
-public  function Delete()     {
-    $val = new EncomendaDAl();
-    $val -> Delete($this);
-}
+    public function Update()     {
+        return EncomendaDAL::Update($this);
+    }
+    public  function Delete()     {
+        return EncomendaDAL::Delete($this);
+    }
+    public function CreateTable(){
+        return EncomendaDAL::CreateDB();
+    }
+    public function CheckCarrinho()    {
+        return EncomendaDAL::CheckCarrinhoDAL($this);
+    }
+    public function UpdateValor()    {
+        return EncomendaDAL::UpdateValorDAL($this);
+    }
 
 
-public function CreateTable(){
-    $val = new EncomendaDAl();
-    $val -> CreateDB();
-}
+
 }

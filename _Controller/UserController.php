@@ -56,6 +56,7 @@ class UserController
                 $_SESSION["Controll"]["Mensage"] = 'Email nao verificado! Por favor verifique o seu email!';
             } else if ($statement > 0) {
                 $_SESSION["email"] = $_POST["email"];
+                $_SESSION["id"]=$statement['idUtilizador'];
                 $_SESSION["Controll"]["Type"] = "success";
                 $_SESSION["Controll"]["Mensage"] = 'success to LogIn!';
                 header("Location: index.php?page=MainPage");
@@ -148,7 +149,7 @@ class UserController
             $uu->Nome = $_POST["Nome"];
             $uu->email = $_POST["email"];
             $uu->pass = sha1($_POST['password']);
-            $uu->Data_Registo = Date("now");
+            $uu->Data_Registo = Date("Y/m/d");
             $uu->Data_Nascimento = $_POST["data_Nascimento"];
             $uu->code_hash = md5(rand(0, 1000));
             $uu->Autorizacao=0;

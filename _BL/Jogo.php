@@ -1,5 +1,6 @@
 <?php
-require_once ('_DAL/JogoDAL.php');
+
+require_once dirname(__FILE__) . '/../_DAL/JogoDAL.php';
 
 
 class Jogo
