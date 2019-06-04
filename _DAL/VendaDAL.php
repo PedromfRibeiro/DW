@@ -22,8 +22,8 @@ class VendaDAL
     {
         $dbGen = new Connection();
         $dbGen->Connect();
-        $sql = "SELECT * FROM venda WHERE id = :id";
-        $val = ['id' => ($Venda->id)];
+        $sql = "SELECT * FROM venda WHERE idVenda = :idVenda";
+        $val = ['idVenda' => ($Venda->idVenda)];
         return $dbGen->SQuerry($sql, $val);
     }
 
@@ -67,6 +67,15 @@ class VendaDAL
         $sql = "SELECT Valor FROM venda WHERE id_Encomenda=:id_Encomenda";
         $valeu=array('id_Encomenda'=>$Obj->id_Encomenda);
         return $dbEnc->SQuerry($sql, $valeu);
+    }
+
+    public static function ReadEncDAL(Venda $Venda){
+
+        $dbGen = new Connection();
+        $dbGen->Connect();
+        $sql = "SELECT * FROM venda WHERE id_Encomenda = :id_Encomenda";
+        $val = ['id_Encomenda' => ($Venda->id_Encomenda)];
+        return $dbGen->SQuerry($sql, $val);
     }
 
 

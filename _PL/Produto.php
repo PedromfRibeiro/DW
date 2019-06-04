@@ -1,4 +1,3 @@
-
 <body>
 
 <div class="plat">
@@ -9,8 +8,8 @@
 
     $POD = new Jogo('', '', '', '', '', '');
     $POD->idJogo = $_GET['jogo'];;
-    $BFetch = ($POD->Read());
-
+    $BFetch = $POD->Read();
+    $row = $BFetch->fetch();
     echo '
          <div class="indexdiv ">
         <div class="left-column">
@@ -22,11 +21,11 @@
 
             <!-- Product Description -->
             <div class="product-description">
-                <h1>' . $BFetch['nome'] . '</h1>
-                <h3>' . $BFetch['idPlataforma'] . '</h3>
-                <h3>' . $BFetch['idGenero'] . '</h3>
+                <h1>' . $row['nome'] . '</h1>
+                <h3>' . $row['idPlataforma'] . '</h3>
+                <h3>' . $row['idGenero'] . '</h3>
 
-                <p>' . $BFetch['descricao'] . '</p>
+                <p>' . $row['descricao'] . '</p>
             </div>
 
             <!-- Product Configuration -->
@@ -34,12 +33,12 @@
 
                 <div class="plat ">
                     <div class="left-column">
-                        <h2>Price:' . $BFetch['preco'] . '€</h2>
+                        <h2>Price:' . $row['preco'] . '€</h2>
                     </div>
                     <div class="right-column">
                         <div class="form-group">
                         <form method="post">
-                        <input type="text" name="preco" value="' . $BFetch['preco'] . '" hidden>
+                        <input type="text" name="preco" value="' . $row['preco'] . '" hidden>
                         <input type="submit" name="Compra" value="Buy It!"> 
 </form>
                             
@@ -123,4 +122,3 @@
 
 
 </body>
-

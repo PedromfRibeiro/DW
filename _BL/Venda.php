@@ -53,4 +53,9 @@ class Venda
         return VendaDAL::ReadValorDAL($this);
     }
 
+    public function ReadEnc()
+    {
+        return VendaDAL::ReadEncDAL($this);
+    }
+
 }

@@ -1,8 +1,9 @@
 <?php
 
-require_once dirname(__FILE__) . "/../_BL/Venda.php";
-require_once dirname(__FILE__) . "/../_BL/Encomenda.php";
-
+require_once dirname(__FILE__) . '/../_BL/Venda.php';
+require_once dirname(__FILE__) . '/../_BL/Encomenda.php';
+require_once dirname(__FILE__) . '/../_BL/Jogo.php';
+require_once dirname(__FILE__) . '/../_BL/Stock.php';
 class JogoController
 {
     public static function processJogo()
@@ -10,6 +11,10 @@ class JogoController
         if (isset($_POST["Compra"])) {
             self::Compra();
         }
+        if (isset($_POST["ComprarCheckOut"])) {
+            self::ComprarCheckOut();
+        }
+
     }
 
     public static function Compra()
@@ -55,4 +60,40 @@ class JogoController
         $EncomendaCliente->Valor=$Valor;
         $EncomendaCliente->UpdateValor();
     }
+
+    public static function GetIdEnc(){
+        $EncPDO = new Encomenda('', '', '', '', '');
+        $EncPDO->id_utilizador=$_SESSION['id'];
+        return $EncPDO->ReadUtil();
+    }
+
+    public static function GetVenda($idEnc){
+        $VendaPDO = new Venda('', '', '', '', '', '');
+        $VendaPDO->id_Encomenda = $idEnc['idEncomenda'];
+        return $VendaPDO->ReadEnc();
+    }
+
+    public static function GetJogoByID($bb){
+        $JogoPDO = new jogo('', '', '', '', '', '');
+        $JogoPDO->idJogo= $bb['id_jogo'];
+        $jogo = $JogoPDO->Read();
+        return $jogo->fetch();
+    }
+
+    public static function GetStockByID($bb){
+        $StockPDO = new Stock('', '', '');
+        $StockPDO->idJogo= $bb['id_jogo'];
+        $Stock = $StockPDO->ReadIdJogo();
+        return $Stock->fetch();
+    }
+
+    public static function ComprarCheckOut(){
+        $EncomendaCliente = new Encomenda('', '', '', '', '');
+        $EncomendaCliente->idEncomenda=self::CheckCarrinho();
+        $EncomendaCliente->Finalizada=1;
+        $EncomendaCliente->UpdateCarrinho();
+
+    }
+
+
 }

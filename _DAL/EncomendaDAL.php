@@ -22,8 +22,9 @@ class EncomendaDAL
     {
         $dbEnc = new Connection();
         $dbEnc->Connect();
-        $sql = "SELECT * FROM encomenda WHERE idEncomenda = :idEncomenda";
-        $val = ['id' => ($Enc->idEncomenda)];
+        $sql = "SELECT * FROM encomenda WHERE idEncomenda =:idEncomenda";
+        $val = array(
+            'idEncomenda' => $Enc->idEncomenda);
         $stm = $dbEnc->SQuerry($sql, $val);
         return $stm->fetch();
     }
@@ -89,4 +90,27 @@ public static function UpdateValorDAL(encomenda $Enc){
     return $dbEnc->SQuerry($sql, $val);
 
 }
+
+    public static function ReadUtilizadorDAL(encomenda $Enc)
+    {
+        $dbEnc = new Connection();
+        $dbEnc->Connect();
+        $sql = "SELECT * FROM encomenda WHERE id_utilizador =:id_utilizador and Finalizada=0";
+        $val = array(
+            'id_utilizador' => $Enc->id_utilizador);
+        $stm = $dbEnc->SQuerry($sql, $val);
+        return $stm->fetch();
+    }
+    public static function UpdateCarrinhoDAL(encomenda $Enc)
+    {
+        $dbEnc = new Connection();
+        $dbEnc->Connect();
+        $sql = "UPDATE encomenda set idEncomenda=:idEncomenda,Finalizada=:Finalizada  where idEncomenda=:idEncomenda ";
+        $val = array(
+            'idEncomenda' => $Enc->idEncomenda,
+            'Finalizada' => $Enc->Finalizada,
+        );
+        return $dbEnc->SQuerry($sql, $val);
+    }
+
 }

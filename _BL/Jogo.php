@@ -34,12 +34,10 @@ class Jogo
     }
     public function ReadALL()    {
         return JogoDAL::ReadALLDAL();
-
     }
 
     public function Update()     {
         return JogoDAL::Update($this);
-
     }
     public function Delete()     {
         return JogoDAL::Delete($this);

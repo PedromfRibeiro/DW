@@ -4,9 +4,9 @@ require_once dirname(__FILE__) . '/../_DAL/StockDAL.php';
 
 class Stock
 {
-public $idStock;
-public $quantidade;
-public $idJogo;
+    public $idStock;
+    public $quantidade;
+    public $idJogo;
 
 
     public function __construct($idStock, $quantidade, $idJogo)
@@ -19,37 +19,39 @@ public $idJogo;
 
     public function Create()
     {
-        $val = new StockDAL();
-        $val -> Create($this);
-    }
-    public function Read()     {
-        $val = new StockDAL();
-        $result = $val -> ReadDAL($this);
-        return $result;
-
-    }
-    public function ReadALL()    {
-        $val = new StockDAL();
-        $rr =$val -> ReadALLDAL();
-        return $rr;
-
+        return StockDAL::Create($this);
     }
 
-    public function Update()     {
-        $val = new StockDAL();
-        $val -> Update($this);
-
-    }
-    public function Delete()     {
-        $val = new StockDAL();
-        $val -> Delete($this);
+    public function Read()
+    {
+        return StockDAL::ReadDAL($this);
     }
 
-    public function CreateDB()     {
-        $val = new StockDAL();
-        $val -> CreateTable();
+    public function ReadALL()
+    {
+        return StockDAL::ReadALLDAL();
     }
 
+    public function Update()
+    {
+        return StockDAL::Update($this);
+
+    }
+
+    public function Delete()
+    {
+        return StockDAL::Delete($this);
+    }
+
+    public function CreateDB()
+    {
+        return StockDAL:: CreateTable();
+    }
+
+    public function ReadIdJogo()
+    {
+        return StockDAL::ReadIdJogoDAL($this);
+    }
 
 
 }

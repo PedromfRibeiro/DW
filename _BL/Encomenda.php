@@ -9,7 +9,7 @@ class Encomenda
     public $Finalizada;
     public $id_utilizador;
 
-    public function __construct($idEncomenda=null, $data_enc=null,$Valor=null, $Finalizada=null, $id_utilizador=null)
+    public function __construct($idEncomenda = null, $data_enc = null, $Valor = null, $Finalizada = null, $id_utilizador = null)
     {
         $this->idEncomenda = $idEncomenda;
         $this->data_enc = $data_enc;
@@ -17,32 +17,56 @@ class Encomenda
         $this->Finalizada = $Finalizada;
         $this->id_utilizador = $id_utilizador;
     }
-    public function Create(){
+
+    public function Create()
+    {
         return EncomendaDAL::CreateDAL($this);
     }
-    public function Read()     {
+
+    public function Read()
+    {
         return EncomendaDAL::ReadDAL($this);
     }
-    public function ReadALL()    {
+
+    public function ReadALL()
+    {
         return EncomendaDAL::ReadALLDAL();
     }
 
-    public function Update()     {
+    public function Update()
+    {
         return EncomendaDAL::Update($this);
     }
-    public  function Delete()     {
+    public function UpdateCarrinho()
+    {
+        return EncomendaDAL::UpdateCarrinhoDAL($this);
+    }
+
+
+    public function Delete()
+    {
         return EncomendaDAL::Delete($this);
     }
-    public function CreateTable(){
+
+    public function CreateTable()
+    {
         return EncomendaDAL::CreateDB();
     }
-    public function CheckCarrinho()    {
+
+    public function CheckCarrinho()
+    {
         return EncomendaDAL::CheckCarrinhoDAL($this);
     }
-    public function UpdateValor()    {
+
+    public function UpdateValor()
+    {
         return EncomendaDAL::UpdateValorDAL($this);
     }
 
+    public function ReadUtil()
+    {
+        return EncomendaDAL::ReadUtilizadorDAL($this);
+    }
 
 
 }

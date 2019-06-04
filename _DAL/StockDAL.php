@@ -48,4 +48,14 @@ class StockDAL
         $sql="use dwphp;CREATE TABLE IF NOT EXISTS `stock` (  `idStock` int(11) NOT NULL AUTO_INCREMENT,  `quantidStockade` varchar(45) NOT NULL,  `idStockJogo` int(11) NOT NULL,  PRIMARY KEY (`idStock`),  KEY `fk_idStockJogo_idStockx` (`idStockJogo`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
         return $dbstock->SQuerry($sql,null);
     }
+
+    public static function ReadIdJogoDAL(Stock $stock){
+        $dbstock = new Connection();
+        $dbstock -> Connect();
+        $sql = "SELECT quantidade FROM stock WHERE idJogo=:idJogo";
+        $val = ['idJogo' => ($stock->idJogo)];
+        return $dbstock->SQuerry($sql,$val);
+
+    }
+
 }
