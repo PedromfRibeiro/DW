@@ -22,13 +22,13 @@
                     </thead>
                     <tbody>
 <?php
-$idEnc=JogoController::GetIdEnc();
-$BFetch =JogoController::GetVenda($idEnc);
+$idEnc=EncomendaController::GetIdEnc();
+$BFetch =VendaController::GetVenda($idEnc);
 $totalPrice=0;
 
 while ($bb = $BFetch->fetch()){
     $row =JogoController::GetJogoByID($bb);
-    $rowStock =JogoController::GetStockByID($bb);
+    $rowStock =StockController::GetStockByID($bb);
 if($rowStock['quantidade']>0){$qq="Yes";}
 else{$qq="No";}
     echo'<tr>

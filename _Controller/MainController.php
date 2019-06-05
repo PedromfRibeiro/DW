@@ -1,12 +1,21 @@
 <?php
 require_once dirname(__FILE__)."/UserController.php";
 require_once dirname(__FILE__)."/JogoController.php";
+require_once dirname(__FILE__)."/EncomendaController.php";
+require_once dirname(__FILE__)."/VendaController.php";
+require_once dirname(__FILE__)."/StockController.php";
+require_once dirname(__FILE__)."/GenerosController.php";
+require_once dirname(__FILE__)."/PlataformaController.php";
+
 class MainController
 {
     public static function process(){
         session_start();
         UserController::processUser();
         JogoController::processJogo();
+        VendaController::processVenda();
+        EncomendaController::processEncomenda();
+
         self::Href();
         if($_GET['page']<= "Admin/Admin"){self::Admin();}
         if($_GET['page']== "Shopping_cart"){self::Logged();}

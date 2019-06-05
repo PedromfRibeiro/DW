@@ -8,8 +8,8 @@
 
     $BFetch = JogoController::ReadJogo($_GET['jogo']);
     $row = $BFetch->fetch();
-    $Genero = JogoController::GetGeneros($row['idGenero']);
-    $Platforma = JogoController::GetPlataforma($row['idPlataforma']);
+    $Genero = GenerosController::GetGeneros($row['idGenero']);
+    $Platforma = PlataformaController::GetPlataforma($row['idPlataforma']);
     echo '
 
         <div class="left-column">
