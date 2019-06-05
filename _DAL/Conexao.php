@@ -23,7 +23,6 @@ class Connection
         $stmte->execute($obj);
         return  $stmte;
     }
-
 }
 
 

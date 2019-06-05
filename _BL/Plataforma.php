@@ -5,45 +5,44 @@ class Plataforma
 {
    public $id;
    public $Plataforma;
+   public $ImagemPlat;
 
-    public function __construct($id,$Plataforma){
+
+    public function __construct($id, $Plataforma, $ImagemPlat)
+    {
         $this->id = $id;
         $this->Plataforma = $Plataforma;
+        $this->ImagemPlat = $ImagemPlat;
     }
 
-        public function Create()
+
+    public function Create()
         {
-            $val = new PlataformaDAL();
-            $val->Create($this);
+            return PlataformaDAL::Create($this);
         }
     public function Read()
     {
-        $val = new PlataformaDAL();
-        return $val -> ReadDAL($this);
+        return PlataformaDAL::ReadDAL($this);
 
     }
     public function ReadALL()
     {
-        $val = new PlataformaDAL();
-        return $val -> ReadALLDAL();
+        return PlataformaDAL::ReadALLDAL();
 
     }
         
         public function Update()
         {
-        $val = new PlataformaDAL();
-        $val -> Update($this);
+            return PlataformaDAL::Update($this);
         }
         public function Delete()
         {
-            $val = new PlataformaDAL();
-            $val -> Delete($this);
+            return PlataformaDAL:: Delete($this);
         }
 
         public function CreateDB(){
 
-        $val = new PlataformaDAL();
-        $val -> CreateTable();
+            return PlataformaDAL::CreateTable();
     }
 }
 

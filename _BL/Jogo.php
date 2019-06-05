@@ -9,15 +9,17 @@ class Jogo
     public $nome;
     public $preco;
     public $descricao;
+    public $Imagem;
     public $idGenero;
     public $idPlataforma;
 
 
-    public function __construct($idJogo, $nome, $preco, $descricao, $idGenero, $idPlataforma)
+    public function __construct($idJogo=null, $nome=null, $preco=null, $descricao=null,$Imagem=null, $idGenero=null, $idPlataforma=null)
     {
         $this->idJogo = $idJogo;
         $this->nome = $nome;
         $this->preco = $preco;
+        $this->Imagem = $Imagem;
         $this->descricao = $descricao;
         $this->idGenero = $idGenero;
         $this->idPlataforma = $idPlataforma;
@@ -48,5 +50,3 @@ class Jogo
     }
 
 }
-
-?>

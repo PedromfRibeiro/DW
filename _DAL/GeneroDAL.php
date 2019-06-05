@@ -6,15 +6,18 @@ class generoDAL{
     public static function CreateDAL(genero $Gen){
         $PDO = new Connection();
         $PDO -> Connect();
-        $sql = "INSERT INTO genero SET genero=:genero;";
-        $val = ['genero' => $Gen->genero];
+        $sql = "INSERT INTO genero SET genero=:genero,ImagemGen=:ImagemGen;";
+        $val = array(
+            'genero' => $Gen->genero,
+            'ImagemGen'=>$Gen->ImagemGen
+        );
         return $PDO -> SQuerry($sql,$val);
     }
     public static function ReadDAL(genero $Gen){
         $dbGen = new Connection();
         $dbGen -> Connect();
-        $sql="SELECT FROM genero WHERE id = :id";
-        $val = ['id' => ($Gen->id)];
+        $sql="SELECT * FROM genero WHERE idGenero=:idGenero";
+        $val = array(':idGenero' => ($Gen->idGenero));
         $stm = $dbGen->SQuerry($sql,$val);
         return  $stm->fetch();
     }
@@ -27,15 +30,19 @@ class generoDAL{
     public static function Update(genero $Gen){
         $dbGen = new Connection();
         $dbGen -> Connect();
-        $sql="UPDATE genero set genero=:genero  where id=:id ";
-        $arrayGen = (array) $Gen;
-        return $dbGen->SQuerry($sql,$arrayGen);
+        $sql="UPDATE genero set genero=:genero  where idGenero=:idGenero ";
+        $val = array(
+            ':idGenero' => $Gen->idGenero,
+            'genero' => $Gen->genero,
+            'ImagemGen'=>$Gen->ImagemGen,
+    );
+        return $dbGen->SQuerry($sql,$val);
     }
     public static function Delete(genero $Gen){
         $dbGen = new Connection();
         $dbGen -> Connect();
-        $sql="DELETE FROM genero WHERE id = :id";
-        $val = ['id' => ($Gen->id)];
+        $sql="DELETE FROM genero WHERE idGenero = :idGenero";
+        $val = ['idGenero' => ($Gen->idGenero)];
         return $dbGen->SQuerry($sql,$val);
     }
     public static function CreateTable(){
@@ -45,7 +52,6 @@ class generoDAL{
         return $dbGen->SQuerry($sql,null);
     }
 }
-?>
 
 
 

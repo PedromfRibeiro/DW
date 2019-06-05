@@ -3,49 +3,51 @@ require_once dirname(__FILE__) . '/../_DAL/GeneroDAL.php';
 
 class Genero
 {
-   public $id;
-   public $genero;
+    public $idGenero;
+    public $genero;
+    public $ImagemGen;
 
-
-    public function __construct($id, $genero)
+    public function __construct($idGenero, $genero, $ImagemGen)
     {
-        $this->id = $id;
+        $this->idGenero = $idGenero;
         $this->genero = $genero;
+        $this->ImagemGen = $ImagemGen;
     }
+
 
     public function Create()
-        {
-            $val = new GeneroDAL();
-            $val->CreateDAL($this);
-        }
-    public function Read()     {
-        $val = new GeneroDAL();
-        $result = $val -> ReadDAL($this);
-        return $result;
-
+    {
+        return GeneroDAL::CreateDAL($this);
     }
-    public function ReadALL()    {
-        $val = new GeneroDAL();
-        $rr =$val -> ReadALLDAL();
-        return $rr;
+
+    public function Read()
+    {
+        return GeneroDAL::ReadDAL($this);
+
 
     }
 
-        public function Update()     {
-        $val = new GeneroDAL();
-        $val -> Update($this);
+    public function ReadALL()
+    {
+        return GeneroDAL::ReadALLDAL();
 
-        }
-        public function Delete()     {
-            $val = new GeneroDAL();
-            $val -> Delete($this);
-        }
 
-        public function CreateDB(){
-            $val = new GeneroDAL();
-            $val -> CreateTable();
+    }
+
+    public function Update()
+    {
+        return GeneroDAL::Update($this);
+
+    }
+
+    public function Delete()
+    {
+        return GeneroDAL::Delete($this);
+    }
+
+    public function CreateDB()
+    {
+        return GeneroDAL::CreateTable();
     }
 
 }
-
-?>

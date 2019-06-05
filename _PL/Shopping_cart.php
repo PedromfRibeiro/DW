@@ -22,11 +22,6 @@
                     </thead>
                     <tbody>
 <?php
-require_once dirname(__FILE__) .'/../_BL/Venda.php';
-require_once dirname(__FILE__) .'/../_BL/Encomenda.php';
-require_once dirname(__FILE__) .'/../_BL/Jogo.php';
-
-
 $idEnc=JogoController::GetIdEnc();
 $BFetch =JogoController::GetVenda($idEnc);
 $totalPrice=0;
@@ -37,7 +32,7 @@ while ($bb = $BFetch->fetch()){
 if($rowStock['quantidade']>0){$qq="Yes";}
 else{$qq="No";}
     echo'<tr>
-                        <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                        <td class="text-center"><img class="img-fluid mx-auto " src="data:image/jpeg;base64,'.base64_encode($row['Imagem']). '"  alt="Responsive image"></td>
                         <td class="text-center">'.$row['nome'].'</td>
                         <td class="text-center">'.$qq.'</td>
                         <td class="text-center">'.$rowStock['quantidade'].'</td>

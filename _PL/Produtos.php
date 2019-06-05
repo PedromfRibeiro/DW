@@ -6,9 +6,7 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
 
   <!-- Page Content -->
   <div class="container">
-
     <div class="row">
-
       <div class="col-lg-3">
           <div class="card">
               <article class="card-group-item">
@@ -42,7 +40,7 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
                           <div class="card-body">
                               <form>
                                   <?php
-                                  $POD = new Plataforma('','');
+                                  $POD = new Plataforma('','','');
                                   $BFetch = ($POD->ReadALL());
                                   while ($row = $BFetch->fetch()) {
                                       echo '<label class="form-check">';
@@ -69,7 +67,7 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
                                   <?php
                                   require_once 'C:/xampp/htdocs/DWphp/_BL/Genero.php';
 
-                                  $PODe = new Genero('','');
+                                  $PODe = new Genero('','','');
                                   $BFeetch = ($PODe->ReadALL());
                                   while ($rowe = $BFeetch->fetch()) {
                                       echo '<label class="form-check">';
@@ -99,17 +97,17 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
             <?php
              require_once 'C:/xampp/htdocs/DWphp/_BL/Jogo.php';
 
-            $POD = new Jogo('','','','','','');
-            $BFetch = ($POD->ReadALL());
+            $BFetch = JogoController::ReadJogo(null);
+
             while ($row = $BFetch->fetch()) {
                 echo '<div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="#"><img class="img-fluid mx-auto Img" src="data:image/jpeg;base64,'.base64_encode($row['Imagem']). '"></a>
               <div class="card-body">
                 <h4 class="card-title">
                 <a href="?page=Produto&jogo='. $row['idJogo'] .'">'. $row['nome'] .'</a>
                 </h4>
-                <h5>'. $row['preco'] .'</h5>
+                <h5>'. $row['preco'] .'€</h5>
                 <p class="card-text">'. $row['descricao'] .'</p>
               </div>
               <div class="card-footer">

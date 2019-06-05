@@ -18,11 +18,11 @@
             <thead>
             <tr>
                 <th></th>
-                <th>Data de Encomenda</th>
-                <th>Valor</th>
-                <th>Estado</th>
-                <th>Utilizador</th>
-
+                <th>Nome</th>
+                <th>Preco</th>
+                <th>Descrição</th>
+                <th>Genero</th>
+                <th>Plataforma</th>
             </tr>
             </thead>
             <?php

@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-pt">
-
-    <?php
-    include '_includes/Head.php';
-    ?>
-<head>
-    <link href="../../_css/Admin/Admin_form.css" type="text/css" rel="stylesheet"/>
-
-</head>
 <body>
 
 <div class="Section">
@@ -32,30 +22,14 @@
                         <div class="form-group">
                             <label class="loginformelement" >Plataforma</label>
                         <select class="form-control">
-                            <?php
-                            require_once '_BL/Plataforma.php';
-                            $POD = new Plataforma('','');
-                            $BFetch = ($POD->ReadALL());
-                            while ($row = $BFetch->fetch()) {
-                                echo '<option>' . $row['Plataforma'] . '</option>';
-                            }
-                            $POD=null;
-                            ?>
+
                         </select>
                 </div>
 
                         <div class="form-group">
                             <label class="loginformelement" >Genero</label>
                         <select class="form-control">
-                            <?php
-                            require_once '_BL/Genero.php';
-                            $POD = new Genero('','');
-                            $BFetch = ($POD->ReadALL());
-                            while ($row = $BFetch->fetch()) {
-                                echo '<option>' . $row['genero'] . '</option>';
-                            }
-                            $POD=null;
-                            ?>
+
                         </select>
                         </div>
 

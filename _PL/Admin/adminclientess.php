@@ -27,9 +27,7 @@
             </tr>
             </thead>
             <?php
-            require_once 'C:/xampp/htdocs/DWphp/_BL/Utilizador.php';
-            $POD = new Utilizador();
-            $BFetch = ($POD->ReadALL());
+            $BFetch = UserController::GetAllUtil();
             while ($row = $BFetch->fetch()) {
 
             $id = $row['idUtilizador'];

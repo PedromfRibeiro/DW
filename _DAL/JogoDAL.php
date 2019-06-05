@@ -7,13 +7,15 @@ class JogoDAL{
     public static function CreateDAL(Jogo $Jogo){
         $PDO = new Connection();
         $PDO -> Connect();
-        $sql = "INSERT INTO jogo SET nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma=:idPlataforma;";
+        $sql = "INSERT INTO jogo SET idJogo=:idJogo,nome=:nome, preco=:preco, descricao=:descricao,Imagem=:Imagem,idGenero=:idGenero,idPlataforma=:idPlataforma;";
         $val = array(
-            'nome' => $Jogo->nome,
-            'preco' => $Jogo->preco,
-            'descricao' => $Jogo->descricao,
-            'idGenero' => $Jogo->idGenero,
-            'idPlataforma' => $Jogo->idPlataforma);
+            ':idJogo'=> 0,
+            ':nome' => $Jogo->nome,
+            ':preco' => $Jogo->preco,
+            ':descricao' => $Jogo->descricao,
+            ':Imagem' => $Jogo->Imagem,
+            ':idGenero' => $Jogo->idGenero,
+            ':idPlataforma' => $Jogo->idPlataforma);
         return $PDO -> SQuerry($sql,$val);
     }
     public static function ReadDAL(Jogo $Jogo){
@@ -32,13 +34,15 @@ class JogoDAL{
     public static function Update(Jogo $Jogo){
         $dbJogo = new Connection();
         $dbJogo -> Connect();
-        $sql="Update jogo SET  nome=:nome, preco=:preco, descricao=:descricao,idGenero=:idGenero,idPlataforma=:idPlataforma where idJogo=:idJogo ";
+        $sql="Update jogo SET  nome=:nome, preco=:preco, descricao=:descricao,Imagem=:Imagem,idGenero=:idGenero,idPlataforma=:idPlataforma where idJogo=:idJogo ";
         $val = array(
-            'nome' => $Jogo->nome,
-            'preco' => $Jogo->preco,
-            'descricao' => $Jogo->descricao,
-            'idGenero' => $Jogo->idGenero,
-            'idPlataforma' => $Jogo->idPlataforma);
+            ':idJogo' => $Jogo->idJogo,
+            ':nome' => $Jogo->nome,
+            ':preco' => $Jogo->preco,
+            ':Imagem' => $Jogo->Imagem,
+            ':descricao' => $Jogo->descricao,
+            ':idGenero' => $Jogo->idGenero,
+            ':idPlataforma' => $Jogo->idPlataforma);
         return $dbJogo->SQuerry($sql,$val);
     }
     public static function Delete(Jogo $Jogo){

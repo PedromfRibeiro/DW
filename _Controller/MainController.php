@@ -10,11 +10,6 @@ class MainController
         self::Href();
         if($_GET['page']<= "Admin/Admin"){self::Admin();}
         if($_GET['page']== "Shopping_cart"){self::Logged();}
-
-
-            $_POST=array();
-
-
     }
     public static function Href()
     {
@@ -76,9 +71,9 @@ class MainController
                     $_SESSION['Hrefs'] = '_css/Admin/adminencomendas.css'; //css
                     break;
                 }
-            case 'Admin/admingames':
+            case 'Admin/AdminJogos':
                 {
-                    $_SESSION['Hrefs'] = '_css/Admin/admingames.css';
+                    $_SESSION['Hrefs'] = '_css/Admin/AdminJogos.css';
                     break;
                 }
             case 'Admin/adminclientess':

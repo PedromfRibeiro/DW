@@ -421,5 +421,13 @@ http://localhost/DWphp/Index.php?page=Login/Reset&email=' . $email . '&code_hash
         self::Register();
     }
 
-
+public static function GetAllUtil(){
+    $POD = new Utilizador();
+    return $POD->ReadALL();
+}
+    public static function GetOneUtil(){
+        $POD = new Utilizador();
+        $POD->email=$_SESSION['email'];
+        return $POD->ReadALL();
+    }
 }

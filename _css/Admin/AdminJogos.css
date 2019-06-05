@@ -1,0 +1,12 @@
+
+.img-fluid{
+    text-align: center;
+    transition: transform .2s; /* Animation */
+    max-height: 130px;
+    margin: 0 auto;
+
+
+}
+
+.img-fluid:hover {
+    transform: scale(1.5);}
