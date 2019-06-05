@@ -33,8 +33,8 @@
             $Nome = $row['nome'];
             $preco = $row['preco'];
             $descricao = $row['descricao'];
-            $idGenero = JogoController::GetGeneros($row['idGenero']);
-            $idPlataforma = JogoController::GetPlataforma($row['idPlataforma']);
+            $idGenero = GenerosController::GetGeneros($row['idGenero']);
+            $idPlataforma = PlataformaController::GetPlataforma($row['idPlataforma']);
 
 
             echo '<tr>';

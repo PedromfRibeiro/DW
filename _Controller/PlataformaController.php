@@ -8,5 +8,9 @@ class PlataformaController
         $Gen->id=$id;
         return $Gen->Read();
     }
+    public static function GetPlataformaALL(){
+        $Gen = new Plataforma('','','');
+        return $Gen->ReadALL();
+    }
 
 }

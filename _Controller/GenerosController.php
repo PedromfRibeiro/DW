@@ -8,4 +8,8 @@ class GenerosController
         $Gen->idGenero=$id;
         return $Gen->Read();
     }
+    public static function GetGenerosAll(){
+        $Gen = new Genero('','','');
+        return $Gen->ReadALL();
+    }
 }

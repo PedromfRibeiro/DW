@@ -5,7 +5,6 @@ require_once dirname(__FILE__) . '/../_BL/Jogo.php';
 require_once dirname(__FILE__) . '/../_BL/Genero.php';
 require_once dirname(__FILE__) . '/../_BL/Plataforma.php';
 require_once dirname(__FILE__) . '/../_BL/Stock.php';
-require_once dirname(__FILE__) . '/UserController.php';
 
 class VendaController
 {

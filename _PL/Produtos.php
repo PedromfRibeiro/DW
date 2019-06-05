@@ -40,8 +40,7 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
                           <div class="card-body">
                               <form>
                                   <?php
-                                  $POD = new Plataforma('','','');
-                                  $BFetch = ($POD->ReadALL());
+                                  $BFetch = PlataformaController::GetPlataformaALL();
                                   while ($row = $BFetch->fetch()) {
                                       echo '<label class="form-check">';
                                       echo '<input class="form-check-input" type="checkbox" value=""></td>';
@@ -65,10 +64,7 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
                           <div class="card-body">
                               <form>
                                   <?php
-                                  require_once 'C:/xampp/htdocs/DWphp/_BL/Genero.php';
-
-                                  $PODe = new Genero('','','');
-                                  $BFeetch = ($PODe->ReadALL());
+                                  $BFeetch = GenerosController::GetGenerosAll();
                                   while ($rowe = $BFeetch->fetch()) {
                                       echo '<label class="form-check">';
                                       echo '<input class="form-check-input" type="radio" name="exampleRadio" value="">';
@@ -97,7 +93,7 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
             <?php
              require_once 'C:/xampp/htdocs/DWphp/_BL/Jogo.php';
 
-            $BFetch = JogoController::ReadJogo(null);
+            $BFetch = JogoController::ReadJogoALL();
 
             while ($row = $BFetch->fetch()) {
                 echo '<div class="col-lg-4 col-md-6 mb-4">

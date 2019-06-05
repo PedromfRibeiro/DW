@@ -49,5 +49,10 @@ class EncomendaController
             return $AfterFetch['idEncomenda'];
         }
     }
+    public static function ReadEncomenda($param){
+        $POD = new Encomenda();
+        $POD->idEncomenda=$param;
+        return ($POD->ReadALL());
+    }
 
 }

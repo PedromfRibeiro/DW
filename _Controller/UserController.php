@@ -428,6 +428,6 @@ public static function GetAllUtil(){
     public static function GetOneUtil(){
         $POD = new Utilizador();
         $POD->email=$_SESSION['email'];
-        return $POD->ReadALL();
+        return $POD->ReadEmail();
     }
 }

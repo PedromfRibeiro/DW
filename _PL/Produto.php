@@ -1,11 +1,6 @@
 <body>
-
 <div class="plat">
-
-
     <?php
-    require_once 'C:/xampp/htdocs/DWphp/_BL/Jogo.php';
-
     $BFetch = JogoController::ReadJogo($_GET['jogo']);
     $row = $BFetch->fetch();
     $Genero = GenerosController::GetGeneros($row['idGenero']);
