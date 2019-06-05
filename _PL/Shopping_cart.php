@@ -87,7 +87,8 @@ else{$qq="No";}
                 </div>
                 <div class="col-sm-12 col-md-6 text-right">
                     <form method="post">
-                    <button class="btn btn-lg btn-block btn-success text-uppercase"  value="$idEnc" name="ComprarCheckOut">Checkout</button>
+                        <input name="Valor" value="<?php echo (int)$totalPrice+$iva  ?>" hidden>
+                        <button class="btn btn-lg btn-block btn-success text-uppercase"  value="$idEnc" name="ComprarCheckOut">Checkout</button>
                     </form>
                 </div>
             </div>

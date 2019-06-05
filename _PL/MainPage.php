@@ -39,7 +39,7 @@
             <button type="button" class="btn btn-secondary btn-lg btn-block">Produtos</button>
         </a>
         <a href="?page=Shopping_cart">
-            <button type="button" class="btn btn-secondary btn-lg btn-block">Login</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block">Shopping Cart</button>
         </a>
         <?php if(!empty(UserController::IsUserLoggedAdmin())){
             print'<a href="?page=Admin/AdminMenu">

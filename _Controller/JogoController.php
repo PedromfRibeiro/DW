@@ -4,6 +4,7 @@ require_once dirname(__FILE__) . '/../_BL/Venda.php';
 require_once dirname(__FILE__) . '/../_BL/Encomenda.php';
 require_once dirname(__FILE__) . '/../_BL/Jogo.php';
 require_once dirname(__FILE__) . '/../_BL/Stock.php';
+require_once dirname(__FILE__) . '/UserController.php';
 class JogoController
 {
     public static function processJogo()
@@ -12,7 +13,7 @@ class JogoController
             self::Compra();
         }
         if (isset($_POST["ComprarCheckOut"])) {
-            self::ComprarCheckOut();
+            if(UserController::IsUserLoggedAdmin()) self::ComprarCheckOut();
         }
 
     }
@@ -91,6 +92,7 @@ class JogoController
         $EncomendaCliente = new Encomenda('', '', '', '', '');
         $EncomendaCliente->idEncomenda=self::CheckCarrinho();
         $EncomendaCliente->Finalizada=1;
+        $EncomendaCliente->Valor=$_POST['Valor'];
         $EncomendaCliente->UpdateCarrinho();
 
     }

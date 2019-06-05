@@ -56,11 +56,9 @@ class UtilizadorDAL
             ':Autorizacao' => $util->Autorizacao,
             ':Data_Nascimento' => $util->Data_Nascimento,
             ':code_hash' => $util->code_hash,
-            ':Verify' => '0',
+            ':Verify' => $util->Verify,
             ':email' => $util->email);
         return  $dbUtilizador->SQuerry($sql, $val);
-
-
 
     }
 

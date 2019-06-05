@@ -105,10 +105,11 @@ public static function UpdateValorDAL(encomenda $Enc){
     {
         $dbEnc = new Connection();
         $dbEnc->Connect();
-        $sql = "UPDATE encomenda set idEncomenda=:idEncomenda,Finalizada=:Finalizada  where idEncomenda=:idEncomenda ";
+        $sql = "UPDATE encomenda set idEncomenda=:idEncomenda,Valor=:Valor,Finalizada=:Finalizada  where idEncomenda=:idEncomenda ";
         $val = array(
-            'idEncomenda' => $Enc->idEncomenda,
-            'Finalizada' => $Enc->Finalizada,
+            ':idEncomenda' => $Enc->idEncomenda,
+            ':Valor' => $Enc->Valor,
+            ':Finalizada' => $Enc->Finalizada,
         );
         return $dbEnc->SQuerry($sql, $val);
     }

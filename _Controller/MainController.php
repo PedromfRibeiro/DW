@@ -5,11 +5,15 @@ class MainController
 {
     public static function process(){
         session_start();
-
         UserController::processUser();
         JogoController::processJogo();
         self::Href();
-        if($_GET['page']==="Admin"){self::Admin();}
+        if($_GET['page']<= "Admin/Admin"){self::Admin();}
+        if($_GET['page']== "Shopping_cart"){self::Logged();}
+
+
+            $_POST=array();
+
 
     }
     public static function Href()
@@ -97,12 +101,27 @@ class MainController
                     $_SESSION['Hrefs'] = '_css/Admin/adminplataforma.css';
                     break;
                 }
+
+            case 'Login/Register':
+                {
+                    $_SESSION['Hrefs'] = '_css/Register.css'; //css
+                    break;
+                }
         }
     }
 
     public static function Admin(){
-        if($_GET['page']=='Admin/adminclientess'){
-            if(!UserController::IsUserLoggedAdmin())UserController::ErrorPage();
+        if($_GET['page']=='Admin/AdminMenu'){
+            if(!UserController::IsUserLoggedAdmin()){UserController::ErrorPage();}
         }
+    }
+    public static function Logged(){
+        if($_GET['page']=='Shopping_cart'){
+            if(!UserController::isUserLoggedIn())UserController::ErrorPage();
+        }
+        if($_GET['page']=='Profile'){
+            if(!UserController::isUserLoggedIn())UserController::ErrorPage();
+        }
+
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>The Classic Gamer</title>
-    <link rel="stylesheet" href="../_css/register.css"/>
+    <link rel="stylesheet" href="../_css/Register.css"/>
 
 
 </head>

@@ -45,18 +45,19 @@ class UserController
             $_SESSION["Controll"]["Mensage"] = 'Missing data to continue';
         } else {
 
-            $uu = new Utilizador('','','','','','','','','');
+            $uu = new Utilizador('', '', '', '', '', '', '', '', '');
             $uu->email = $_POST["email"];
             $uu->pass = sha1($_POST['password']);;
             $statement = $uu->Read();
 
-             if($statement==false){$_SESSION["Controll"]["Mensage"] = 'Something went Wrong!';}
-            else if (($statement['Verify'] == 0)) {
+            if ($statement == false) {
+                $_SESSION["Controll"]["Mensage"] = 'Something went Wrong!';
+            } else if (($statement['Verify'] == 0)) {
                 $_SESSION["Controll"]["Type"] = "warning";
                 $_SESSION["Controll"]["Mensage"] = 'Email nao verificado! Por favor verifique o seu email!';
             } else if ($statement > 0) {
                 $_SESSION["email"] = $_POST["email"];
-                $_SESSION["id"]=$statement['idUtilizador'];
+                $_SESSION["id"] = $statement['idUtilizador'];
                 $_SESSION["Controll"]["Type"] = "success";
                 $_SESSION["Controll"]["Mensage"] = 'success to LogIn!';
                 header("Location: index.php?page=MainPage");
@@ -101,7 +102,7 @@ class UserController
             if (empty($_POST['password']) || empty($_POST['newpassword'])) {
                 $_SESSION["Controll"]["Mensage"] = "Password is empty!";
                 return true;
-            } else if ((strcmp($array1, $array2))!== 0) {
+            } else if ((strcmp($array1, $array2)) !== 0) {
                 $_SESSION["Controll"]["Mensage"] = "The two passwords you entered dont match, try again!";
                 return true;
             } else if (strlen($_POST['password']) < 8 || strlen($_POST['password']) > 24) {
@@ -152,8 +153,10 @@ class UserController
             $uu->Data_Registo = Date("Y/m/d");
             $uu->Data_Nascimento = $_POST["data_Nascimento"];
             $uu->code_hash = md5(rand(0, 1000));
-            $uu->Autorizacao=0;
-            if(isset($_POST['Autorizacao'])){$uu->Autorizacao=$_POST['Autorizacao'];}
+            $uu->Autorizacao = 0;
+            if (isset($_POST['Autorizacao'])) {
+                $uu->Autorizacao = $_POST['Autorizacao'];
+            }
             $uu->Verify = '0';
 
 
@@ -383,7 +386,8 @@ http://localhost/DWphp/Index.php?page=Login/Reset&email=' . $email . '&code_hash
             })</script>";
     }
 
-    public static function ErrorPage(){
+    public static function ErrorPage()
+    {
         $_SESSION["Controll"]["Type"] = "error";
         $_SESSION["Controll"]["Mensage"] = 'You shall not Pass!';
         header("Location: index.php?page=MainPage");
@@ -397,22 +401,24 @@ http://localhost/DWphp/Index.php?page=Login/Reset&email=' . $email . '&code_hash
         $up = new Utilizador();
         $up->email = $_POST["email"];
         $statment = $up->ReadEmailOBJ();
-        if($statment->Nome!=$_POST['Nome'])$statment->Nome=$_POST['Nome'];
-        if($statment->Data_Nascimento!=$_POST['Data_Nascimento'])$statment->Data_Nascimento=$_POST['Data_Nascimento'];
-        if($statment->Autorizacao!=$_POST['Autorizacao'])$statment->Autorizacao=$_POST['Autorizacao'];
-        if($statment->code_hash!=$_POST['code_hash'])$statment->code_hash=$_POST['code_hash'];
-        if($statment->Verify!=$_POST['Verify'])$statment->Verify=$_POST['Verify'];
+        if ($statment->Nome != $_POST['Nome']) $statment->Nome = $_POST['Nome'];
+        if ($statment->Data_Nascimento != $_POST['Data_Nascimento']) $statment->Data_Nascimento = $_POST['Data_Nascimento'];
+        if ($statment->Autorizacao != $_POST['Autorizacao']) $statment->Autorizacao = $_POST['Autorizacao'];
+        if ($statment->code_hash != $_POST['code_hash']) $statment->code_hash = $_POST['code_hash'];
+        if ($statment->Verify != $_POST['Verify']) $statment->Verify = $_POST['Verify'];
         $statment->Update();
     }
-    public static function DeleteCliente(){
+
+    public static function DeleteCliente()
+    {
         $up = new Utilizador();
         $up->idUtilizador = $_POST["idUtilizador"];
         $up->Delete();
     }
-    public static function NewCliente(){
+
+    public static function NewCliente()
+    {
         self::Register();
-
-
     }
 
 
