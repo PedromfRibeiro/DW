@@ -25,7 +25,7 @@
                 </tr>
                 </thead>
                 <?php
-                $GenFetch = GenerosController::GetGenerosAll();
+                $GenFetch = PlataformaController::GetPlataformaALL();
                 while ($rowPlat = $GenFetch ->fetch()) {
                 $id = $rowPlat['id'];
                 $Nome = $rowPlat['Plataforma'];
@@ -98,7 +98,7 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h4 class="modal-title">Criar Generos</h4>
+                    <h4 class="modal-title">Criar Plataforma</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 

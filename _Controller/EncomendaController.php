@@ -13,7 +13,7 @@ class EncomendaController
     public static function processEncomenda()
     {
         if (isset($_POST["ComprarCheckOut"])) {
-            if(UserController::IsUserLoggedAdmin()) self::ComprarCheckOut();
+            if (UserController::isUserLoggedIn()) self::ComprarCheckOut();
         }
         if (isset($_POST["Update_Encomenda"])) {
             self::Update_Encomenda();
@@ -26,21 +26,34 @@ class EncomendaController
         }
     }
 
-    public static function ComprarCheckOut(){
+    public static function ComprarCheckOut()
+    {
         $EncomendaCliente = new Encomenda('', '', '', '', '');
-        $EncomendaCliente->idEncomenda=self::CheckCarrinho();
-        $EncomendaCliente->Finalizada=1;
-        $EncomendaCliente->Valor=$_POST['Valor'];
-        $EncomendaCliente->UpdateCarrinho();
-        $_SESSION["Controll"]["Type"]="success";
-        $_SESSION["Controll"]["Mensage"]="Order Successful!";
+        if ($_POST['Valor']==0) {
+            $_SESSION["Controll"]["Type"] = "error";
+            $_SESSION["Controll"]["Mensage"] = "There is nothing to CheckOut!";
+            header("Location: index.php?page=MainPage");
+            exit;
 
+        } else {
+            $EncomendaCliente->idEncomenda = self::CheckCarrinho();
+            $EncomendaCliente->Finalizada = 1;
+            $EncomendaCliente->Valor = $_POST['Valor'];
+            $EncomendaCliente->UpdateCarrinho();
+            $_SESSION["Controll"]["Type"] = "success";
+            $_SESSION["Controll"]["Mensage"] = "Order Successful!";
+            header("Location: index.php?page=MainPage");
+            exit;
+        }
     }
-    public static function GetIdEnc(){
+
+    public static function GetIdEnc()
+    {
         $EncPDO = new Encomenda('', '', '', '', '');
-        $EncPDO->id_utilizador=$_SESSION['id'];
+        $EncPDO->id_utilizador = $_SESSION['id'];
         return $EncPDO->ReadUtil();
     }
+
     public static function CheckCarrinho()
     {
         $EncomendaCliente = new Encomenda('', '', '', '', '');
@@ -58,37 +71,46 @@ class EncomendaController
             return $AfterFetch['idEncomenda'];
         }
     }
-    public static function ReadEncomenda($param){
+
+    public static function ReadEncomenda($param)
+    {
         $POD = new Encomenda();
-        $POD->idEncomenda=$param;
+        $POD->idEncomenda = $param;
         return ($POD->ReadALL());
     }
-    public static function ReadEncALL(){
+
+    public static function ReadEncALL()
+    {
         $EncPDO = new Encomenda();
         return $EncPDO->ReadALL();
     }
 
-    public static function Create_Encomenda(){
-        $PDO =new Encomenda();
-        $PDO->idEncomenda=0;
-        $PDO->data_enc=$_POST['data_enc'];
-        $PDO->Valor=$_POST['Valor'];
-        $PDO->Finalizada=$_POST['Finalizada'];
-        $PDO->id_utilizador=$_POST["idUti"];
+    public static function Create_Encomenda()
+    {
+        $PDO = new Encomenda();
+        $PDO->idEncomenda = 0;
+        $PDO->data_enc = $_POST['data_enc'];
+        $PDO->Valor = $_POST['Valor'];
+        $PDO->Finalizada = $_POST['Finalizada'];
+        $PDO->id_utilizador = $_POST["idUti"];
         $PDO->Create();
     }
-    public static function Update_Encomenda(){
-        $PDO =new Encomenda();
-        $PDO->idEncomenda=$_POST['idEnc'];
-        $PDO->data_enc=$_POST['data_enc'];
-        $PDO->Valor=$_POST['Valor'];
-        $PDO->Finalizada=$_POST['Finalizada'];
-        $PDO->id_utilizador=$_POST["idUti"];
+
+    public static function Update_Encomenda()
+    {
+        $PDO = new Encomenda();
+        $PDO->idEncomenda = $_POST['idEnc'];
+        $PDO->data_enc = $_POST['data_enc'];
+        $PDO->Valor = $_POST['Valor'];
+        $PDO->Finalizada = $_POST['Finalizada'];
+        $PDO->id_utilizador = $_POST["idUti"];
         $PDO->Update();
     }
-    public static function Delete_Encomenda(){
-        $PDO =new Encomenda();
-        $PDO->idEncomenda=$_POST['idEnc'];
+
+    public static function Delete_Encomenda()
+    {
+        $PDO = new Encomenda();
+        $PDO->idEncomenda = $_POST['idEnc'];
 
         $PDO->Delete();
     }
