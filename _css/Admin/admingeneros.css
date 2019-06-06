@@ -6,13 +6,6 @@ body {
     font-size: 13px;
 }
 
-.Section{display: grid;
-    padding: 25px;
-    grid-column-gap: 10%;
-    grid-template-columns: 45% 45%;}
-
-
-@media only screen and (max-width: 991px) {    .Section{display: inline}}
 
 .table-wrapper {
     background: #fff;
@@ -186,4 +179,11 @@ table.table td i {
     box-shadow: none;
     background: #ddd;
 }
+.Section  {
+    display: grid;
+    padding: 25px;
+    grid-column-gap: 10%;
+    grid-template-columns: 45% 45%;}
+
+@media only screen and (max-width: 891px) {    .Section{display: inline}}
 

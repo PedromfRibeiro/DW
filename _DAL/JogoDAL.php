@@ -58,6 +58,19 @@ class JogoDAL{
         $sql="use dwphp;CREATE TABLE IF NOT EXISTS `jogo` (  `idJogo` int(11) NOT NULL AUTO_INCREMENT,  `nome` varchar(45) NOT NULL,  `preco` varchar(45) NOT NULL,  `descricao` varchar(45) NOT NULL,  `idGenero` int(11) NOT NULL,  `idPlataforma` int(11) NOT NULL,  PRIMARY KEY (`idJogo`),  KEY `fk_Genero_idx` (`idGenero`),  KEY `fk_Plataforma_idx` (`idPlataforma`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
         return $dbJogo->SQuerry($sql,null);
     }
+    public static function ReadPlatDAL(Jogo $Jogo){
+        $dbJogo = new Connection();
+        $dbJogo -> Connect();
+        $sql="SELECT * FROM Jogo WHERE idPlataforma=:idPlataforma";
+        $val = array('idPlataforma' => ($Jogo->idPlataforma));
+        return $dbJogo->SQuerry($sql,$val);
+    }
+    public static function ReadGenDAL(Jogo $Jogo){
+        $dbJogo = new Connection();
+        $dbJogo -> Connect();
+        $sql="SELECT * FROM Jogo WHERE idGenero=:idGenero";
+        $val = array('idGenero' => ($Jogo->idGenero));
+        return $dbJogo->SQuerry($sql,$val);
+    }
 
 }
-?>

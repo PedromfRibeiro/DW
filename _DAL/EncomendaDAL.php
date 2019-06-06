@@ -41,10 +41,11 @@ class EncomendaDAL
     {
         $dbEnc = new Connection();
         $dbEnc->Connect();
-        $sql = "UPDATE encomenda set idEncomenda=:idEncomenda,data_enc=:data_enc,Finalizada=:Finalizada,id_utilizador=:id_utilizador  where idEncomenda=:idEncomenda ";
+        $sql = "UPDATE encomenda set data_enc=:data_enc,Valor=:Valor,Finalizada=:Finalizada,id_utilizador=:id_utilizador  where idEncomenda=:idEncomenda ";
         $val = array(
             'idEncomenda' => $Enc->idEncomenda,
             'data_enc' => $Enc->data_enc,
+            'Valor' => $Enc->Valor,
             'Finalizada' => $Enc->Finalizada,
             'id_utilizador' => $Enc->id_utilizador,
         );

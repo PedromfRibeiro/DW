@@ -90,6 +90,12 @@ class Utilizador
 
 
     }
+    public function ReadbyID()
+    {
+        return UtilizadorDAL::ReadbyIDDAL($this);
+
+
+    }
 
     public function UpdateVerify()
     {

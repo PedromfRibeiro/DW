@@ -27,10 +27,10 @@ class UtilizadorDAL
         $dbUtilizador = new Connection();
         $dbUtilizador->Connect();
         $sql = "SELECT * FROM Utilizador WHERE email=:email AND pass=:pass";
-        $val = [
+        $val = array(
             ':email' => $util->email,
             ':pass' => $util->pass,
-        ];
+        );
         $statment = $dbUtilizador->SQuerry($sql, $val);
         return $statment->fetch(PDO::FETCH_ASSOC);
 
@@ -67,7 +67,7 @@ class UtilizadorDAL
         $dbUtilizador = new Connection();
         $dbUtilizador->Connect();
         $sql = "DELETE FROM utilizador WHERE idUtilizador=:idUtilizador";
-        $val = ['idUtilizador' => ($util->idUtilizador)];
+        $val = array('idUtilizador' => ($util->idUtilizador));
         return $dbUtilizador->SQuerry($sql, $val);
 
     }
@@ -81,27 +81,38 @@ class UtilizadorDAL
         return $dbUtilizador->SQuerry($sql, null);
     }
 
+    public static function ReadbyIDDAL(Utilizador $id)
+    {
+        $dbUtilizador = new Connection();
+        $dbUtilizador -> Connect();
+        $sql = "SELECT * FROM Utilizador WHERE idUtilizador=:idUtilizador";
+        $val = array(':idUtilizador'=>$id->idUtilizador);
+        $stm = $dbUtilizador->SQuerry($sql,$val);
+        return $stm->fetch();
+    }
+
 
     public static function ReadEmailDAL(Utilizador $util)
     {
         $dbUtilizador = new Connection();
         $dbUtilizador -> Connect();
         $sql = "SELECT * FROM Utilizador WHERE email=:email ";
-        $val = [
+        $val = array(
             ':email'=>$util->email,
-        ];
+        );
         $stm = $dbUtilizador->SQuerry($sql,$val);
         return $stm->fetch();
     }
+
     public static function ReadEmailOBJDAL(Utilizador $util)
     {
         $User = new Utilizador();
         $dbUtilizador = new Connection();
         $dbUtilizador->Connect();
         $sql = "SELECT * FROM Utilizador where email=:email";
-        $val = [
+        $val = array(
             ':email' => $util->email,
-        ];
+        );
         $stmt = $dbUtilizador->SQuerry($sql,$val);
         $stmt->setFetchMode(PDO::FETCH_INTO,$User);
         $User=$stmt->fetch();
@@ -115,10 +126,10 @@ class UtilizadorDAL
         $dbUtilizador = new Connection();
         $dbUtilizador->Connect();
         $sql = "SELECT * FROM Utilizador WHERE email=:email AND code_hash=:code_hash";
-        $val = [
+        $val = array(
             ':email' => $util->email,
             ':code_hash' => $util->code_hash,
-        ];
+        );
         $stm = $dbUtilizador->SQuerry($sql, $val);
         return $stm->fetch();
     }
@@ -128,10 +139,10 @@ class UtilizadorDAL
         $dbUtilizador = new Connection();
         $dbUtilizador->Connect();
         $sql = "SELECT * FROM Utilizador WHERE email=:email AND code_hash=:code_hash And Verify='0'";
-        $val = [
+        $val = array(
             ':email' => $util->email,
             ':code_hash' => $util->code_hash,
-        ];
+        );
         $stm = $dbUtilizador->SQuerry($sql, $val);
         return $stm->fetch();
     }

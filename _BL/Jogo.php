@@ -37,6 +37,10 @@ class Jogo
     public function ReadALL()    {
         return JogoDAL::ReadALLDAL();
     }
+    public function ReadPlat()    {
+        return JogoDAL::ReadPlatDAL($this);
+
+    }
 
     public function Update()     {
         return JogoDAL::Update($this);
@@ -48,5 +52,7 @@ class Jogo
     public function CreateTable(){
         return JogoDAL::CreateDB();
     }
-
+    public function ReadGen()    {
+        return JogoDAL::ReadGenDAL($this);
+    }
 }

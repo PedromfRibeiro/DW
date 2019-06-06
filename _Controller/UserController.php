@@ -425,9 +425,16 @@ public static function GetAllUtil(){
     $POD = new Utilizador();
     return $POD->ReadALL();
 }
+
     public static function GetOneUtil(){
         $POD = new Utilizador();
         $POD->email=$_SESSION['email'];
         return $POD->ReadEmail();
+    }
+    public static function GetOneUtilbyid($aa){
+        $POD = new Utilizador();
+        $POD->idUtilizador=$aa;
+        return $POD->ReadbyID();
+
     }
 }

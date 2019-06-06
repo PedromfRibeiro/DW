@@ -13,7 +13,9 @@ class MainController
         session_start();
         UserController::processUser();
         JogoController::processJogo();
+        GenerosController::processGen();
         VendaController::processVenda();
+        PlataformaController::processPlat();
         EncomendaController::processEncomenda();
 
         self::Href();
@@ -128,4 +130,5 @@ class MainController
         }
 
     }
+
 }

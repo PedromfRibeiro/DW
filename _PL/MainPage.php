@@ -28,14 +28,14 @@
             </div>
         </section>
     </div>
-    <div class="bts ">
+        <div class="bts ">
         <a href="?page=Genero">
             <button  type="button" class="btn btn-secondary btn-lg btn-block">Generos</button>
         </a>
         <a href="?page=Plataforma">
             <button type="button" class="btn btn-secondary btn-lg btn-block">Plataforma</button>
         </a>
-        <a href="?page=Produtos">
+        <a href="?page=Produtos&idGen=0&Plat=0">
             <button type="button" class="btn btn-secondary btn-lg btn-block">Produtos</button>
         </a>
         <a href="?page=Shopping_cart">

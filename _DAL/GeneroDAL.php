@@ -30,7 +30,7 @@ class generoDAL{
     public static function Update(genero $Gen){
         $dbGen = new Connection();
         $dbGen -> Connect();
-        $sql="UPDATE genero set genero=:genero  where idGenero=:idGenero ";
+        $sql="UPDATE genero set genero=:genero,ImagemGen=:ImagemGen  where idGenero=:idGenero ";
         $val = array(
             ':idGenero' => $Gen->idGenero,
             'genero' => $Gen->genero,

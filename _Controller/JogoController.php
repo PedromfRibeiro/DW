@@ -39,7 +39,18 @@ class JogoController
         $POD = new Jogo();
         return ($POD->ReadALL());
     }
-
+    public static function ReadJogobyGen($idGen){
+        $POD = new Jogo();
+        if($idGen==0){return ($POD->ReadALL());}
+        else{
+            $POD->idGenero=$idGen;
+            return ($POD->ReadGen());}
+    }
+    public static function ReadJogobyPlat($idPlat){
+        $POD = new Jogo();
+            $POD->idPlataforma=$idPlat;
+            return ($POD->ReadPlat());
+    }
 
     //Admin_Jogos
     public static function Create_Jogo(){

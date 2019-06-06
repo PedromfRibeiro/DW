@@ -15,6 +15,15 @@ class EncomendaController
         if (isset($_POST["ComprarCheckOut"])) {
             if(UserController::IsUserLoggedAdmin()) self::ComprarCheckOut();
         }
+        if (isset($_POST["Update_Encomenda"])) {
+            self::Update_Encomenda();
+        }
+        if (isset($_POST["Delete_Encomenda"])) {
+            self::Delete_Encomenda();
+        }
+        if (isset($_POST["Create_Encomenda"])) {
+            self::Create_Encomenda();
+        }
     }
 
     public static function ComprarCheckOut(){
@@ -54,5 +63,33 @@ class EncomendaController
         $POD->idEncomenda=$param;
         return ($POD->ReadALL());
     }
+    public static function ReadEncALL(){
+        $EncPDO = new Encomenda();
+        return $EncPDO->ReadALL();
+    }
 
+    public static function Create_Encomenda(){
+        $PDO =new Encomenda();
+        $PDO->idEncomenda=0;
+        $PDO->data_enc=$_POST['data_enc'];
+        $PDO->Valor=$_POST['Valor'];
+        $PDO->Finalizada=$_POST['Finalizada'];
+        $PDO->id_utilizador=$_POST["idUti"];
+        $PDO->Create();
+    }
+    public static function Update_Encomenda(){
+        $PDO =new Encomenda();
+        $PDO->idEncomenda=$_POST['idEnc'];
+        $PDO->data_enc=$_POST['data_enc'];
+        $PDO->Valor=$_POST['Valor'];
+        $PDO->Finalizada=$_POST['Finalizada'];
+        $PDO->id_utilizador=$_POST["idUti"];
+        $PDO->Update();
+    }
+    public static function Delete_Encomenda(){
+        $PDO =new Encomenda();
+        $PDO->idEncomenda=$_POST['idEnc'];
+
+        $PDO->Delete();
+    }
 }

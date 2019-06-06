@@ -26,7 +26,7 @@
             </tr>
             </thead>
             <?php
-            $BFetch = JogoController::ReadJogo(null);
+            $BFetch = JogoController::ReadJogoALL();
             while ($row = $BFetch->fetch()) {
 
             $id = $row['idJogo'];

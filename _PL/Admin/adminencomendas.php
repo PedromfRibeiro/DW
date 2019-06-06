@@ -4,12 +4,12 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Manage <b>Jogos</b></h2>
+                    <h2>Manage <b>Encomenda</b></h2>
                 </div>
                 <div class="col-sm-6">
                     <form method="post">
                         <a href="" class="btn btn-success" data-toggle="modal" data-target="#myCreateModal"><i
-                                    class="material-icons">&#xE147;</i> <span>Add New Jogo</span></a>
+                                    class="material-icons">&#xE147;</i> <span>Add New Encomenda</span></a>
                     </form>
                 </div>
             </div>
@@ -26,24 +26,21 @@
             </tr>
             </thead>
             <?php
-            $BFetch = JogoController::ReadJogo(null);
+            $BFetch = EncomendaController::ReadEncALL();
             while ($row = $BFetch->fetch()) {
 
-            $id = $row['idJogo'];
-            $Nome = $row['nome'];
-            $preco = $row['preco'];
-            $descricao = $row['descricao'];
-            $idGenero = GenerosController::GetGeneros($row['idGenero']);
-            $idPlataforma = PlataformaController::GetPlataforma($row['idPlataforma']);
+            $id = $row['idEncomenda'];
+            $data_enc = $row['data_enc'];
+            $Valor = $row['Valor'];
+            $Finalizada = $row['Finalizada'];
+            $id_utilizador = UserController::GetOneUtilbyid($row['id_utilizador']);
 
 
             echo '<tr>';
-            echo '<td><img class="img-fluid mx-auto Img" src="data:image/jpeg;base64,' . base64_encode($row['Imagem']) . '" alt=""></td>';
-            echo '<td>' . $Nome . '</td>';
-            echo '<td>' . $preco . '</td>';
-            echo '<td>' . $descricao . '</td>';
-            echo '<td>' . $idGenero['genero'] . '</td>';
-            echo '<td>' . $idPlataforma['Plataforma'] . '</td>';
+            echo '<td>' . $data_enc . '</td>';
+            echo '<td>' . $Valor . '</td>';
+            echo '<td>' . $Finalizada . '</td>';
+            echo '<td>' . $id_utilizador["Nome"] . '</td>';
             echo '<td>';
             echo '<a     href=""  id="' . $id . '"  class="edit"   data-toggle="modal" data-target="#myUpModal' . $id . '"><i class="material-icons" title="Edit" >&#xE254;</i></a>';
             echo '<td>';
@@ -58,38 +55,32 @@
 
 
                     <div class="modal-header">
-                        <h4 class="modal-title">Atualizar Jogo</h4>
+                        <h4 class="modal-title">Atualizar Encomenda</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <div class="modal-body">
                         <form enctype="multipart/form-data" method="post" data-ajax='false'>
-                            <label for="Nome"><b> Nome</b></label>
-                            <input class="form-control" type="text" placeholder="Enter Name" name="Nome"
-                                   value="<?php echo $Nome ?>">
+                            <label for="data_enc"><b>Enter Data de Encomenda</b></label>
+                            <input class="form-control" type="date" placeholder="Enter Data de Encomenda" name="data_enc"
+                                   value="<?php echo $data_enc ?>">
                             <br>
-                            <label for="Nome"><b> Descricao</b></label>
-                            <input class="form-control" type="text" placeholder="Enter Descrição" name="descricao"
-                                   value="<?php echo $descricao ?>">
+                            <label for="Finalizad"><b> Finalizada</b></label>
+                            <input class="form-control" type="number" placeholder="Enter Finalizada" name="Finalizada"
+                                   value="<?php echo $Finalizada ?>">
                             <br>
-                            <label for="preco"><b> preco </b></label>
-                            <input class="form-control" type="number" placeholder="Enter Preço"
-                                   name="preco" value="<?php echo $preco ?>">
+                            <label for="Valor"><b> Valor Total </b></label>
+                            <input class="form-control" type="number" placeholder="Enter Valor Total"
+                                   name="Valor" value="<?php echo $Valor ?>">
 
-                            <label for="idGenero"><b> id Genero</b></label>
-                            <input class="form-control" type="number" placeholder="Enter id Genero"
-                                   name="idGenero" value="<?php echo $row['idGenero'] ?>">
-                            <br>
-                            <label for="idGenero"><b> id Genero</b></label>
-                            <input class="form-control" type="number" placeholder="Enter id Plataforma"
-                                   name="idPlataforma" value="<?php echo $row['idPlataforma'] ?>">
-                            <br>
-                            <label>Imagem</label>
-                            <input class="form-control" type="file" name="Imagem"/>
-                            <br>
-                            <input name="idJogo" value="<?php echo $row['idJogo'] ?>" hidden>
+                            <label for="Finalizada"><b>Utilizador</b></label>
+                            <input class="form-control" type="text" placeholder="<?php echo $id_utilizador['Nome'] ?>"disabled>
 
-                            <button type="submit" class="btn btn-primary" name="Update_Jogo">Save changes
+                            <input class="form-control" type="text" name="idUti" value="<?php echo $id_utilizador['idUtilizador']?>" hidden>
+                            <br>
+                            <input class="form-control" type="number" name="idEnc" value="<?php echo $id ?>"hidden>
+
+                            <button type="submit" class="btn btn-primary" name="Update_Encomenda">Save changes
                             </button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </form>
@@ -107,11 +98,11 @@
 
             Tem a certeza que quer eliminar?
             <form method="post">
-                <label for="Nome"><b> Nome</b></label>
-                <input class="form-control" type="text" value="<?php echo $Nome ?>" disabled>
-                <input name="idJogo" value="<?php echo $row['idJogo'] ?>" hidden>
+                <label for="data_enc"><b> data_enc</b></label>
+                <input class="form-control" type="text" value="<?php echo $data_enc ?>" disabled>
+                <input class="form-control" type="number" name="idEnc" value="<?php echo $id ?>"hidden>
                 <br>
-                <button name="Delete_Jogo">Sim</button>
+                <button name="Delete_Encomenda">Sim</button>
             </form>
         </div>
     </div>
@@ -127,30 +118,27 @@ $POD = null;
         <div class="modal-content">
 
             <div class="modal-header">
-                <h4 class="modal-title">Criar Jogo</h4>
+                <h4 class="modal-title">Criar Encomenda</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <div class="modal-body">
                 <form enctype="multipart/form-data" method="post" data-ajax='false'>
-                    <label for="Nome"><b> Nome</b></label>
-                    <input class="form-control" type="text" placeholder="Enter Name" name="Nome">
+                    <label for="data_enc"><b>Enter Data de Encomenda</b></label>
+                    <input class="form-control" type="date" placeholder="Enter Data de Encomenda" name="data_enc">
                     <br>
-                    <label for="Preço"><b> Preço </b></label>
-                    <input class="form-control" type="text" placeholder="Enter Preço" name="preco">
-                    <label for="Descricao"><b> Descricao </b></label>
-                    <input class="form-control" type="text" placeholder="Enter Descricao" name="descricao">
+                    <label for="Finalizad"><b> Finalizada</b></label>
+                    <input class="form-control" type="number" placeholder="Enter Finalizada" name="Finalizada">
                     <br>
-                    <label for="Genero"><b> Genero</b></label>
-                    <input class="form-control" type="number" placeholder="Enter Genero" name="idGenero">
-                    <br>
-                    <label for="Plataforma"><b> Plataforma</b></label>
-                    <input class="form-control" type="number" placeholder="Enter Plataforma" name="idPlataforma">
-                    <br>
-                    <label for="Imagem"><b> Imagem</b></label>
-                    <input class="form-control" type="file" name="Imagem">
+                    <label for="Valor"><b> Valor Total </b></label>
+                    <input class="form-control" type="number" placeholder="Enter Valor Total" name="Valor" >
 
-                    <button type="submit" class="btn btn-primary" name="Create_Jogo">Create</button>
+                    <label for="Finalizada"><b>Utilizador</b></label>
+
+                    <input class="form-control" type="text" name="idUti" >
+                    <br>
+                    <button type="submit" class="btn btn-primary" name="Create_Encomenda">Save changes
+                    </button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </form>
             </div>

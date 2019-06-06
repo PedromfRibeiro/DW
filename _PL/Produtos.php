@@ -9,7 +9,10 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
     <div class="row">
       <div class="col-lg-3">
           <div class="card">
-              <article class="card-group-item">
+
+
+
+              <!--  <article class="card-group-item">
                   <header class="card-header">
                       <h6 class="title">Range input </h6>
                   </header>
@@ -25,11 +28,11 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
                                   <input type="number" class="form-control" placeholder="$10">
                               </div>
                           </div>
-                      </div> <!-- card-body.// -->
+                      </div>
                   </div>
-              </article> <!-- card-group-item.// -->
+              </article>               -->
 
-          </div> <!-- card.// -->
+          </div>
 
               <div class="card">
                   <article class="card-group-item">
@@ -42,13 +45,16 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
                                   <?php
                                   $BFetch = PlataformaController::GetPlataformaALL();
                                   while ($row = $BFetch->fetch()) {
-                                      echo '<label class="form-check">';
-                                      echo '<input class="form-check-input" type="checkbox" value=""></td>';
-                                      echo '<span class="form-check-label">' . $row['Plataforma'] . '</span>';
-                                      echo '</label>';
+                                      echo'
+                                      <div class="bts" >
+                                      <a href="?page=Produtos&idGen=0&Plat='.$row['id'].'">
+                                      <button type="button" class="btn btn-secondary btn-sm">'.$row['Plataforma'].'</button>
+                                      </a>
+                                      </div>
+                                      ';
+
                                   }
-                                  $POD=$row=null;
-                                  $BFetch->closeCursor();
+                                  $POD=null;
                                   ?>
                               </form>
 
@@ -66,10 +72,14 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
                                   <?php
                                   $BFeetch = GenerosController::GetGenerosAll();
                                   while ($rowe = $BFeetch->fetch()) {
-                                      echo '<label class="form-check">';
-                                      echo '<input class="form-check-input" type="radio" name="exampleRadio" value="">';
-                                      echo '<span class="form-check-label">' . $rowe['genero'] . '</span>';
-                                      echo '</label>';
+                                      echo'
+                                      <div class="bts" >
+                                      <a href="?page=Produtos&idGen='.$rowe['idGenero'].'&Plat=0">
+                                      <button type="button" class="btn btn-secondary btn-sm">'.$rowe['genero'].'</button>
+                                      </a>
+                                      </div>
+                                      ';
+
                                   }
                                   $POD=null;
                                   ?>
@@ -91,9 +101,20 @@ require_once dirname(__FILE__) . '/../_BL/Genero.php';
         <div class="row">
 
             <?php
-             require_once 'C:/xampp/htdocs/DWphp/_BL/Jogo.php';
+            if(($_GET['idGen']!=0) && ($_GET['Plat']!=0)){
+                $idGen=0;
+                $BFetch = JogoController::ReadJogobyGen(0);
 
-            $BFetch = JogoController::ReadJogoALL();
+            }
+            else if($_GET['idGen']!=0){$BFetch = JogoController::ReadJogobyGen($_GET['idGen']);}
+            else if($_GET['Plat']!=0){$BFetch = JogoController::ReadJogobyPlat($_GET['Plat']);}
+
+else {
+    $idGen=0;
+    $idPlat=0;
+    $BFetch = JogoController::ReadJogobyGen(0);
+
+}
 
             while ($row = $BFetch->fetch()) {
                 echo '<div class="col-lg-4 col-md-6 mb-4">
