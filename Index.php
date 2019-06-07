@@ -115,9 +115,9 @@ require_once $page;
             <div class="col-xs-12 col-sm-4 col-md-3">
 
                 <ul class="list-unstyled quick-links">
-                    <li><a href="Index.php#AboutUs"><i class="fa fa-angle-double-right"></i>About Us</a></li>
-                    <li><a href="Index.php#Customer"><i class="fa fa-angle-double-right"></i>Customer Support</a></li>
-                    <li><a href="Index.php#FAQ"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                    <li><a href="Index.php?page=MainPage#AboutUs"><i class="fa fa-angle-double-right"></i>About Us</a></li>
+                    <li><a href="Index.php?page=MainPage#Customer"><i class="fa fa-angle-double-right"></i>Customer Support</a></li>
+                    <li><a href="Index.php?page=MainPage#FAQ"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
 
                 </ul>
             </div>

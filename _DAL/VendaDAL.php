@@ -39,9 +39,15 @@ class VendaDAL
     {
         $dbGen = new Connection();
         $dbGen->Connect();
-        $sql = "UPDATE venda set Data=:Data,Valor=:Valor,quantidade=:quantidade,id_jogo=:id_jogo,id_Encomenda=:id_Encomenda  where id=:id ";
-        $arrayGen = (array)$Venda;
-        return $dbGen->SQuerry($sql, $arrayGen);
+        $sql = "UPDATE venda set Data=:Data,Valor=:Valor,quantidade=:quantidade,id_jogo=:id_jogo,id_Encomenda=:id_Encomenda  where idVenda=:idVenda ";
+        $val = array(
+            'idVenda'=>$Venda->idVenda,
+            'Data' => $Venda->Data,
+            'Valor' => $Venda->Valor,
+            'quantidade' => $Venda->quantidade,
+            'id_jogo' => $Venda->id_jogo,
+            'id_Encomenda' => $Venda->id_Encomenda);
+        return $dbGen->SQuerry($sql, $val);
     }
 
     public static function Delete(venda $Venda)

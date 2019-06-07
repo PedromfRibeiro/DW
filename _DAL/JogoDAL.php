@@ -23,7 +23,8 @@ class JogoDAL{
         $dbJogo -> Connect();
         $sql="SELECT * FROM Jogo WHERE idJogo =:idJogo";
         $val = array('idJogo' => ($Jogo->idJogo));
-        return $dbJogo->SQuerry($sql,$val);
+        $jogo=$dbJogo->SQuerry($sql,$val);
+        return $jogo->fetch();
     }
     public static function ReadALLDAL(){
         $dbJogo = new Connection();

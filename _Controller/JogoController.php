@@ -27,8 +27,12 @@ class JogoController
     public static function GetJogoByID($bb){
         $JogoPDO = new Jogo();
         $JogoPDO->idJogo= $bb['id_jogo'];
-        $jogo = $JogoPDO->Read();
-        return $jogo->fetch();
+        return $jogo = $JogoPDO->Read();
+    }
+    public static function GetJogoByIDNonObj($bb){
+        $JogoPDO = new Jogo();
+        $JogoPDO->idJogo= $bb;
+        return $jogo = $JogoPDO->Read();
     }
     public static function ReadJogo($param){
         $POD = new Jogo();

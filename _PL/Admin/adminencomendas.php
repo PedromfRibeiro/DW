@@ -81,11 +81,17 @@
                                    name="Valor" value="<?php echo $Valor ?>">
 
                             <label for="Finalizada"><b>Utilizador</b></label>
-                            <input class="form-control" type="text" placeholder="<?php echo $id_utilizador['Nome'] ?>"disabled>
+                            <select class="form-control" name="idUti">
+                            <?php
+                                $rowUser = UserController::GetAllUtil();
+                                echo'<option selected="selected" VALUE="' . $id_utilizador['idUtilizador'] . '">'.$id_utilizador['Nome'].' </option>';
+                            while ($rowUsers = $rowUser->fetch()){
+                                echo'<option VALUE="' . $rowUsers['idUtilizador'] . '">'.$rowUsers['Nome'].' </option>';
 
-                            <input class="form-control" type="text" name="idUti" value="<?php echo $id_utilizador['idUtilizador']?>" hidden>
+                            }
+                            ?></select>
                             <br>
-                            <input class="form-control" type="number" name="idEnc" value="<?php echo $id ?>"hidden>
+                            <input name="idEnc" value="<?php echo $id ?>"hidden>
 
                             <button type="submit" class="btn btn-primary" name="Update_Encomenda">Save changes
                             </button>

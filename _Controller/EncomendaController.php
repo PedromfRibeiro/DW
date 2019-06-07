@@ -76,7 +76,8 @@ class EncomendaController
     {
         $POD = new Encomenda();
         $POD->idEncomenda = $param;
-        return ($POD->ReadALL());
+        return $POD->Read();
+
     }
 
     public static function ReadEncALL()

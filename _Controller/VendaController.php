@@ -13,7 +13,15 @@ class VendaController
         if (isset($_POST["Compra"])) {
             self::Compra();
         }
-
+        if (isset($_POST["Update_Venda"])) {
+            self::UpdateVenda();
+        }
+        if (isset($_POST["Delete_Venda"])) {
+            self::DeleteVenda();
+        }
+        if (isset($_POST["Create_Venda"])) {
+            self::CreateVenda();
+        }
     }
 
     public static function Compra()
@@ -34,7 +42,7 @@ class VendaController
 
     public static function ValorFinal(Venda $VendaJogo)
     {
-        $EncomendaCliente = new Encomenda('', '', '', '', '');
+        $EncomendaCliente = new Venda('', '', '', '', '');
         $EncomendaCliente->idEncomenda=EncomendaController::CheckCarrinho();
         $EncomendaCliente->id_utilizador = $_SESSION["id"];
         $Valor=0;
@@ -53,5 +61,33 @@ class VendaController
         $VendaPDO->id_Encomenda = $idEnc['idEncomenda'];
         return $VendaPDO->ReadEnc();
     }
+    public static function ReadVendaALL()
+    {
+        $EncPDO = new Venda();
+        return $EncPDO->ReadALL();
+    }
+    public static function UpdateVenda(){
+        $PDO = new Venda();
+        $PDO->idVenda = $_POST['id'];
+        $PDO->Data = $_POST['data_enc'];
+        $PDO->Valor = $_POST['Valor'];
+        $PDO->quantidade = $_POST['Quantidade'];
+        $PDO->id_jogo = $_POST["idJogo"];
+        $PDO->id_Encomenda = $_POST["idEnc"];
+        $PDO->Update();
+    }
+    public static function DeleteVenda(){
+
+    }
+    public static function CreateVenda(){
+        $PDO = new Venda();
+        $PDO->idVenda = 0;
+        $PDO->Data = $_POST['data_venda'];
+        $PDO->Valor = $_POST['Valor'];
+        $PDO->quantidade = $_POST['Quantidade'];
+        $PDO->id_jogo = $_POST["idJogo"];
+        $PDO->id_Encomenda = $_POST["idEnc"];
+        $PDO->Create();
+}
 
 }
