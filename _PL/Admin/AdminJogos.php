@@ -82,9 +82,9 @@
                             <select class="form-control" name="idGenero">
                                 <?php
                                 $rowGeneros = GenerosController::GetGenerosAll();
-                                while ($rowGen = $rowGeneros->fetch())
-                                    echo'<option selected="selected" VALUE="' . $idGenero['idGenero'] . '">' . $idGenero['genero'] . '</option>';
+                                echo'<option selected="selected" VALUE="' . $idGenero['idGenero'] . '">' . $idGenero['genero'] . '</option>';
 
+                                while ($rowGen = $rowGeneros->fetch())
                                 echo '<option VALUE="' . $rowGen['idGenero'] . '">' . $rowGen['genero'] . '</option>'
 
                                 ?>
@@ -94,8 +94,9 @@
                             <select class="form-control" name="idPlataforma">
                                 <?php
                                 $rowPlata = PlataformaController::GetPlataformaALL();
-                                while ($rowPlat = $rowPlata->fetch())
                                 echo'<option selected="selected" VALUE="' . $idPlataforma['id'] . '">' . $idPlataforma['Plataforma'] . '</option>';
+
+                                while ($rowPlat = $rowPlata->fetch())
                                 echo '<option VALUE="' . $rowPlat['id'] . '">' . $rowPlat['Plataforma'] . '</option>'
 
 
