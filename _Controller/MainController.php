@@ -19,7 +19,7 @@ class MainController
         EncomendaController::processEncomenda();
 
         self::Href();
-        if($_GET['page']<= "Admin/Admin"){self::Admin();}
+        if($_GET['page']>= "Admin/Admin"){self::Admin();}
         if($_GET['page']== "Shopping_cart"){self::Logged();}
     }
     public static function Href()

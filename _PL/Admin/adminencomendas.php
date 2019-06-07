@@ -17,11 +17,13 @@
         <table class="table table-striped table-hover">
             <thead>
             <tr>
-                <th></th>
+
                 <th>Data de Encomenda</th>
                 <th>Valor</th>
                 <th>Estado</th>
                 <th>Utilizador</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
 
             </tr>
             </thead>
@@ -39,7 +41,10 @@
             echo '<tr>';
             echo '<td>' . $data_enc . '</td>';
             echo '<td>' . $Valor . '</td>';
-            echo '<td>' . $Finalizada . '</td>';
+            if ($Finalizada ==1){            echo '<td>Finalizada</td>';
+            }
+            if ($Finalizada ==0){            echo '<td>Não Finalizada</td>';
+            }
             echo '<td>' . $id_utilizador["Nome"] . '</td>';
             echo '<td>';
             echo '<a     href=""  id="' . $id . '"  class="edit"   data-toggle="modal" data-target="#myUpModal' . $id . '"><i class="material-icons" title="Edit" >&#xE254;</i></a>';
@@ -65,9 +70,11 @@
                             <input class="form-control" type="date" placeholder="Enter Data de Encomenda" name="data_enc"
                                    value="<?php echo $data_enc ?>">
                             <br>
-                            <label for="Finalizad"><b> Finalizada</b></label>
-                            <input class="form-control" type="number" placeholder="Enter Finalizada" name="Finalizada"
-                                   value="<?php echo $Finalizada ?>">
+                            <label for="Finalizad"><b>Finalizada</b></label>
+                            <select class="form-control"  name="Finalizada" >
+                                <option VALUE="0">Nao Finalizada</option>
+                                <option VALUE="1">Finalizada</option>
+                            </select>
                             <br>
                             <label for="Valor"><b> Valor Total </b></label>
                             <input class="form-control" type="number" placeholder="Enter Valor Total"
@@ -127,15 +134,26 @@ $POD = null;
                     <label for="data_enc"><b>Enter Data de Encomenda</b></label>
                     <input class="form-control" type="date" placeholder="Enter Data de Encomenda" name="data_enc">
                     <br>
-                    <label for="Finalizad"><b> Finalizada</b></label>
-                    <input class="form-control" type="number" placeholder="Enter Finalizada" name="Finalizada">
+                    <label for="Finalizad"><b>Finalizada?</b></label>
+                    <select class="form-control"  name="Finalizada">
+                        <option VALUE="0">Nao Finalizada</option>
+                        <option VALUE="1">Finalizada</option>
+                    </select>
                     <br>
                     <label for="Valor"><b> Valor Total </b></label>
                     <input class="form-control" type="number" placeholder="Enter Valor Total" name="Valor" >
 
-                    <label for="Finalizada"><b>Utilizador</b></label>
+                    <br>
 
-                    <input class="form-control" type="text" name="idUti" >
+                    <label for="Utilizador"><b>Utilizador</b></label>
+                    <select class="form-control" name="idUti">
+                        <?php
+                        $rowUser = UserController::GetAllUtil();
+                        while ($rowUsers = $rowUser->fetch())
+                            echo '<option VALUE="' . $rowUsers['idUtilizador'] . '">' . $rowUsers['Nome'] . '</option>'
+
+                        ?>
+                    </select>
                     <br>
                     <button type="submit" class="btn btn-primary" name="Create_Encomenda">Save changes
                     </button>

@@ -36,26 +36,28 @@
             $idGenero = GenerosController::GetGeneros($row['idGenero']);
             $idPlataforma = PlataformaController::GetPlataforma($row['idPlataforma']);
 
+            echo '
+            <tr>
+            <td><img class="img-fluid mx-auto Img" src="data:image/jpeg;base64,' . base64_encode($row['Imagem']) . '" alt=""></td>
+            <td>' . $Nome . '</td>
+            <td>' . $preco . '</td>
+            <td>' . $descricao . '</td>
+            <td>' . $idGenero['genero'] . '</td>
+            <td>' . $idPlataforma['Plataforma'] . '</td>
+            <td>
+            <a     href=""  id="' . $id . '"  class="edit"   data-toggle="modal" data-target="#myUpModal' . $id . '"><i class="material-icons" title="Edit" >&#xE254;</i></a >
+            </td>
+            <td>
+            <a     href=""  id="' . $id . '"  class="delete" data-toggle="modal" data-target="#myDELModal' . $id . '"><i class="material-icons" title="Delete">&#xE872;</i></a>
+                </td>
+                </tr>
+                <div class="modal fade" id="myUpModal' . $id . '">
+            ';
 
-            echo '<tr>';
-            echo '<td><img class="img-fluid mx-auto Img" src="data:image/jpeg;base64,' . base64_encode($row['Imagem']) . '" alt=""></td>';
-            echo '<td>' . $Nome . '</td>';
-            echo '<td>' . $preco . '</td>';
-            echo '<td>' . $descricao . '</td>';
-            echo '<td>' . $idGenero['genero'] . '</td>';
-            echo '<td>' . $idPlataforma['Plataforma'] . '</td>';
-            echo '<td>';
-            echo '<a     href=""  id="' . $id . '"  class="edit"   data-toggle="modal" data-target="#myUpModal' . $id . '"><i class="material-icons" title="Edit" >&#xE254;</i></a>';
-            echo '<td>';
-            echo '<a     href=""  id="' . $id . '"  class="delete" data-toggle="modal" data-target="#myDELModal' . $id . '"><i class="material-icons" title="Delete">&#xE872;</i></a>';
-            echo '</td>';
-            echo '</tr>';
 
-
-            echo '<div class="modal fade" id="myUpModal' . $id . '">'; ?>
+            echo ''; ?>
             <div class="modal-dialog">
                 <div class="modal-content">
-
 
                     <div class="modal-header">
                         <h4 class="modal-title">Atualizar Jogo</h4>
@@ -75,17 +77,29 @@
                             <label for="preco"><b> preco </b></label>
                             <input class="form-control" type="number" placeholder="Enter Preço"
                                    name="preco" value="<?php echo $preco ?>">
-
-                            <label for="idGenero"><b> id Genero</b></label>
-                            <input class="form-control" type="number" placeholder="Enter id Genero"
-                                   name="idGenero" value="<?php echo $row['idGenero'] ?>">
                             <br>
-                            <label for="idGenero"><b> id Genero</b></label>
-                            <input class="form-control" type="number" placeholder="Enter id Plataforma"
-                                   name="idPlataforma" value="<?php echo $row['idPlataforma'] ?>">
+                            <label for="idGenero"><b>Genero</b></label>
+                            <select class="form-control" name="idGenero">
+                                <?php
+                                $rowGeneros = GenerosController::GetGenerosAll();
+                                while ($rowGen = $rowGeneros->fetch())
+                                    echo '<option VALUE="' . $rowGen['idGenero'] . '">' . $rowGen['genero'] . '</option>'
+
+                                ?>
+                            </select>
+                            <br>
+                            <label for="idPlataforma"><b>Plataforma</b></label>
+                            <select class="form-control" name="idPlataforma">
+                                <?php
+                                $rowPlata = PlataformaController::GetPlataformaALL();
+                                while ($rowPlat = $rowPlata->fetch())
+                                    echo '<option VALUE="' . $rowPlat['id'] . '">' . $rowPlat['Plataforma'] . '</option>'
+
+                                ?>
+                            </select>
                             <br>
                             <label>Imagem</label>
-                            <input class="form-control" type="file" name="Imagem"/>
+                            <input class="form-control" type="file" name="Imagem" value="<?php $row['Imagem'] ?>"/>
                             <br>
                             <input name="idJogo" value="<?php echo $row['idJogo'] ?>" hidden>
 
@@ -141,11 +155,27 @@ $POD = null;
                     <label for="Descricao"><b> Descricao </b></label>
                     <input class="form-control" type="text" placeholder="Enter Descricao" name="descricao">
                     <br>
-                    <label for="Genero"><b> Genero</b></label>
-                    <input class="form-control" type="number" placeholder="Enter Genero" name="idGenero">
                     <br>
-                    <label for="Plataforma"><b> Plataforma</b></label>
-                    <input class="form-control" type="number" placeholder="Enter Plataforma" name="idPlataforma">
+                    <label for="idGenero"><b>Genero</b></label>
+                    <select class="form-control" name="idGenero">
+                        <?php
+                        $rowGeneros = GenerosController::GetGenerosAll();
+                        while ($rowGen = $rowGeneros->fetch())
+                            echo '<option VALUE="' . $rowGen['idGenero'] . '">' . $rowGen['genero'] . '</option>'
+
+                        ?>
+                    </select>
+                    <br>
+                    <label for="idPlataforma"><b>Plataforma</b></label>
+                    <select class="form-control" name="idPlataforma">
+                        <?php
+                        $rowPlata = PlataformaController::GetPlataformaALL();
+                        while ($rowPlat = $rowPlata->fetch())
+                            echo '<option VALUE="' . $rowPlat['id'] . '">' . $rowPlat['Plataforma'] . '</option>'
+
+                        ?>
+                    </select>
+                    <br>
                     <br>
                     <label for="Imagem"><b> Imagem</b></label>
                     <input class="form-control" type="file" name="Imagem">

@@ -24,6 +24,8 @@
                 <th>Email</th>
                 <th>Code Hash</th>
                 <th>Verify</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
             </tr>
             </thead>
             <?php
@@ -46,12 +48,17 @@
 
             echo '<td>' . $row['Nome'] . '</td>';
             echo '<td>' . $row['Data_Registo'] . '</td>';
-            echo '<td>' . $row['Autorizacao'] . '</td>';
+            if ($Autorizacao ==1){            echo '<td>Admin</td>';
+            }
+            if ($Autorizacao ==0){            echo '<td>Normal User</td>';
+            }
             echo '<td>' . $row['Data_Nascimento'] . '</td>';
             echo '<td>' . $row['email'] . '</td>';
             echo '<td>' . $row['code_hash'] . '</td>';
-            echo '<td>' . $row['Verify'] . '</td>';
-
+            if ($Verify ==1){            echo '<td>Verificado</td>';
+            }
+            if ($Verify ==0){            echo '<td>Não Verificado</td>';
+            }
             echo '<td>';
             echo '<a     href=""  id="' . $id . '"  class="edit"   data-toggle="modal" data-target="#myUpModal' . $id . '"><i class="material-icons" title="Edit" >&#xE254;</i></a>';
             echo '<td>';
@@ -169,6 +176,8 @@ $POD = null;
     </div>
 </div>
 </div>
+
+
 </table>
 
 <?php
