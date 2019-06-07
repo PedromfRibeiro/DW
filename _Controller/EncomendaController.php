@@ -115,4 +115,18 @@ class EncomendaController
 
         $PDO->Delete();
     }
+
+    public static function Countby(){
+        if(UserController::isUserLoggedIn()){
+            $user= new Encomenda();
+            $b=0;
+            $user->id_utilizador=$_SESSION["id"];
+            $users=$user->ReadUtilInEnc();
+            while($aa=$users->fetch()){
+                if($aa!=null){$b++;}
+            }
+            return$b;
+        }
+return 0;
+    }
 }

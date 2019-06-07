@@ -1,15 +1,16 @@
 <?php
-require_once dirname(__FILE__)."/UserController.php";
-require_once dirname(__FILE__)."/JogoController.php";
-require_once dirname(__FILE__)."/EncomendaController.php";
-require_once dirname(__FILE__)."/VendaController.php";
-require_once dirname(__FILE__)."/StockController.php";
-require_once dirname(__FILE__)."/GenerosController.php";
-require_once dirname(__FILE__)."/PlataformaController.php";
+require_once dirname(__FILE__) . "/UserController.php";
+require_once dirname(__FILE__) . "/JogoController.php";
+require_once dirname(__FILE__) . "/EncomendaController.php";
+require_once dirname(__FILE__) . "/VendaController.php";
+require_once dirname(__FILE__) . "/StockController.php";
+require_once dirname(__FILE__) . "/GenerosController.php";
+require_once dirname(__FILE__) . "/PlataformaController.php";
 
 class MainController
 {
-    public static function process(){
+    public static function process()
+    {
         session_start();
         UserController::processUser();
         JogoController::processJogo();
@@ -19,9 +20,30 @@ class MainController
         EncomendaController::processEncomenda();
 
         self::Href();
-        if($_GET['page']>= "Admin/Admin"){self::Admin();}
-        if($_GET['page']== "Shopping_cart"){self::Logged();}
+
+
+        $array = array("Genero", "MainPage", "phpTeste", "Plataforma", "Produto", "Produtos", "Profile", "Shopping_cart", "Login/Forgot", "Login/login", "Login/Register", "Login/Reset"
+        , "Admin/AdminJogos", "Admin/adminclientess", "Admin/adminencomendas", "Admin/admingeneros", "Admin/AdminJogos", "Admin/AdminMenu", "Admin/adminVenda");
+        $arrayAdmin=array("Admin/AdminJogos", "Admin/adminclientess", "Admin/adminencomendas", "Admin/admingeneros", "Admin/AdminJogos", "Admin/AdminMenu", "Admin/adminVenda");
+
+
+
+            if(in_array ($_GET['page'],$array)){}
+            else{UserController::ErrorPage();}
+        if(in_array ($_GET['page'],$arrayAdmin)){
+            if (!UserController::IsUserLoggedAdmin()) {
+                UserController::ErrorPage();
+            }
+
+        }
+
+
+
+        if ($_GET['page'] == "Shopping_cart") {
+            self::Logged();
+        }
     }
+
     public static function Href()
     {
         $option = $_GET["page"];
@@ -116,17 +138,22 @@ class MainController
         }
     }
 
-    public static function Admin(){
-        if($_GET['page']=='Admin/AdminMenu'){
-            if(!UserController::IsUserLoggedAdmin()){UserController::ErrorPage();}
+    public static function Admin()
+    {
+        if ($_GET['page'] == 'Admin/AdminMenu') {
+            if (!UserController::IsUserLoggedAdmin()) {
+                UserController::ErrorPage();
+            }
         }
     }
-    public static function Logged(){
-        if($_GET['page']=='Shopping_cart'){
-            if(!UserController::isUserLoggedIn())UserController::ErrorPage();
+
+    public static function Logged()
+    {
+        if ($_GET['page'] == 'Shopping_cart') {
+            if (!UserController::isUserLoggedIn()) UserController::ErrorPage();
         }
-        if($_GET['page']=='Profile'){
-            if(!UserController::isUserLoggedIn())UserController::ErrorPage();
+        if ($_GET['page'] == 'Profile') {
+            if (!UserController::isUserLoggedIn()) UserController::ErrorPage();
         }
 
     }

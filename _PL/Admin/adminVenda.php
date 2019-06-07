@@ -142,7 +142,7 @@
                 <input class="form-control" type="text" value="<?php echo $data_enc ?>" disabled>
                 <label for="data_enc"><b> Nome Associado</b></label>
                 <input class="form-control" type="text" value="<?php echo $Utilizador["Nome"] ?>" disabled>
-                <input class="form-control" type="number" name="idEnc" value="<?php echo $id ?>"hidden>
+                <input class="form-control" type="number" name="idVenda" value="<?php echo $id ?>"hidden>
                 <br>
                 <button name="Delete_Venda">Sim</button>
             </form>

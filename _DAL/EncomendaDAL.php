@@ -115,4 +115,14 @@ public static function UpdateValorDAL(encomenda $Enc){
         return $dbEnc->SQuerry($sql, $val);
     }
 
+    public static function ReadUtilInEncDAL(encomenda $Enc)
+    {
+        $dbEnc = new Connection();
+        $dbEnc->Connect();
+        $sql = "SELECT * FROM encomenda WHERE id_utilizador =:id_utilizador";
+        $val = array(
+            'id_utilizador' => $Enc->id_utilizador);
+        return $dbEnc->SQuerry($sql, $val);
+    }
+
 }

@@ -7,59 +7,34 @@
 
 <?php   $BFetch = UserController::GetOneUtil(); ?>
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-inverse" style="background-color: #808080; border-color: #808080; padding:40px 0 50px 0;">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-12  text-center">
+                            <h2 class="card-title">Name: <?php echo $BFetch['Nome']; ?></h2>
+                            <p class="card-text"><strong>Data de Registo: </strong> <?php echo $BFetch['Data_Registo']; ?> </p>
+                            <p class="card-text"><strong>email: </strong> <?php echo $BFetch['email']; ?> </p>
+                            <p class="card-text"><strong>Email Verificado: </strong>
 
-<div class="container">
-    <div class="row profile">
-        <div class="col-md-3">
-            <div class="profile-sidebar">
-                <div class="profile-usertitle">
-                    <div class="profile-usertitle-name">
-                        <?php echo  $BFetch['Nome']; ?>
-                    </div>
-                    <div class="profile-usertitle-email">
-                        <?php echo  $BFetch['email']; ?>
-                        <?php echo  $BFetch['code_hash']; ?>
-                    </div>
-                </div>
-                <div class="profile-userbuttons">
-                    <button type="button" class="btn btn-success btn-sm">Follow</button>
-                    <button type="button" class="btn btn-danger btn-sm">Message</button>
-                </div>
+                                <?php if( $BFetch['Verify']==1)echo'Sim'; else{echo 'Não';} ?>
+                            </p>
 
-                <div class="profile-usermenu">
-                    <ul class="nav">
-                        <li class="active">
-                            <a href="#">
-                                <i class="glyphicon glyphicon-home"></i>
-                                Overview </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="glyphicon glyphicon-user"></i>
-                                Account Settings </a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="glyphicon glyphicon-ok"></i>
-                                Tasks </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="glyphicon glyphicon-flag"></i>
-                                Help </a>
-                        </li>
-                    </ul>
+                            <p class="card-text"><strong>Numero de Encomendas: </strong>
+                                <?php $b=EncomendaController::Countby();
+                                echo $b;?>
+                            </p>
+
+                        </div>
+
+                    </div>
                 </div>
-                <!-- END MENU -->
-            </div>
-        </div>
-        <div class="col-md-9">
-            <div class="profile-content">
-                Some user related content goes here...
             </div>
         </div>
     </div>
-</div>'
+</div>
 
 <?php
 

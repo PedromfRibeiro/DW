@@ -77,7 +77,9 @@ class VendaController
         $PDO->Update();
     }
     public static function DeleteVenda(){
-
+        $PDO = new Venda();
+        $PDO->idVenda = $_POST['idVenda'];
+        $PDO->Delete();
     }
     public static function CreateVenda(){
         $PDO = new Venda();

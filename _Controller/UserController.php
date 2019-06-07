@@ -391,6 +391,7 @@ http://localhost/DWphp/Index.php?page=Login/Reset&email=' . $email . '&code_hash
         $_SESSION["Controll"]["Type"] = "error";
         $_SESSION["Controll"]["Mensage"] = 'You shall not Pass!';
         header("Location: index.php?page=MainPage");
+        exit();
     }
 
     //Form

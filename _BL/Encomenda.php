@@ -68,5 +68,8 @@ class Encomenda
         return EncomendaDAL::ReadUtilizadorDAL($this);
     }
 
-
+    public function ReadUtilInEnc()
+    {
+        return EncomendaDAL::ReadUtilInEncDAL($this);
+    }
 }

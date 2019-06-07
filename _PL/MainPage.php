@@ -54,7 +54,7 @@
     </div>
 </div>
 
-<div class="Section P2">
+    <div class="Section P2">
     <div class="indexdiv ">
         <div id="AboutUs" class="About">
             <article>

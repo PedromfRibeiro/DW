@@ -54,8 +54,8 @@ class VendaDAL
     {
         $dbGen = new Connection();
         $dbGen->Connect();
-        $sql = "DELETE FROM venda WHERE id = :id";
-        $val = ['id' => ($Venda->idVenda)];
+        $sql = "DELETE FROM venda WHERE idVenda = :idVenda";
+        $val = ['idVenda' => ($Venda->idVenda)];
         return $dbGen->SQuerry($sql, $val);
     }
 
