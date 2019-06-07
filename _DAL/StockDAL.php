@@ -16,7 +16,7 @@ class StockDAL
     public static function ReadDAL(Stock $stock){
         $dbstock = new Connection();
         $dbstock -> Connect();
-        $sql ="SELECT FROM Stock WHERE idStock = :idStock";
+        $sql ="SELECT * FROM Stock WHERE idStock = :idStock";
         $val = ['idStock' => ($stock->idStock)];
         $stm = $dbstock->SQuerry($sql,$val);
         return  $stm->fetch();

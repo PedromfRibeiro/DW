@@ -9,7 +9,7 @@ class Stock
     public $idJogo;
 
 
-    public function __construct($idStock, $quantidade, $idJogo)
+    public function __construct($idStock=null, $quantidade=null, $idJogo=null)
     {
         $this->idStock = $idStock;
         $this->quantidade = $quantidade;

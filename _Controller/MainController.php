@@ -18,6 +18,7 @@ class MainController
         VendaController::processVenda();
         PlataformaController::processPlat();
         EncomendaController::processEncomenda();
+        StockController::processStock();
 
 
 
@@ -25,8 +26,8 @@ class MainController
 
 
         $array = array("Genero","searchEngine", "MainPage", "phpTeste", "Plataforma", "Produto", "Produtos", "Profile", "Shopping_cart", "Login/Forgot", "Login/login", "Login/Register", "Login/Reset"
-        , "Admin/AdminJogos", "Admin/adminclientess", "Admin/adminencomendas", "Admin/admingeneros", "Admin/AdminJogos", "Admin/AdminMenu", "Admin/adminVenda");
-        $arrayAdmin=array("Admin/AdminJogos", "Admin/adminclientess", "Admin/adminencomendas", "Admin/admingeneros", "Admin/AdminJogos", "Admin/AdminMenu", "Admin/adminVenda");
+        , "Admin/AdminJogos", "Admin/adminclientess", "Admin/adminencomendas", "Admin/adminStock", "Admin/admingeneros", "Admin/AdminJogos", "Admin/AdminMenu", "Admin/adminVenda");
+        $arrayAdmin=array("Admin/AdminJogos","Admin/adminStock", "Admin/adminclientess", "Admin/adminencomendas", "Admin/admingeneros", "Admin/AdminJogos", "Admin/AdminMenu", "Admin/adminVenda");
 
 
 

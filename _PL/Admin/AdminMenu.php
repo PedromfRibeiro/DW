@@ -6,6 +6,8 @@
 <div class="col-xs-2 col-md-12 ">
 <div class="col-xs-2 col-md-12">
     <a href="?page=Admin/AdminJogos" class="btn btn-lg btn-primary" role="button"><span ></span> <br/>Jogos</a>
+    <a href="?page=Admin/adminStock" class="btn btn-lg btn-primary" role="button"><span class="glyphicon glyphicon-user"></span> <br/>Stock</a>
+
     <a href="?page=Admin/adminencomendas" class="btn btn-lg btn-primary" role="button"><span class="glyphicon glyphicon-comment"></span> <br/>Encomendas</a>
 </div>
 <div class="col-xs-2 col-md-12">
