@@ -1,12 +1,12 @@
-<body>
-<div class="Section P1">
+<div>
+    <div class="Section">
 <div class="Content">
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2>Manage <b>Generos</b></h2>
+                        <h2>Manage <b>Plataformas</b></h2>
                     </div>
                     <div class="col-sm-6">
                         <form method="post">
@@ -20,7 +20,7 @@
                 <thead>
                 <tr>
                     <th></th>
-                    <th><Plataforma></Plataforma></th>
+                    <th>Plataforma</th>
                     <th>Imagem</th>
                 </tr>
                 </thead>
@@ -55,7 +55,7 @@
                             <form enctype="multipart/form-data" method="post" data-ajax='false'>
                                 <label for="Nome"><b> Nome</b></label>
                                 <input class="form-control" type="text" placeholder="Enter Name" name="Nome"
-                                       value="<?php echo $Nome ?>">
+                                       value="<?php echo $Nome ?>" required>
                                 <br>
                                 <label>Imagem</label>
                                 <input class="form-control" type="file" name="Imagem" required/>
@@ -92,7 +92,7 @@
 
     <?php
     }
-    ?>
+    ?></div>
     <div class="modal fade" id="myCreateModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -105,10 +105,10 @@
                 <div class="modal-body">
                     <form enctype="multipart/form-data" method="post" data-ajax='false'>
                         <label for="Nome"><b> Nome</b></label>
-                        <input class="form-control" type="text" placeholder="Enter Name" name="Nome">
+                        <input class="form-control" type="text" placeholder="Enter Name" name="Nome" required>
                         <br>
                         <label for="Imagem"><b> Imagem</b></label>
-                        <input class="form-control" type="file" name="Imagem">
+                        <input class="form-control" type="file" name="Imagem" required>
 
                         <button type="submit" class="btn btn-primary" name="Create_Plat">Create</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -119,12 +119,10 @@
             </div>
         </div>
     </div>
-
-
     </table>
 </div>
-
-<div class="Content">
+</div>
+</div>    </div>    </div>   <div class="Content">
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
@@ -178,7 +176,7 @@
                             <form enctype="multipart/form-data" method="post" data-ajax='false'>
                                 <label for="Nome"><b> Nome</b></label>
                                 <input class="form-control" type="text" placeholder="Enter Name" name="Nome"
-                                       value="<?php echo $Nome ?>">
+                                       value="<?php echo $Nome ?>" required>
                                 <br>
                                 <label>Imagem</label>
                                 <input class="form-control" type="file" name="ImagemGen" required/>
@@ -228,10 +226,10 @@
                 <div class="modal-body">
                     <form enctype="multipart/form-data" method="post" data-ajax='false'>
                         <label for="Nome"><b> Nome</b></label>
-                        <input class="form-control" type="text" placeholder="Enter Name" name="Nome">
+                        <input class="form-control" type="text" placeholder="Enter Name" name="Nome" required>
                         <br>
                         <label for="ImagemGen"><b> Imagem</b></label>
-                        <input class="form-control" type="file" name="ImagemGen">
+                        <input class="form-control" type="file" name="ImagemGen" required>
 
                         <button type="submit" class="btn btn-primary" name="Create_Gen">Create</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -245,7 +243,6 @@
 
 
     </table>
-</div>
-</div>
+</div>     </div>
 </body>
 

@@ -83,15 +83,15 @@
                         <form enctype="multipart/form-data" method="post" data-ajax='false'>
                             <label for="data_enc"><b>Enter Data de Venda</b></label>
                             <input class="form-control" type="date" placeholder="Enter Data de Encomenda" name="data_enc"
-                                   value="<?php echo $data_enc ?>">
+                                   value="<?php echo $data_enc ?>" required>
                             <br>
                             <label for="Valor"><b> Valor Total </b></label>
                             <input class="form-control" type="number" placeholder="Enter Valor Total"
-                                   name="Valor" value="<?php echo $Valor ?>">
+                                   name="Valor" value="<?php echo $Valor ?>"required>
                             <br>
                             <label for="Quantidade"><b> Quantidade </b></label>
                             <input class="form-control" type="number" placeholder="Enter Quantidade"
-                                   name="Quantidade" value="<?php echo $Quantidade ?>">
+                                   name="Quantidade" value="<?php echo $Quantidade ?>"required>
                             <br>
                             <label for="Jogo"><b>Jogo</b></label>
                             <select class="form-control" name="idJogo">
@@ -167,14 +167,14 @@ $POD = null;
             <div class="modal-body">
                 <form enctype="multipart/form-data" method="post" data-ajax='false'>
                     <label for="data_enc"><b>Enter Data de Venda</b></label>
-                    <input class="form-control" type="date" placeholder="Enter Data de Venda" name="data_venda">
+                    <input class="form-control" type="date" placeholder="Enter Data de Venda" name="data_venda"required>
                     <br>
                     <label for="Valor"><b>Valor</b></label>
-                    <input class="form-control" type="text" placeholder="Enter Valor" name="Valor">
+                    <input class="form-control" type="text" placeholder="Enter Valor" name="Valor"required>
 
                     <br>
                     <label for="Quantidade"><b> Quantidade </b></label>
-                    <input class="form-control" type="number" placeholder="Enter Quantidade" name="Quantidade" value="1" >
+                    <input class="form-control" type="number" placeholder="Enter Quantidade" name="Quantidade" value="1" required>
 
                     <br>
                     <label for="Jogo"><b>Jogo</b></label>

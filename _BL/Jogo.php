@@ -55,4 +55,7 @@ class Jogo
     public function ReadGen()    {
         return JogoDAL::ReadGenDAL($this);
     }
+    public function SearchEngine()    {
+        return JogoDAL::SearchEngineDAL($this);
+    }
 }

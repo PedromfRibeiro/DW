@@ -73,5 +73,11 @@ class JogoDAL{
         $val = array('idGenero' => ($Jogo->idGenero));
         return $dbJogo->SQuerry($sql,$val);
     }
-
+    public function SearchEngineDAL(Jogo $Jogo)    {
+        $dbJogo = new Connection();
+        $dbJogo -> Connect();
+        $sql="SELECT * FROM Jogo WHERE nome like '%".$Jogo->nome."'";
+        $val = array(':nome' => ($Jogo->nome));
+        return$jogo=$dbJogo->SQuerry($sql,null);
+    }
 }

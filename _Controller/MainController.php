@@ -19,10 +19,12 @@ class MainController
         PlataformaController::processPlat();
         EncomendaController::processEncomenda();
 
+
+
         self::Href();
 
 
-        $array = array("Genero", "MainPage", "phpTeste", "Plataforma", "Produto", "Produtos", "Profile", "Shopping_cart", "Login/Forgot", "Login/login", "Login/Register", "Login/Reset"
+        $array = array("Genero","searchEngine", "MainPage", "phpTeste", "Plataforma", "Produto", "Produtos", "Profile", "Shopping_cart", "Login/Forgot", "Login/login", "Login/Register", "Login/Reset"
         , "Admin/AdminJogos", "Admin/adminclientess", "Admin/adminencomendas", "Admin/admingeneros", "Admin/AdminJogos", "Admin/AdminMenu", "Admin/adminVenda");
         $arrayAdmin=array("Admin/AdminJogos", "Admin/adminclientess", "Admin/adminencomendas", "Admin/admingeneros", "Admin/AdminJogos", "Admin/AdminMenu", "Admin/adminVenda");
 

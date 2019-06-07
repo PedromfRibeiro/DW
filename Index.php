@@ -8,7 +8,7 @@ MainController::process();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>The Classic Gamer</title>
+    <title><?php echo $_GET["page"];?></title>
 
 
     <!--Fonts-->
@@ -60,8 +60,11 @@ MainController::process();
         <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
             <form class="form-inline">
                 <div class="searchbar ">
-                    <input class="search_input" placeholder="Search..." type="text">
-                    <a href="#" class="search_icon "><i class="fas fa-search"></i></a>
+                    <form method="post">
+                    <input class="search_input" placeholder="Search..." type="text" name="page=searchEngine&aa">
+                    </form>
+                    <a  class="search_icon "><i class="fas fa-search"></i></a>
+
                 </div>
             </form>
 

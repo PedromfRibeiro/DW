@@ -68,15 +68,15 @@
                         <form enctype="multipart/form-data" method="post" data-ajax='false'>
                             <label for="Nome"><b> Nome</b></label>
                             <input class="form-control" type="text" placeholder="Enter Name" name="Nome"
-                                   value="<?php echo $Nome ?>">
+                                   value="<?php echo $Nome ?>" required>
                             <br>
                             <label for="Nome"><b> Descricao</b></label>
                             <input class="form-control" type="text" placeholder="Enter Descrição" name="descricao"
-                                   value="<?php echo $descricao ?>">
+                                   value="<?php echo $descricao ?>" required>
                             <br>
                             <label for="preco"><b> preco </b></label>
                             <input class="form-control" type="number" placeholder="Enter Preço"
-                                   name="preco" value="<?php echo $preco ?>">
+                                   name="preco" value="<?php echo $preco ?>" required>
                             <br>
                             <label for="idGenero"><b>Genero</b></label>
                             <select class="form-control" name="idGenero">
@@ -153,16 +153,16 @@ $POD = null;
             <div class="modal-body">
                 <form enctype="multipart/form-data" method="post" data-ajax='false'>
                     <label for="Nome"><b> Nome</b></label>
-                    <input class="form-control" type="text" placeholder="Enter Name" name="Nome">
+                    <input class="form-control" type="text" placeholder="Enter Name" name="Nome" required>
                     <br>
                     <label for="Preço"><b> Preço </b></label>
-                    <input class="form-control" type="text" placeholder="Enter Preço" name="preco">
+                    <input class="form-control" type="text" placeholder="Enter Preço" name="preco" required>
                     <label for="Descricao"><b> Descricao </b></label>
-                    <input class="form-control" type="text" placeholder="Enter Descricao" name="descricao">
+                    <input class="form-control" type="text" placeholder="Enter Descricao" name="descricao" required>
 
                     <br>
                     <label for="idGenero"><b>Genero</b></label>
-                    <select class="form-control" name="idGenero">
+                    <select class="form-control" name="idGenero" required>
                         <?php
                         $rowGeneros = GenerosController::GetGenerosAll();
                         while ($rowGen = $rowGeneros->fetch())
@@ -172,7 +172,7 @@ $POD = null;
                     </select>
                     <br>
                     <label for="idPlataforma"><b>Plataforma</b></label>
-                    <select class="form-control" name="idPlataforma">
+                    <select class="form-control" name="idPlataforma" required>
                         <?php
                         $rowPlata = PlataformaController::GetPlataformaALL();
                         while ($rowPlat = $rowPlata->fetch())
@@ -183,7 +183,7 @@ $POD = null;
                     <br>
 
                     <label for="Imagem"><b> Imagem</b></label>
-                    <input class="form-control" type="file" name="Imagem">
+                    <input class="form-control" type="file" name="Imagem" required>
                     <br>
                     <button type="submit" class="btn btn-primary" name="Create_Jogo">Create</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

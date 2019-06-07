@@ -81,11 +81,11 @@
                         <form method="Post">
                             <label for="Nome"><b> Nome</b></label>
                             <input class="form-control" type="text" placeholder="Enter Name" name="Nome"
-                                   value="<?php echo $Nome ?>">
+                                   value="<?php echo $Nome ?>" required>
                             <br>
                             <label for="Data Nascimento"><b> Data de Nascimento </b></label>
                             <input class="form-control" type="date" placeholder="Enter Birth Date"
-                                   name="Data_Nascimento" value="<?php echo $Data_Nascimento ?>">
+                                   name="Data_Nascimento" value="<?php echo $Data_Nascimento ?>" required>
                             <label for="email"><b> Email</b></label>
                             <input class="form-control" type="text" value="<?php echo $email ?>" disabled>
                             <input class="form-control" type="text" placeholder="Enter Email" name="email"
@@ -93,15 +93,15 @@
 
                             <label for="Autorizaçao"><b> Autorizaçao</b></label>
                             <input class="form-control" type="number" placeholder="Enter Authorization"
-                                   name="Autorizacao" value="<?php echo $Autorizacao ?>">
+                                   name="Autorizacao" value="<?php echo $Autorizacao ?>" required>
                             <br>
                             <label for="Code_hash"><b> Code Hash</b></label>
                             <input class="form-control" type="text" placeholder="Enter Code Hash" name="code_hash"
-                                   value="<?php echo $code_hash ?>">
+                                   value="<?php echo $code_hash ?>" required>
                             <br>
                             <label for="Verify"><b> Verify</b></label>
                             <input class="form-control" type="number" placeholder="Enter Verify" name="Verify"
-                                   value="<?php echo $Verify ?>">
+                                   value="<?php echo $Verify ?>" required>
 
                             <br>
                             <button type="submit" class="btn btn-primary" name="Update_Cliente">Save changes
@@ -149,24 +149,24 @@ $POD = null;
         <div class="modal-body">
             <form method="post">
                 <label for="Nome"><b> Nome</b></label>
-                <input class="form-control" type="text" placeholder="Enter Name" name="Nome">
+                <input class="form-control" type="text" placeholder="Enter Name" name="Nome" required>
                 <br>
                 <label for="firstpassword"><b>Enter Password</b></label>
                 <input class="form-control" type="text" placeholder="Enter Password" name="firstpassword"
-                       value="DefaultPassword2019">
+                       value="DefaultPassword2019" required>
                 <label for="Data Nascimento"><b> Confirm Password </b></label>
                 <input class="form-control" type="text" placeholder="Enter Password" name="newpassword"
-                       value="DefaultPassword2019">
+                       value="DefaultPassword2019" required>
 
                 <br>
                 <label for="Data Nascimento"><b> Data de Nascimento </b></label>
-                <input class="form-control" type="date" placeholder="Enter Birth Date" name="data_Nascimento">
+                <input class="form-control" type="date" placeholder="Enter Birth Date" name="data_Nascimento" required>
                 <br>
                 <label for="email"><b> Email</b></label>
-                <input class="form-control" type="text" placeholder="Enter Email" name="email">
+                <input class="form-control" type="text" placeholder="Enter Email" name="email" required>
                 <br>
                 <label for="Autorizaçao"><b> Autorizaçao</b></label>
-                <input class="form-control" type="number" placeholder="1-Admin ||  0-User" name="Autorizacao">
+                <input class="form-control" type="number" placeholder="1-Admin ||  0-User" name="Autorizacao" required>
                 <br>
                 <button type="submit" class="btn btn-primary" name="NewCliente">Create</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

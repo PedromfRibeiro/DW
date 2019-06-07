@@ -21,6 +21,9 @@ class JogoController
         if (isset($_POST["Create_Jogo"])) {
             self::Create_Jogo();
         }
+        if(isset($_POST['search'])){
+            header('http://localhost/DWphp/index.php?page=searchEngine&aa='.$_POST['search'].'');
+        }
     }
 
 
@@ -84,5 +87,13 @@ class JogoController
         $PDO->Delete();
     }
 
+
+    public static function SearchEngine($aa){
+        $bb= new Jogo();
+        $bb->nome=$aa;
+        return $bb->SearchEngine();
+
+
+    }
 
 }
