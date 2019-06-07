@@ -37,6 +37,8 @@ MainController::process();
     <link rel="stylesheet" type="text/css" href="_css/Styles.css"/>
     <link type="text/css" rel="stylesheet" href="<?php echo $_SESSION['Hrefs'] ?>"/>
 
+    <link rel="stylesheet" type="text/css" href="_css/Breadcrums.css"/>
+
 
 </head>
 <body>

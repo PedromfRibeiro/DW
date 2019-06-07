@@ -1,5 +1,10 @@
 <body>
 
+<ul class="breadcrumb">
+    <li><a href="http://localhost/DWphp/Index.php?page=MainPage">Home</a></li>
+    <li>Profile</li>
+</ul>
+
 <?php   $BFetch = UserController::GetOneUtil(); ?>
 
 

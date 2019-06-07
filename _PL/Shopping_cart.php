@@ -1,4 +1,10 @@
 <body>
+
+<ul class="breadcrumb">
+    <li><a href="http://localhost/DWphp/Index.php?page=MainPage">Home</a></li>
+    <li>Shopping Cart</li>
+</ul>
+
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Shopping Cart</h1>

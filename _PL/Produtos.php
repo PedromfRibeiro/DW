@@ -1,4 +1,10 @@
 <body>
+
+<ul class="breadcrumb">
+    <li><a href="http://localhost/DWphp/Index.php?page=MainPage">Home</a></li>
+    <li>Produtos</li>
+</ul>
+
 <?php
 require_once dirname(__FILE__) . '/../_BL/Plataforma.php';
 require_once dirname(__FILE__) . '/../_BL/Genero.php';

@@ -1,4 +1,10 @@
 <body>
+
+<ul class="breadcrumb">
+    <li><a href="http://localhost/DWphp/Index.php?page=MainPage">Home</a></li>
+    <li>Plataforma</li>
+</ul>
+
 <div class="plat">
     <div class="column">
     </div>
