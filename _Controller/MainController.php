@@ -91,16 +91,7 @@ class MainController
                     $_SESSION['Hrefs'] = '_css/Shopping_cart.css';
                     break;
                 }
-            case 'Admin/Admin_form':
-                {
-                    $_SESSION['Hrefs'] = '_css/Admin/Admin_form.css';
-                    break;
-                }
-            case 'Admin/adminclientes':
-                {
-                    $_SESSION['Hrefs'] = '_css/Admin/adminclientes.css';
-                    break;
-                }
+
             case 'Admin/adminencomendas':
                 {
                     $_SESSION['Hrefs'] = '_css/Admin/adminencomendas.css'; //css
@@ -135,6 +126,11 @@ class MainController
             case 'Login/Register':
                 {
                     $_SESSION['Hrefs'] = '_css/Register.css'; //css
+                    break;
+                }
+            case 'adminVenda.php':
+                {
+                    $_SESSION['Hrefs'] = '_css/Admin/adminplataforma.css'; //css
                     break;
                 }
         }
