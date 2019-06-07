@@ -441,4 +441,22 @@ http://localhost/DWphp/Index.php?page=Login/Reset&email=' . $email . '&code_hash
         return $POD->ReadbyID();
 
     }
+
+    public static function ReadClientes($a,$b){
+        $POD = new Utilizador('', '', '', '', '', ' ', ' ', ' ', ' ');
+        $stm = $POD->ReadALLLimit($a,$b);
+        return $stm;
+
+    }
+
+    public static function schearPage(){
+
+
+        $b=(int)$_GET['asd'];
+        $a=5;
+        $stm =  self::ReadClientes($a,($b*4));
+        return $stm;
+
+    }
+
 }

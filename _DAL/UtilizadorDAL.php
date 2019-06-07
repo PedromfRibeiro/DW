@@ -159,5 +159,25 @@ class UtilizadorDAL
         return $dbUtilizador->SQuerry($sql, $val);
     }
 
+    public static function ReadALLDALLIMIT($a,$b)
+    {
+        $dbUtilizador = new Connection();
+        $dbUtilizador->Connect();
+        $sql= "SELECT * FROM Utilizador LIMIT  ".$a." OFFSET ".$b.";" ;
+
+        $val = array(':a' => $a,
+            ':b' => $b);
+        return $dbUtilizador->SQuerry($sql,$val);
+    }
+
+    public static function Counterrows()
+    {
+        $dbUtilizador = new Connection();
+        $dbUtilizador->Connect();
+        $sql = "SELECT COUNT(*) FROM utilizador";
+        $teste= $dbUtilizador->SQuerry($sql, null);
+        return $teste->fetch();
+    }
+
 
 }

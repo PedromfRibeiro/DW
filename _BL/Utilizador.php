@@ -101,4 +101,16 @@ class Utilizador
     {
         return UtilizadorDAL::UpdateVerifyDAL($this);
     }
+
+    public function ReadALLLimit($a,$b)
+    {
+        return UtilizadorDAL::ReadALLDALLIMIT($a,$b);
+
+    }
+
+    public function Counterrows()
+    {
+        return UtilizadorDAL::Counterrows();
+
+    }
 }

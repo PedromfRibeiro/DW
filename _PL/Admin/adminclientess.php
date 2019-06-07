@@ -28,6 +28,8 @@
             </thead>
             <?php
             $BFetch = UserController::GetAllUtil();
+            $pn=0;
+            $BFetch=UserController::schearPage();
             while ($row = $BFetch->fetch()) {
 
             $id = $row['idUtilizador'];
@@ -167,19 +169,52 @@ $POD = null;
     </div>
 </div>
 </div>
-
-
 </table>
-<div class="clearfix">
-    <div class="hint-text">Showing <b>1</b> out of <b>25</b> entries</div>
-    <ul class="pagination">
-        <li class="page-item"><a>Previous</a></li>
-        <button class="page-item active" name="pagina" value="0"><a>0</a></button>
-        <li class="page-item"><a>Next</a></li>
-        <button type="button" name="nextpage">Next</button>
 
-    </ul>
+<?php
+$numrows=Utilizador::Counterrows();
+$total_pages=($numrows%5);
+
+$k = (($pn+4>$total_pages)?$total_pages-4:(($pn-4<1)?5:$pn));
+$pagLink = "";
+if($pn>=1){
+    echo "<li><a href='index.php?page=Admin/adminclientes&asd=1'> << </a></li>";
+    echo "<li><a href='index.php?page=Admin/adminclientes&asd=".($pn-1)."'> < </a></li>";
+}
+
+for ($i=-4; $i<=4; $i++) {
+    if($k+$i==$pn)
+        $pagLink .= "<li class='active'><a href='index.php?page=Admin/adminclientes&asd=".($k+$i)."'>".($k+$i)."</a></li>";
+    else
+        if($k+$i>=0) {
+            $pagLink .= "<li><a href='index.php?page=Admin/adminclientes&asd=" . ($k + $i) . "'>" . ($k + $i) . "</a></li>";
+        }
+};
+echo $pagLink;
+
+if($pn<$total_pages){
+    echo "<li><a href='index.php?page=Admin/adminclientes&asd=".($pn+1)."'> > </a></li>";
+    echo "<li><a href='index.php?page=Admin/adminclientes&asd=".$total_pages."'> >> </a></li>";
+}
+
+?>
+<div class="inline">
+    <input id="pn" type="number" min="0" max="<?php echo $total_pages?>"
+           placeholder="<?php echo $pn."/".$total_pages; ?>" required>
+    <button onclick="go2Page();">Go</button>
 </div>
+
+</div>
+</div>
+<script>
+    function go2Page()
+    {
+        var pn = document.getElementById("pn").value;
+        pn = ((pn><?php echo $total_pages; ?>)?<?php echo $total_pages; ?>:((pn<1)?0:pn));
+        window.location.href = 'index.php?page=Admin/adminclientes&asd='+pn;
+    }
+</script>
+
 </div>
 </div>
 
