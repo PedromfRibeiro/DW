@@ -9,7 +9,7 @@
     <a href="?page=Admin/adminencomendas" class="btn btn-lg btn-primary" role="button"><span class="glyphicon glyphicon-comment"></span> <br/>Encomendas</a>
 </div>
 <div class="col-xs-2 col-md-12">
-    <a href="?page=Admin/adminclientess" class="btn btn-lg btn-primary" role="button"><span class="glyphicon glyphicon-user"></span> <br/>Users</a>
+    <a href="?page=Admin/adminclientess&asd=0" class="btn btn-lg btn-primary" role="button"><span class="glyphicon glyphicon-user"></span> <br/>Users</a>
     <a href="?page=Admin/adminVenda" class="btn btn-lg btn-primary" role="button"><span class="glyphicon glyphicon-picture"></span> <br/>Venda</a>
     <a href="?page=Admin/admingeneros" class="btn btn-lg btn-primary" role="button"><span class="glyphicon glyphicon-tag"></span><br/>Generos-Plataformas</a>
 </div>

@@ -98,6 +98,7 @@
                             <label for="Code_hash"><b> Code Hash</b></label>
                             <input class="form-control" type="text" placeholder="Enter Code Hash" name="code_hash"
                                    value="<?php echo $code_hash ?>">
+                            <br>
                             <label for="Verify"><b> Verify</b></label>
                             <input class="form-control" type="number" placeholder="Enter Verify" name="Verify"
                                    value="<?php echo $Verify ?>">
@@ -150,10 +151,10 @@ $POD = null;
                 <label for="Nome"><b> Nome</b></label>
                 <input class="form-control" type="text" placeholder="Enter Name" name="Nome">
                 <br>
-                <label for="Data Nascimento"><b> Data de Nascimento </b></label>
-                <input class="form-control" type="text" placeholder="Enter Password" name="password"
+                <label for="firstpassword"><b>Enter Password</b></label>
+                <input class="form-control" type="text" placeholder="Enter Password" name="firstpassword"
                        value="DefaultPassword2019">
-                <label for="Data Nascimento"><b> Data de Nascimento </b></label>
+                <label for="Data Nascimento"><b> Confirm Password </b></label>
                 <input class="form-control" type="text" placeholder="Enter Password" name="newpassword"
                        value="DefaultPassword2019">
 
@@ -165,7 +166,7 @@ $POD = null;
                 <input class="form-control" type="text" placeholder="Enter Email" name="email">
                 <br>
                 <label for="Autorizaçao"><b> Autorizaçao</b></label>
-                <input class="form-control" type="number" placeholder="Enter Authorization" name="Autorizacao">
+                <input class="form-control" type="number" placeholder="1-Admin ||  0-User" name="Autorizacao">
                 <br>
                 <button type="submit" class="btn btn-primary" name="NewCliente">Create</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -187,23 +188,23 @@ $total_pages=($numrows%5);
 $k = (($pn+4>$total_pages)?$total_pages-4:(($pn-4<1)?5:$pn));
 $pagLink = "";
 if($pn>=1){
-    echo "<li><a href='index.php?page=Admin/adminclientes&asd=1'> << </a></li>";
-    echo "<li><a href='index.php?page=Admin/adminclientes&asd=".($pn-1)."'> < </a></li>";
+    echo "<li><a href='index.php?page=Admin/adminclientess&asd=1'> << </a></li>";
+    echo "<li><a href='index.php?page=Admin/adminclientess&asd=".($pn-1)."'> < </a></li>";
 }
 
 for ($i=-4; $i<=4; $i++) {
     if($k+$i==$pn)
-        $pagLink .= "<li class='active'><a href='index.php?page=Admin/adminclientes&asd=".($k+$i)."'>".($k+$i)."</a></li>";
+        $pagLink .= "<li class='active'><a href='index.php?page=Admin/adminclientess&asd=".($k+$i)."'>".($k+$i)."</a></li>";
     else
         if($k+$i>=0) {
-            $pagLink .= "<li><a href='index.php?page=Admin/adminclientes&asd=" . ($k + $i) . "'>" . ($k + $i) . "</a></li>";
+            $pagLink .= "<li><a href='index.php?page=Admin/adminclientess&asd=" . ($k + $i) . "'>" . ($k + $i) . "</a></li>";
         }
 };
 echo $pagLink;
 
 if($pn<$total_pages){
-    echo "<li><a href='index.php?page=Admin/adminclientes&asd=".($pn+1)."'> > </a></li>";
-    echo "<li><a href='index.php?page=Admin/adminclientes&asd=".$total_pages."'> >> </a></li>";
+    echo "<li><a href='index.php?page=Admin/adminclientess&asd=".($pn+1)."'> > </a></li>";
+    echo "<li><a href='index.php?page=Admin/adminclientess&asd=".$total_pages."'> >> </a></li>";
 }
 
 ?>
@@ -220,7 +221,7 @@ if($pn<$total_pages){
     {
         var pn = document.getElementById("pn").value;
         pn = ((pn><?php echo $total_pages; ?>)?<?php echo $total_pages; ?>:((pn<1)?0:pn));
-        window.location.href = 'index.php?page=Admin/adminclientes&asd='+pn;
+        window.location.href = 'index.php?page=Admin/adminclientess&asd='+pn;
     }
 </script>
 

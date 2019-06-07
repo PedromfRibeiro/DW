@@ -83,7 +83,9 @@
                                 <?php
                                 $rowGeneros = GenerosController::GetGenerosAll();
                                 while ($rowGen = $rowGeneros->fetch())
-                                    echo '<option VALUE="' . $rowGen['idGenero'] . '">' . $rowGen['genero'] . '</option>'
+                                    echo'<option selected="selected" VALUE="' . $idGenero['idGenero'] . '">' . $idGenero['genero'] . '</option>';
+
+                                echo '<option VALUE="' . $rowGen['idGenero'] . '">' . $rowGen['genero'] . '</option>'
 
                                 ?>
                             </select>
@@ -93,7 +95,9 @@
                                 <?php
                                 $rowPlata = PlataformaController::GetPlataformaALL();
                                 while ($rowPlat = $rowPlata->fetch())
-                                    echo '<option VALUE="' . $rowPlat['id'] . '">' . $rowPlat['Plataforma'] . '</option>'
+                                echo'<option selected="selected" VALUE="' . $idPlataforma['id'] . '">' . $idPlataforma['Plataforma'] . '</option>';
+                                echo '<option VALUE="' . $rowPlat['id'] . '">' . $rowPlat['Plataforma'] . '</option>'
+
 
                                 ?>
                             </select>
@@ -154,7 +158,7 @@ $POD = null;
                     <input class="form-control" type="text" placeholder="Enter Preço" name="preco">
                     <label for="Descricao"><b> Descricao </b></label>
                     <input class="form-control" type="text" placeholder="Enter Descricao" name="descricao">
-                    <br>
+
                     <br>
                     <label for="idGenero"><b>Genero</b></label>
                     <select class="form-control" name="idGenero">
@@ -176,10 +180,10 @@ $POD = null;
                         ?>
                     </select>
                     <br>
-                    <br>
+
                     <label for="Imagem"><b> Imagem</b></label>
                     <input class="form-control" type="file" name="Imagem">
-
+                    <br>
                     <button type="submit" class="btn btn-primary" name="Create_Jogo">Create</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </form>

@@ -95,23 +95,23 @@ class UserController
 
         function pass()
         {
-            $array1 = $_POST['password'];
+            $array1 = $_POST['firstpassword'];
             $array2 = $_POST['newpassword'];
 
 
-            if (empty($_POST['password']) || empty($_POST['newpassword'])) {
+            if (empty($_POST['firstpassword']) || empty($_POST['newpassword'])) {
                 $_SESSION["Controll"]["Mensage"] = "Password is empty!";
                 return true;
             } else if ((strcmp($array1, $array2)) !== 0) {
                 $_SESSION["Controll"]["Mensage"] = "The two passwords you entered dont match, try again!";
                 return true;
-            } else if (strlen($_POST['password']) < 8 || strlen($_POST['password']) > 24) {
+            } else if (strlen($_POST['firstpassword']) < 8 || strlen($_POST['firstpassword']) > 24) {
                 $_SESSION["Controll"]["Mensage"] = "Password too short!";
                 return true;
-            } else if (!preg_match("#[0-9]+#", $_POST['password'])) {
+            } else if (!preg_match("#[0-9]+#", $_POST['firstpassword'])) {
                 $_SESSION["Controll"]["Mensage"] = "Password must include at least one number!";
                 return true;
-            } else if (!preg_match("#[a-zA-Z]+#", $_POST['password'])) {
+            } else if (!preg_match("#[a-zA-Z]+#", $_POST['firstpassword'])) {
                 $_SESSION["Controll"]["Mensage"] = "Password must include at least one letter!";
                 return true;
             } else {
@@ -149,7 +149,7 @@ class UserController
             $uu = new Utilizador();
             $uu->Nome = $_POST["Nome"];
             $uu->email = $_POST["email"];
-            $uu->pass = sha1($_POST['password']);
+            $uu->pass = sha1($_POST['firstpassword']);
             $uu->Data_Registo = Date("Y/m/d");
             $uu->Data_Nascimento = $_POST["data_Nascimento"];
             $uu->code_hash = md5(rand(0, 1000));
